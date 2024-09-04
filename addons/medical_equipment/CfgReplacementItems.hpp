@@ -41,4 +41,25 @@ class ace_medical_replacementItems
         {"wdc_bloodPlasmaIV_250", 1},
         {"wdc_US_personalAidKit", 1}
     };
+    SPE_GER_FirstAidKit[] = {
+        {"wdc_gauzeBandage", 1},
+        {"wdc_carlisleLarge", 1},
+        {"wdc_morphineSyrette", 1},
+        {"wdc_Sulfa", 2},
+        {"wdc_US_Tourniquet", 2}
+    };
+    SPE_GER_Medkit[] = {
+        {"wdc_gauzeBandage", 10},
+        {"wdc_carlisleLarge", 5},
+        {"wdc_carlisleSmall", 5},
+        {"wdc_morphineSyrette", 10},
+        {"wdc_atropineSyrette", 2},
+        {"wdc_ammoniaAmpule", 10},
+        {"wdc_Sulfa", 20},
+        {"wdc_US_Tourniquet", 8},
+        {"wdc_US_surgicalKit", 1},
+        {"wdc_bloodPlasmaIV_400", 2},
+        {"wdc_bloodPlasmaIV_250", 1},
+        {"wdc_US_personalAidKit", 1}
+    };
 };
