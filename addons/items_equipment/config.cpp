@@ -56,12 +56,52 @@ class CfgWeapons
 		descriptionShort = "Standard US flashlight";
 		model = "\WW2\SPE_Assets_m\Misc\Items_m\SPE_US_Flashlight_Ground.p3d";
 		picture = "\WW2\SPE_Assets_t\Weapons\Equipment_U1_t\Weapons\Items\Gear_US_FL_TL122_X_ca.paa";
+		class ItemInfo: CBA_MiscItem_ItemInfo
+		{
+			mass = 4;
+			class FlashLight
+			{
+				ACE_Flashlight_Colour = "white";
+				ACE_Flashlight_Beam = "\z\ace\addons\flashlights\UI\Flashlight_beam_white_ca.paa";
+				ACE_Flashlight_Size = 1.75;
+			};
+		};
 	};
-	class ACE_CableTie : ACE_ItemCore 
+	class ACE_Flashlight_KSF1: ACE_ItemCore
+	{
+		displayName = "GER 2213 Signallampe";
+		descriptionShort = "Standard WWII German flashlight";
+		model = "\WW2\SPE_Assets_m\Misc\Items_m\SPE_GER_Flashlight_Ground.p3d";
+		picture = "\WW2\SPE_Assets_t\Weapons\Equipment_U1_t\Weapons\Items\Gear_GER_FL_Signal_Flashlight_X_ca.paa";
+		class ItemInfo: CBA_MiscItem_ItemInfo
+		{
+			mass = 4;
+			class FlashLight
+			{
+				ACE_Flashlight_Colour = "white";
+				ACE_Flashlight_Beam = "\z\ace\addons\flashlights\UI\Flashlight_beam_white_ca.paa";
+				ACE_Flashlight_Size = 1.5;
+			};
+		};
+	};
+	class ACE_CableTie: ACE_ItemCore
 	{
 		displayName = "Binding Rope";
 		descriptionShort = "Rope used to restrain prisoners.";
-		picture = "\x\wdc\addons\items_equipment\ui\wdc_rope.paa";
+		picture = "\x\wdc\addons\items_equipment\data\UI\rope_ui_ca.paa";
+		model = "\A3\Structures_F_Heli\Items\Tools\Rope_01_F.p3d";
+		hiddenSelections[] = {"Camo_1"};
+		hiddenSelectionsTextures[] = {"#(argb,8,8,3)color(1.0,1.0,1.0,1.0,co)"};
+	};
+	class wdc_EntrenchingTool_schanzzeug: wdc_EntrenchingTool_m43
+	{
+		author = "Letlev";
+		displayName = "GER Schanzzeug E-Tool";
+		descriptionShort = "German WWII E-Tool";
+		picture = "\x\wdc\addons\items_equipment\data\UI\Schanzzeug_etool_ui_ca.paa";
+		model = "\A3\Structures_F_EPA\Items\Tools\Shovel_F.p3d";
+		hiddenSelections[] = {};
+		hiddenSelectionsTextures[] = {};
 	};
 };
 class ACE_Triggers
