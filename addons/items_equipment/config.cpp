@@ -47,7 +47,7 @@ class CfgWeapons
 	{
 		displayName = "US 10 Cap Blasting Machine";
 		picture = "\x\wdc\addons\items_equipment\data\UI\blasting_machine_ui_ca.paa";
-		model = "\x\wdc\addons\items_equipment\us_detonator.p3d";
+		model = "\x\wdc\addons\items_equipment\wdc_us_detonator.p3d";
 		descriptionShort = "Standard US Handheld detonator";
 	};
 	class wdc_flastlight_tl22: ACE_Flashlight_XL50
