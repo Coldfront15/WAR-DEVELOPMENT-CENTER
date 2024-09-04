@@ -23,6 +23,7 @@ class CfgWeapons
 	class ACE_EntrenchingTool;
 	class ACE_Clacker;
 	class ACE_Flashlight_XL50;
+	class CBA_MiscItem_ItemInfo;
 	class wdc_EntrenchingTool_m28: ACE_EntrenchingTool
 	{
 		author = "Letlev";
