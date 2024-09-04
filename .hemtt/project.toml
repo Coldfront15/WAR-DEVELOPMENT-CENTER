@@ -1,0 +1,36 @@
+name = "War Development Center"
+author = "Coldfront15/Henderson"
+prefix = "wdc"
+mainprefix = "x"
+
+[hemtt.build]
+pdrive = "require"
+
+[hemtt.launch.default]
+workshop = [
+    "450814997", # CBA_A3's Workshop ID
+    "463939057", # ACE Workshop ID
+    "3119699935", # SIMC LCD
+]
+dlc = [
+    "Spearhead 1944",
+]
+optionals = []
+mission = "TESTACE_WDCERAAA.VR" # Mission to launch directly into the editor with
+parameters = [
+    "-skipIntro",           # These parameters are passed to the Arma 3 executable
+    "-noSplash",            # They do not need to be added to your list
+    "-showScriptErrors",    # You can add additional parameters here
+    "-debug",
+    "-filePatching",
+]
+
+executable = "arma3_x64" # Default: "arma3_x64"
+
+[version]
+major = 1 # Overrides path when set
+minor = 0
+patch = 0
+build = 0 # Optional
+
+git_hash = 4
