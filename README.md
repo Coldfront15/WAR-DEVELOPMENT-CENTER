@@ -32,6 +32,8 @@ Medical Items Added
  - US Tourniquet == Tourniquet
  - US Splint == Splint
  - US, 24-Unit First Aid Kit == Personal Aid Kit
+ - US, BLOOD PLASMA (250/500CC)
+ - US, BLOOD (250/500CC)
 
 
 Items Added
@@ -40,6 +42,9 @@ Items Added
  - US TL-22 Handheld Flashlight == XL-50 Flashlight
  - US 10 Cap Blasting Machine, Detonator == M26 Clacker
  - Binding Rope == Cable Ties
+ - GER Signallampe Flashlight == XL-50 Flashlight
+ - GER Schanzzeug E-Tool == Entrenching Tool
+
 
 
 Credits
