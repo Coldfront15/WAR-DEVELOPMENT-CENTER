@@ -176,23 +176,46 @@ class CfgWeapons
 		picture = "\WW2\SPE_Assets_t\Weapons\Equipment_t\Weapons\Items\Gear_US_Medkit_X_ca.paa";
 		model = "\WW2\SPE_Assets_m\Misc\Items_m\SPE_US_Medkit.p3d";
 	};
-    class wdc_bloodPlasmaIV_400: ACE_bloodIV
+    class wdc_bloodPlasmaIV_500: ACE_bloodIV
     {
         author = "Coldfront15";
-		displayName = "Blood Plasma (400cc)";
+		displayName = "Blood Plasma (500cc)";
 		picture = "\x\wdc\addons\medical_equipment\ui\bloodPlasma_ui_ca.paa";
+        model = "\x\wdc\addons\medical_equipment\wdc_plasmaBottle.p3d";
         class ItemInfo: CBA_MiscItem_ItemInfo
 		{
-			mass = 0.4;
+			mass = 2;
 		};
     };
-    class wdc_bloodPlasmaIV_250: wdc_bloodPlasmaIV_400
+    class wdc_bloodPlasmaIV_250: wdc_bloodPlasmaIV_500
     {
         author = "Coldfront15";
 		displayName = "Blood Plasma (250cc)";
+        model = "\x\wdc\addons\medical_equipment\wdc_plasmaBottle_250.p3d";
         class ItemInfo: CBA_MiscItem_ItemInfo
 		{
-			mass = 0.25;
+			mass = 1;
+		};
+    };
+    class wdc_bloodIV_500: ACE_bloodIV
+    {
+        author = "Coldfront15";
+		displayName = "Blood (500cc)";
+		picture = "\x\wdc\addons\medical_equipment\ui\bloodPlasma_ui_ca.paa";
+        model = "\x\wdc\addons\medical_equipment\wdc_plasmaBottle_blood.p3d";
+        class ItemInfo: CBA_MiscItem_ItemInfo
+		{
+			mass = 2;
+		};
+    };
+    class wdc_bloodIV_250: wdc_bloodPlasmaIV_500
+    {
+        author = "Coldfront15";
+		displayName = "Blood (250cc)";
+        model = "\x\wdc\addons\medical_equipment\wdc_plasmaBottle_blood_250.p3d";
+        class ItemInfo: CBA_MiscItem_ItemInfo
+		{
+			mass = 1;
 		};
     };
 };
@@ -233,6 +256,10 @@ class CfgVehicles
     class wdc_MedicalLitter_sulfaPacket: ACE_MedicalLitterBase 
 	{
         model = "\x\wdc\addons\medical_equipment\wdc_sulfaPacket.p3d";
+    };
+    class wdc_MedicalLitter_bloodPlasma: ACE_MedicalLitterBase 
+	{
+        model = "\x\wdc\addons\medical_equipment\wdc_plasmaBottle_litter.p3d";
     };
 	class wdc_carlisleLargeItem: Item_Base_F 
 	{
@@ -426,18 +453,18 @@ class CfgVehicles
 			};
         };
     };
-    class wdc_bloodPlasmaIV_400Item: Item_Base_F 
+    class wdc_bloodPlasmaIV_500Item: Item_Base_F 
 	{
         scope = 2;
         scopeCurator = 2;
-        displayName = "Blood Plasma (400cc)";
+        displayName = "Blood Plasma (500cc)";
         author = "Coldfront15";
         editorSubcategory = "WDC_ACE_Items";
         class TransportItems
 		{
-			class _xx_wdc_bloodPlasmaIV_400
+			class _xx_wdc_bloodPlasmaIV_500
 			{
-				name = "wdc_bloodPlasmaIV_400";
+				name = "wdc_bloodPlasmaIV_500";
 				count = 1;
 			};
         };
@@ -458,6 +485,38 @@ class CfgVehicles
 			};
         };
     };
+    class wdc_bloodIV_500Item: Item_Base_F 
+	{
+        scope = 2;
+        scopeCurator = 2;
+        displayName = "Blood (500cc)";
+        author = "Coldfront15";
+        editorSubcategory = "WDC_ACE_Items";
+        class TransportItems
+		{
+			class _xx_wdc_bloodIV_500
+			{
+				name = "wdc_bloodIV_500";
+				count = 1;
+			};
+        };
+    };
+    class wdc_bloodIV_250Item: Item_Base_F 
+	{
+        scope = 2;
+        scopeCurator = 2;
+        displayName = "Blood (250cc)";
+        author = "Coldfront15";
+        editorSubcategory = "WDC_ACE_Items";
+        class TransportItems
+		{
+			class _xx_wdc_bloodIV_250
+			{
+				name = "wdc_bloodIV_250";
+				count = 1;
+			};
+        };
+    };
     class ACE_medicalSupplyCrate;
 	class WDC_ACE_Items_US_Resupply_medical: ACE_medicalSupplyCrate
 	{
@@ -468,21 +527,6 @@ class CfgVehicles
 		editorSubcategory = "WDC_ACE_Items";
 		class TransportItems
 		{
-			class _xx_ACE_plasmaIV_250
-			{
-				name = "ACE_plasmaIV_250";
-				count = 12;
-			};
-			class _xx_ACE_plasmaIV_500
-			{
-				name = "ACE_plasmaIV_500";
-				count = 20;
-			};
-			class _xx_ACE_plasmaIV_1000
-			{
-				name = "ACE_plasmaIV";
-				count = 8;
-			};
 			class _xx_wdc_carlisleLarge
 			{
 				name = "wdc_carlisleLarge";
@@ -538,15 +582,15 @@ class CfgVehicles
 				name = "wdc_US_personalAidKit";
 				count = 1;
 			};
-            class _xx_wdc_bloodPlasmaIV_400
+            class _xx_wdc_bloodPlasmaIV_500
 			{
-				name = "wdc_bloodPlasmaIV_400";
-				count = 15;
+				name = "wdc_bloodPlasmaIV_500";
+				count = 12;
 			};
             class _xx_wdc_bloodPlasmaIV_250
 			{
 				name = "wdc_bloodPlasmaIV_250";
-				count = 20;
+				count = 24;
 			};
 		};
 	};
@@ -656,13 +700,25 @@ class ACE_Medical_Treatment_Actions
     class BloodIV;
     class BloodIV_500;
     class BloodIV_250;
-    class BloodPlasmaIV_400: BloodIV {
-        displayName = "Give Blood Plasma IV (400cc)";
-        items[] = {"wdc_bloodPlasmaIV_400"};
+    class BloodPlasmaIV_500: BloodIV {
+        displayName = "Give Blood Plasma IV (500cc)";
+        items[] = {"wdc_bloodPlasmaIV_500"};
+        litter[] = {{"wdc_MedicalLitter_bloodPlasma"}};
     };
      class BloodPlasmaIV_250: BloodIV_500 {
         displayName = "Give Blood Plasma IV (250cc)";
         items[] = {"wdc_bloodPlasmaIV_250"};
+        litter[] = {{"wdc_MedicalLitter_bloodPlasma"}};
+    };
+    class wdc_BloodIV_500: BloodIV {
+        displayName = "Give Blood IV (500cc)";
+        items[] = {"wdc_bloodIV_500"};
+        litter[] = {{"wdc_MedicalLitter_bloodPlasma"}};
+    };
+     class wdc_BloodIV_250: BloodIV_500 {
+        displayName = "Give Blood IV (250cc)";
+        items[] = {"wdc_bloodIV_250"};
+        litter[] = {{"wdc_MedicalLitter_bloodPlasma"}};
     };
 };
 
@@ -1274,11 +1330,20 @@ class ACE_Medical_Treatment
         volume = 1000;
         ratio[] = {};
         type = "Blood";
-        class BloodPlasmaIV_400 {
-            volume = 400;
-            ratio[] = {"Plasma", 1};
+        class BloodPlasmaIV_500 {
+            volume = 500;
+            ratio[] = {"Blood", 1};
+            type = "Plasma";
         };
-        class BloodPlasmaIV_250: BloodPlasmaIV_400 {
+        class BloodPlasmaIV_250: BloodPlasmaIV_500 {
+            volume = 250;
+        };
+        class wdc_BloodIV_500 {
+            volume = 500;
+            ratio[] = {"Plasma", 1};
+            type = "Blood";
+        };
+        class wdc_BloodPlasmaIV_250: wdc_BloodIV_500 {
             volume = 250;
         };
     };
