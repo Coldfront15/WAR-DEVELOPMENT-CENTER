@@ -30,7 +30,19 @@ executable = "arma3_x64" # Default: "arma3_x64"
 [version]
 major = 1 # Overrides path when set
 minor = 0
-patch = 0
+patch = 1
 build = 0 # Optional
 
 git_hash = 4
+
+[files]
+include = [
+    "mod.cpp",      # These files are copied to the build directory by default
+    "meta.cpp",     # They do not need to be added to your list
+    "LICENSE",
+    "089_blauw_cal.paa",
+    "089_ca.paa",
+    "089_jellwick_ca.paa",
+    "large - dev.paa",
+    "large.paa",
+]
