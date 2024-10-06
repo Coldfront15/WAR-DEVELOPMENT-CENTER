@@ -4,3 +4,10 @@ hemtt
 hemtt.exe
 *.biprivatekey
 *.zip
+.hemtt/missions/TESTACE_WDCERAAA.VR/init.sqf.txt
+.hemtt/missions/TESTACE_WDCERAAA.VR/mission.sqm
+.hemtt/project.toml
+.hemtt/missions/TESTACE_WDCERAAA.VR/mission.sqm
+.hemtt/project.toml
+/releases
+/releases

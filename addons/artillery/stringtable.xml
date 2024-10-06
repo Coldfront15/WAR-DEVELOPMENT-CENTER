@@ -1,0 +1,650 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="wdc_artillery">
+    <Package name="Translation">
+        <Key ID="STR_WDC_ARTILLERY_NAME">
+            <English>M3</English>
+            <Czech>M3</Czech>
+            <Russian>M3</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_OPEN_BREECH">
+            <English>Open Breech</English>
+            <Czech>Otevřít zadovku</Czech>
+            <Russian>Открыть</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_CLOSE_BREECH">
+            <English>Close Breech</English>
+            <Czech>Zavřít zadovku</Czech>
+            <Russian>Закрыть</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_LOAD">
+            <English>Load Round</English>
+            <Czech>Nabít</Czech>
+            <Russian>Зарядить</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_UNLOAD">
+            <English>Unload Round</English>
+            <Czech>Vybít</Czech>
+            <Russian>Разрядить</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_HE">
+            <English>High-Explosive</English>
+            <Czech>Tříštivé</Czech>
+            <Russian>ОФ</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_HE_VT">
+            <English>High-Explosive Proximity</English>
+            <Czech>Tříštivé</Czech>
+            <Russian>ОФ</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_HEAT">
+            <English>High-Explosive Anti-Tank</English>
+            <Czech>Tříštivé</Czech>
+            <Russian>ОФ</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_WP">
+            <English>White Phosphorous</English>
+            <Czech>Dýmové</Czech>
+            <Russian>дымовыми</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105mm_HE_CH1">
+            <English>M1/PD High Explosive Round - Charge 1</English>
+            <Czech>M1 HE/PD delostřelecká mina - Náplň 1</Czech>
+            <Russian>M1 HE/PD ОФ снаряд - заряд 1</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105mm_HE_CH1_SHORT">
+            <English>M1 HE/PD Ch. 1</English>
+            <Czech>M1 HE/PD Ch. 1</Czech>
+            <Russian>M1 HE/PD ОФ - заряд 1</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105mm_HE_CH1_DESC">
+            <English>M1/PD High Explosive round used in 105mm howitzers such as the M3. This round is loaded with 1 propellant charge</English>
+            <Czech>M1/PD Tříštivý výstřel použitý v houfnicích jako M3. Tento výstřel je připravená s 1 paketom prachové náplně</Czech>
+            <Russian>M1 HE/PD ОФ снаряд для гаубицы М3. У этого снаряда присутствует заряд 1</Russian>
+        </Key>
+
+        <Key ID="STR_WDC_ARTILLERY_105mm_HE_CH2">
+            <English>M1/PD High Explosive Round - Charge 2</English>
+            <Czech>M1 HE/PD delostřelecká mina - Náplň 2</Czech>
+            <Russian>M1 HE/PD ОФ снаряд - заряд 2</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105mm_HE_CH2_SHORT">
+            <English>M1 HE/PD Ch. 2</English>
+            <Czech>M1 HE/PD Ch. 2</Czech>
+            <Russian>M1 HE/PD ОФ - заряд 2</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105mm_HE_CH2_DESC">
+            <English>M1/PD High Explosive round used in 105mm howitzers such as the M3. This round is loaded with 2 propellant charges</English>
+            <Czech>M1/PD Tříštivý výstřel použitý v houfnicích jako M3. Tento výstřel je připravená s 2 paketami prachové náplně</Czech>
+            <Russian>M1 HE/PD ОФ снаряд для гаубицы М3. У этого снаряда присутствует заряд 2</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105mm_HE_CH3">
+            <English>M1/PD High Explosive Round - Charge 3</English>
+            <Czech>M1 HE/PD delostřelecká mina - Náplň 3</Czech>
+            <Russian>M1 HE/PD ОФ снаряд - заряд 3</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105mm_HE_CH3_SHORT">
+            <English>M1 HE/PD Ch. 3</English>
+            <Czech>M1 HE/PD Ch. 3</Czech>
+            <Russian>M1 HE/PD ОФ - заряд 3</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105mm_HE_CH3_DESC">
+            <English>M1/PD High Explosive round used in 105mm howitzers such as the M3. This round is loaded with 3 propellant charges</English>
+            <Czech>M1/PD Tříštivý výstřel použitý v houfnicích jako M3. Tento výstřel je připravená s 3 paketami prachové náplně</Czech>
+            <Russian>M1 HE/PD ОФ снаряд для гаубицы М3. У этого снаряда присутствует заряд 3</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105mm_HE_CH4">
+            <English>M1/PD High Explosive Round - Charge 4</English>
+            <Czech>M1 HE/PD delostřelecká mina - Náplň 4</Czech>
+            <Russian>M1 HE/PD ОФ снаряд - заряд 4</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105mm_HE_CH4_SHORT">
+            <English>M1 HE/PD Ch. 4</English>
+            <Czech>M1 HE/PD Ch. 4</Czech>
+            <Russian>M1 HE/PD ОФ - заряд 4</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105mm_HE_CH4_DESC">
+            <English>M1/PD High Explosive round used in 105mm howitzers such as the M3. This round is loaded with 4 propellant charges</English>
+            <Czech>M1/PD Tříštivý výstřel použitý v houfnicích jako M3. Tento výstřel je připravená s 4 paketami prachové náplně</Czech>
+            <Russian>M1 HE/PD ОФ снаряд для гаубицы М3. У этого снаряда присутствует заряд 4</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105mm_HE_CH5">
+            <English>M1/PD High Explosive Round - Charge 5</English>
+            <Czech>M1 HE/PD delostřelecká mina - Náplň 5</Czech>
+            <Russian>M1 HE/PD ОФ снаряд - заряд 5</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105mm_HE_CH5_SHORT">
+            <English>M1 HE/PD Ch. 5</English>
+            <Czech>M1 HE/PD Ch. 5</Czech>
+            <Russian>M1 HE/PD ОФ - заряд 5</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105mm_HE_CH5_DESC">
+            <English>M1/PD High Explosive round used in 105mm howitzers such as the M3. This round is loaded with 5 propellant charges</English>
+            <Czech>M1/PD Tříštivý výstřel použitý v houfnicích jako M3. Tento výstřel je připravená s 5 paketami prachové náplně</Czech>
+            <Russian>M1 HE/PD ОФ снаряд для гаубицы М3. У этого снаряда присутствует заряд 5</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105mm_HE_VT_CH1">
+            <English>M1 High Explosive Proximity Round - Charge 1</English>
+            <Czech>M1 HE/VT delostřelecká mina - Náplň 1</Czech>
+            <Russian>105мм ОФ снаряд - заряд 1</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105mm_HE_VT_CH1_SHORT">
+            <English>M1 HE/VT Ch. 1</English>
+            <Czech>M1 HE/VT Ch. 1</Czech>
+            <Russian>105мм ОФ - заряд 1</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105mm_HE_VT_CH1_DESC">
+            <English>M1 High Explosive Proximity round used in 105mm howitzers such as the M3. This round is loaded with 1 propellant charge</English>
+            <Czech>M1 Tříštivý výstřel použitý v houfnicích jako M3. Tento výstřel je připravená s 1 paketom prachové náplně</Czech>
+            <Russian>M1 ОФ снаряд для гаубицы М3. У этого снаряда присутствует заряд 1</Russian>
+        </Key>
+
+        <Key ID="STR_WDC_ARTILLERY_105mm_HE_VT_CH2">
+            <English>M1 High Explosive Proximity Round - Charge 2</English>
+            <Czech>M1 HE/VT delostřelecká mina - Náplň 2</Czech>
+            <Russian>105мм ОФ снаряд - заряд 2</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105mm_HE_VT_CH2_SHORT">
+            <English>M1 HE/VT Ch. 2</English>
+            <Czech>M1 HE/VT Ch. 2</Czech>
+            <Russian>105мм ОФ - заряд 2</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105mm_HE_VT_CH2_DESC">
+            <English>M1 High Explosive Proximity Round used in 105mm howitzers such as the M3. This round is loaded with 2 propellant charges</English>
+            <Czech>105mm Tříštivý výstřel použitý v houfnicích jako M3. Tento výstřel je připravená s 2 paketami prachové náplně</Czech>
+            <Russian>105мм ОФ снаряд для гаубицы М3. У этого снаряда присутствует заряд 2</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105mm_HE_VT_CH3">
+            <English>M1 High Explosive Proximity Round - Charge 3</English>
+            <Czech>M1 HE/VT delostřelecká mina - Náplň 3</Czech>
+            <Russian>105мм ОФ снаряд - заряд 3</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105mm_HE_VT_CH3_SHORT">
+            <English>M1 HE/VT Ch. 3</English>
+            <Czech>M1 HE/VT Ch. 3</Czech>
+            <Russian>105мм ОФ - заряд 3</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105mm_HE_VT_CH3_DESC">
+            <English>M1 High Explosive Proximity Round used in 105mm howitzers such as the M3. This round is loaded with 3 propellant charges</English>
+            <Czech>105mm Tříštivý výstřel použitý v houfnicích jako M3. Tento výstřel je připravená s 3 paketami prachové náplně</Czech>
+            <Russian>105мм ОФ снаряд для гаубицы М3. У этого снаряда присутствует заряд 3</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105mm_HE_VT_CH4">
+            <English>M1 High Explosive Proximity Round - Charge 4</English>
+            <Czech>M1 HE/VT delostřelecká mina - Náplň 4</Czech>
+            <Russian>105мм ОФ снаряд - заряд 4</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105mm_HE_VT_CH4_SHORT">
+            <English>M1 HE/VT Ch. 4</English>
+            <Czech>M1 HE/VT Ch. 4</Czech>
+            <Russian>105мм ОФ - заряд 4</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105mm_HE_VT_CH4_DESC">
+            <English>M1 High Explosive Proximity Round used in 105mm howitzers such as the M3. This round is loaded with 4 propellant charges</English>
+            <Czech>105mm Tříštivý výstřel použitý v houfnicích jako M3. Tento výstřel je připravená s 4 paketami prachové náplně</Czech>
+            <Russian>105мм ОФ снаряд для гаубицы М3. У этого снаряда присутствует заряд 4</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105mm_HE_VT_CH5">
+            <English>M1 High Explosive Proximity Round - Charge 5</English>
+            <Czech>M1 HE/VT delostřelecká mina - Náplň 5</Czech>
+            <Russian>105мм ОФ снаряд - заряд 5</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105mm_HE_VT_CH5_SHORT">
+            <English>M1 HE/VT Ch. 5</English>
+            <Czech>M1 HE/VT Ch. 5</Czech>
+            <Russian>105мм ОФ - заряд 5</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105mm_HE_VT_CH5_DESC">
+            <English>M1 High Explosive Proximity Round used in 105mm howitzers such as the M3. This round is loaded with 5 propellant charges</English>
+            <Czech>105mm Tříštivý výstřel použitý v houfnicích jako M3. Tento výstřel je připravená s 5 paketami prachové náplně</Czech>
+            <Russian>105мм ОФ снаряд для гаубицы М3. У этого снаряда присутствует заряд 5</Russian>
+        </Key>
+        
+        <Key ID="STR_WDC_ARTILLERY_105mm_WP_CH1">
+            <English>M60 White Phosphorous Round - Charge 1</English>
+            <Czech>M60 WP delostřelecká mina - Náplň 1</Czech>
+            <Russian>M60 Дымовый снаряд - заряд 1</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105mm_WP_CH1_SHORT">
+            <English>M60 WP Ch. 1</English>
+            <Czech>M60 WP Ch. 1</Czech>
+            <Russian>M60 Дымовый - заряд 1</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105mm_WP_CH1_DESC">
+            <English>M60 White Phosphorous Round used in 105mm howitzers such as the M3. This round is loaded with 1 propellant charge</English>
+            <Czech>M60 WP Tříštivý výstřel použitý v houfnicích jako M3. Tento výstřel je připravená s 1 paketom prachové náplně</Czech>
+            <Russian>M60 Дымовый снаряд для гаубицы М3. У этого снаряда присутствует заряд 1</Russian>
+        </Key>
+
+        <Key ID="STR_WDC_ARTILLERY_105mm_WP_CH2">
+            <English>M60 White Phosphorous Round - Charge 2</English>
+            <Czech>M60 WP delostřelecká mina - Náplň 2</Czech>
+            <Russian>M60 Дымовый снаряд - заряд 2</Russian>
+            
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105mm_WP_CH2_SHORT">
+            <English>M60 WP Ch. 2</English>
+            <Czech>M60 WP Ch. 2</Czech>
+            <Russian>M60 Дымовый - заряд 2</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105mm_WP_CH2_DESC">
+            <English>M60 White Phosphorous Round used in 105mm howitzers such as the M3. This round is loaded with 2 propellant charges</English>
+            <Czech>M60 WP Tříštivý výstřel použitý v houfnicích jako M3. Tento výstřel je připravená s 2 paketami prachové náplně</Czech>
+            <Russian>M60 Дымовый снаряд для гаубицы М119. У этого снаряда присутствует заряд 2</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105mm_WP_CH3">
+            <English>M60 White Phosphorous Round - Charge 3</English>
+            <Czech>M60 WP delostřelecká mina - Náplň 3</Czech>
+            <Russian>M60 Дымовый снаряд - заряд 3</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105mm_WP_CH3_SHORT">
+            <English>M60 WP Ch. 3</English>
+            <Czech>M60 WP Ch. 3</Czech>
+            <Russian>M60 Дымовый - заряд 3</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105mm_WP_CH3_DESC">
+            <English>M60 White Phosphorous Round used in 105mm howitzers such as the M3. This round is loaded with 3 propellant charges</English>
+            <Czech>M60 WP Tříštivý výstřel použitý v houfnicích jako M3. Tento výstřel je připravená s 3 paketami prachové náplně</Czech>
+            <Russian>M60 Дымовый снаряд для гаубицы М119. У этого снаряда присутствует заряд 3</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105mm_WP_CH4">
+            <English>M60 White Phosphorous Round - Charge 4</English>
+            <Czech>M60 WP delostřelecká mina - Náplň 4</Czech>
+            <Russian>M60 Дымовый снаряд - заряд 4</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105mm_WP_CH4_SHORT">
+            <English>M60 WP Ch. 4</English>
+            <Czech>M60 WP Ch. 4</Czech>
+            <Russian>M60 Дымовый - заряд 4</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105mm_WP_CH4_DESC">
+            <English>M60 White Phosphorous Round used in 105mm howitzers such as the M3. This round is loaded with 4 propellant charges</English>
+            <Czech>M60 WP Tříštivý výstřel použitý v houfnicích jako M3. Tento výstřel je připravená s 4 paketami prachové náplně</Czech>
+            <Russian>M60 Дымовый снаряд для гаубицы М119. У этого снаряда присутствует заряд 4</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105mm_WP_CH5">
+            <English>M60 White Phosphorous Round - Charge 5</English>
+            <Czech>M60 WP delostřelecká mina - Náplň 5</Czech>
+            <Russian>M60 Дымовый снаряд - заряд 5</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105mm_WP_CH5_SHORT">
+            <English>M60 WP Ch. 5</English>
+            <Czech>M60 WP Ch. 5</Czech>
+            <Russian>M60 Дымовый - заряд 5</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105mm_WP_CH5_DESC">
+            <English>M60 White Phosphorous Round used in 105mm howitzers such as the M3. This round is loaded with 5 propellant charges</English>
+            <Czech>M60 WP Tříštivý výstřel použitý v houfnicích jako M3. Tento výstřel je připravená s 5 paketami prachové náplně</Czech>
+            <Russian>M60 Дымовый снаряд для гаубицы М119. У этого снаряда присутствует заряд 5</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105mm_BOX_HE">
+            <English>105mm M1 HE Box</English>
+            <Czech>105mm bedna s tříštivou municí</Czech>
+            <Russian>Ящик с ОФ 105мм зарядами и снарядами</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105mm_BOX_WP">
+            <English>105mm M60 WP box</English>
+            <Czech>105mm bedna s dymovou municí</Czech>
+            <Russian>Ящик с дымовыми 105мм зарядами и снарядами</Russian>
+        <Key ID="STR_WDC_ARTILLERY_105mm_CLOSE">
+            <English>Close</English>
+            <Czech>Zavřít</Czech>
+            <Russian>Закрыть</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105mm_OPEN">
+            <English>Open</English>
+            <Czech>Otevřít</Czech>
+            <Russian>Открыть</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105mm_TAKE_MINE_HE">
+            <English>Take M1 tube</English>
+            <Czech>Vzít tříštivou trubku</Czech>
+            <Russian>Взять ОФ тубус</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105mm_PUT_MINE_HE">
+            <English>Return M1 tube</English>
+            <Czech>Schovat třístivou</Czech>
+            <Russian>Вернуть ОФ тубус</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105mm_TAKE_MINE_WP">
+            <English>Take M60 tube</English>
+            <Czech>Vzít dýmovou trubku</Czech>
+            <Russian>Взять дымовый тубус</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105mm_PUT_MINE_WP">
+            <English>Return M60 tube</English>
+            <Czech>Schovat dýmovou</Czech>
+            <Russian>Вернуть дымовый тубус</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105mm_UNPACK">
+            <English>Unpack</English>
+            <Czech>Rozbalit</Czech>
+            <Russian>Распаковать</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105mm_PACK">
+            <English>Packing</English>
+            <Czech>Zabaluji</Czech>
+            <Russian>Упакую</Russian>
+        </Key>  
+        <Key ID="STR_WDC_ARTILLERY_105mm_PACK_1">
+            <English>Pack with Ch. 1</English>
+            <Czech>Zabalit s Ch. 1</Czech>
+            <Russian>Упаковать с зарядом 1</Russian>
+        </Key>        
+        <Key ID="STR_WDC_ARTILLERY_105mm_PACK_2">
+            <English>Pack with Ch. 2</English>
+            <Czech>Zabalit s Ch. 2</Czech>
+            <Russian>Упаковать с зарядом 2</Russian>
+        </Key>        
+        <Key ID="STR_WDC_ARTILLERY_105mm_PACK_3">
+            <English>Pack with Ch. 3</English>
+            <Czech>Zabalit s Ch. 3</Czech>
+            <Russian>Упаковать с зарядом 3</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105mm_PACK_5">
+            <English>Pack with Ch. 5</English>
+            <Czech>Zabalit s Ch. 5</Czech>
+            <Russian>Упаковать с зарядом 5</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105mm_PACK_4">
+            <English>Pack with Ch. 4</English>
+            <Czech>Zabalit s Ch. 4</Czech>
+            <Russian>Упаковать с зарядом 4</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105_casing_charge_1">
+            <English>105mm Casing, Charge 1</English>
+            <Czech>105mm nábojka, nálož 1</Czech>
+            <Russian>105мм гильза, заряд 1</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105_casing_charge_1_short">
+            <English>105mm Ch. 1</English>
+            <Czech>105mm Nál. 1</Czech>
+            <Russian>105мм заряд 1</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105_casing_charge_1_desc">
+            <English>105mm Casing with charge 1</English>
+            <Czech>105mm nábojka s náloží 1</Czech>
+            <Russian>105мм гильза с зарядом 1</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105_casing_charge_2">
+            <English>105mm Casing, Charge 2</English>
+            <Czech>105mm nábojka, nálož 2</Czech>
+            <Russian>105мм гильза, заряд 2</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105_casing_charge_2_short">
+            <English>105mm Ch. 2</English>
+            <Czech>105mm Nál. 2</Czech>
+            <Russian>105мм заряд 2</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105_casing_charge_2_desc">
+            <English>105mm Casing with charge 2</English>
+            <Czech>105mm nábojka s náloží 2</Czech>
+            <Russian>105мм гильза с зарядом 2</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105_casing_charge_3">
+            <English>105mm Casing, Charge 3</English>
+            <Czech>105mm nábojka, nálož 3</Czech>
+            <Russian>105мм гильза, заряд 3</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105_casing_charge_3_short">
+            <English>105mm Ch. 3</English>
+            <Czech>105mm Nál. 3</Czech>
+            <Russian>105мм заряд 3</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105_casing_charge_3_desc">
+            <English>105mm Casing with charge 3</English>
+            <Czech>105mm nábojka s náloží 3</Czech>
+            <Russian>105мм гильза с зарядом 3</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105_casing_charge_4">
+            <English>105mm Casing, Charge 4</English>
+            <Czech>105mm nábojka, nálož 4</Czech>
+            <Russian>105мм гильза, заряд 4</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105_casing_charge_4_short">
+            <English>105mm Ch. 4</English>
+            <Czech>105mm Nál. 4</Czech>
+            <Russian>105мм заряд 4</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105_casing_charge_4_desc">
+            <English>105mm Casing with charge 4</English>
+            <Czech>105mm nábojka s náloží 4</Czech>
+            <Russian>105мм гильза с зарядом 4</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105_casing_charge_5">
+            <English>105mm Casing, Charge 5</English>
+            <Czech>105mm nábojka, nálož 5</Czech>
+            <Russian>105мм гильза, заряд 5</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105_casing_charge_5_short">
+            <English>105mm Ch. 5</English>
+            <Czech>105mm Nál. 5</Czech>
+            <Russian>105мм заряд 5</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105_casing_charge_5_desc">
+            <English>105mm Casing with charge 5</English>
+            <Czech>105mm nábojka s náloží 5</Czech>
+            <Russian>105мм гильза с зарядом 5</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105mm_assemble_1">
+            <English>Assemble round, charge 1</English>
+            <Czech>Smontovat tříšťivou minu s nábojkou 1</Czech>
+            <Russian>Собрать ОФ снаряд с зарядом 1</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105mm_assemble_2">
+            <English>Assemble round, charge 2</English>
+            <Czech>Smontovat tříšťivou minu s nábojkou 2</Czech>
+            <Russian>Собрать ОФ снаряд с зарядом 2</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105mm_assemble_3">
+            <English>Assemble round, charge 3</English>
+            <Czech>Smontovat tříšťivou minu s nábojkou 3</Czech>
+            <Russian>Собрать ОФ снаряд с зарядом 3</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105mm_assemble_4">
+            <English>Assemble round, charge 4</English>
+            <Czech>Smontovat tříšťivou minu s nábojkou 4</Czech>
+            <Russian>Собрать ОФ снаряд с зарядом 4</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105mm_assemble_5">
+            <English>Assemble round, charge 5</English>
+            <Czech>Smontovat tříšťivou minu s nábojkou 5</Czech>
+            <Russian>Собрать ОФ снаряд с зарядом 5</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105mm_assemble">
+            <English>Assemble</English>
+            <Czech>Smontovat</Czech>
+            <Russian>Собрать</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105mm_assembling">
+            <English>Assembling</English>
+            <Czech>Montuji</Czech>
+            <Russian>Собираю</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105mm_disassemble">
+            <English>Disassemble</English>
+            <Czech>Rozmontovat</Czech>
+            <Russian>Разобрать</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105mm_disassembling">
+            <English>Disassembling</English>
+            <Czech>Rozmontovávám</Czech>
+            <Russian>Разбираю</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105mm_CHARGE_CHANGE_1">
+            <English>Set charge to 1</English>
+            <Czech>Změnit množství prachové náplně na 1</Czech>
+            <Russian>Настроить заряд 1</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105mm_CHARGE_CHANGE_2">
+            <English>Set charge to 2</English>
+            <Czech>Změnit množství prachové náplně na 2</Czech>
+            <Russian>Настроить заряд 2</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105mm_CHARGE_CHANGE_3">
+            <English>Set charge to 3</English>
+            <Czech>Změnit množství prachové náplně na 3</Czech>
+            <Russian>Настроить заряд 3</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105mm_CHARGE_CHANGE_4">
+            <English>Set charge to 4</English>
+            <Czech>Změnit množství prachové náplně na 4</Czech>
+            <Russian>Настроить заряд 4</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105mm_CHARGE_CHANGE_5">
+            <English>Set charge to 5</English>
+            <Czech>Změnit množství prachové náplně na 5</Czech>
+            <Russian>Настроить заряд 5</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105mm_CHARGE_CHANGE">
+            <English>Changing charges</English>
+            <Czech>Měním střelný prach</Czech>
+            <Russian>Меняю заряд</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105mm_NAME">
+            <English>M3</English>
+            <Czech>M3</Czech>
+            <Russian>М3</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105mm_LOAD">
+            <English>Load</English>
+            <Czech>Nabít</Czech>
+            <Russian>Зарядить</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105mm_UNLOAD">
+            <English>Unload</English>
+            <Czech>Vybít</Czech>
+            <Russian>Разрядить</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105mm_HE_CHARGE_1">
+            <English>HE/PD Charge 1</English>
+            <Czech>Tříštivá nálož 1</Czech>
+            <Russian>ОФ заряд 1</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105mm_HE_CHARGE_2">
+            <English>HE/PD Charge 2</English>
+            <Czech>Tříštivá nálož 2</Czech>
+            <Russian>ОФ заряд 2</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105mm_HE_CHARGE_3">
+            <English>HE/PD Charge 3</English>
+            <Czech>Tříštivá nálož 3</Czech>
+            <Russian>ОФ заряд 3</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105mm_HE_CHARGE_4">
+            <English>HE/PD Charge 4</English>
+            <Czech>Tříštivá nálož 4</Czech>
+            <Russian>ОФ заряд 4</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105mm_HE_CHARGE_5">
+            <English>HE/PD Charge 5</English>
+            <Czech>Tříštivá nálož 5</Czech>
+            <Russian>ОФ заряд 5</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105mm_HE_CHARGE_SHORT">
+            <English>M1/PD HE</English>
+            <Czech>M1/PD HE</Czech>
+            <Russian>M1/PD ОФ</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105mm_HE_CHARGE_DESC">
+            <English>M1/PD HE shell used in the M3</English>
+            <Czech>M1/PD výstřel použit v M3</Czech>
+            <Russian>M1/PD снаряд для M3</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105mm_HE_VT_CHARGE_1">
+            <English>HE/VT Charge 1</English>
+            <Czech>Tříštivá nálož 1</Czech>
+            <Russian>ОФ заряд 1</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105mm_HE_VT_CHARGE_2">
+            <English>HE/VT Charge 2</English>
+            <Czech>Tříštivá nálož 2</Czech>
+            <Russian>ОФ заряд 2</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105mm_HE_VT_CHARGE_3">
+            <English>HE/VT Charge 3</English>
+            <Czech>Tříštivá nálož 3</Czech>
+            <Russian>ОФ заряд 3</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105mm_HE_VT_CHARGE_4">
+            <English>HE/VT Charge 4</English>
+            <Czech>Tříštivá nálož 4</Czech>
+            <Russian>ОФ заряд 4</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105mm_HE_VT_CHARGE_5">
+            <English>HE/VT Charge 5</English>
+            <Czech>Tříštivá nálož 5</Czech>
+            <Russian>ОФ заряд 5</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105mm_HE_VT_CHARGE_SHORT">
+            <English>M1/VT HE</English>
+            <Czech>M1/VT HE</Czech>
+            <Russian>M1/VT ОФ</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105mm_HE_VT_CHARGE_DESC">
+            <English>M1/VT HE shell used in the M3</English>
+            <Czech>M1/VT výstřel použit v M3</Czech>
+            <Russian>M1/VT снаряд для M3</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105mm_HEAT">
+            <English>M67 HEAT</English>
+            <Czech>M67 HEAT</Czech>
+            <Russian>M67 HEAT</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105mm_HEAT_SHORT">
+            <English>HEAT</English>
+            <Czech>HEAT</Czech>
+            <Russian>HEAT</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105mm_HEAT_DESC">
+            <English>M67 HEAT shell used in the M3</English>
+            <Czech>M67 HEAT výstřel použit v M3</Czech>
+            <Russian>M67 HEAT снаряд для M3</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105mm_WP_CHARGE_1">
+            <English>WP Charge 1</English>
+            <Czech>Tříštivá nálož 1</Czech>
+            <Russian>Дымовый заряд 1</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105mm_WP_CHARGE_2">
+            <English>WP Charge 2</English>
+            <Czech>Tříštivá nálož 2</Czech>
+            <Russian>Дымовый заряд 2</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105mm_WP_CHARGE_3">
+            <English>WP Charge 3</English>
+            <Czech>Tříštivá nálož 3</Czech>
+            <Russian>Дымовый заряд 3</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105mm_WP_CHARGE_4">
+            <English>WP Charge 4</English>
+            <Czech>Tříštivá nálož 4</Czech>
+            <Russian>Дымовый заряд 4</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105mm_WP_CHARGE_5">
+            <English>WP Charge 5</English>
+            <Czech>Tříštivá nálož 5</Czech>
+            <Russian>Дымовый заряд 5</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105mm_WP_CHARGE_SHORT">
+            <English>M60 WP</English>
+            <Czech>M60 WP</Czech>
+            <Russian>M60 дымовый</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105mm_WP_CHARGE_DESC">
+            <English>M60 WP shell used in the M3</English>
+            <Czech>M60 výstřel použit v M3</Czech>
+            <Russian>M60 снаряд для M3</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105mm_TIME_TO_CLUSTER">
+            <English>Time in seconds after which the shell dispenses submunition</English>
+            <Czech>Čas v sekundách po kterém střela vypustí submunici</Czech>
+            <Russian>Время после пуска после которого кассета выбросит БК</Russian>
+        </Key>
+        <Key ID="STR_WDC_ARTILLERY_105mm_SET_TIMER">
+            <English>Set timer</English>
+            <Czech>Nastavit časovač</Czech>
+            <Russian>Установить таймер</Russian>
+        </Key>
+        </Key>
+    </Package>
+</Project>

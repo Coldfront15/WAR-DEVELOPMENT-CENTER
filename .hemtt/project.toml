@@ -6,12 +6,19 @@ mainprefix = "x"
 [hemtt.build]
 pdrive = "require"
 
+
 [hemtt.launch.default]
 workshop = [
-    "450814997", # CBA_A3's Workshop ID
-    "463939057", # ACE Workshop ID
+    "450814997", # CBA_A3
+    "463939057", # ACE
+    "2369477168", # Advanced Developer Tools 
+    "3058335345", # TBD Mortars
     "3119699935", # SIMC LCD
+    "1341387001",
+    "1862880106",
+    "3233638297", # m119
 ]
+
 dlc = [
     "Spearhead 1944",
 ]

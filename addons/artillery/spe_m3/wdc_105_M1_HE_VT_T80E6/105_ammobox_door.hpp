@@ -1,0 +1,7 @@
+#include "cover_source\105_ammobox_door_mFront_strap.hpp"
+#include "cover_source\105_ammobox_door_lFront_strap.hpp"
+#include "cover_source\105_ammobox_door_rFront_strap.hpp"
+#include "cover_source\105_ammobox_door_mRear_strap.hpp"
+#include "cover_source\105_ammobox_door_lRear_strap.hpp"
+#include "cover_source\105_ammobox_door_rRear_strap.hpp"
+#include "cover_source\105_ammobox_door_door_1.hpp"

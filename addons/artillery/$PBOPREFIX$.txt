@@ -1,0 +1,2 @@
+
+prefix=x\wdc\addons\artillery
