@@ -9,7 +9,6 @@ class CfgPatches {
         requiredVersion = REQUIRED_VERSION;
 		requiredAddons[] = {"cba_main","ace_interact_menu","tbd_mortars_main","ww2_spe_assets_c_vehicles_staticweapons_u1_c"};
 		author = "Coldfront15";
-		skipWhenMissingDependencies = 1;
         VERSION_CONFIG;
     };
 };
