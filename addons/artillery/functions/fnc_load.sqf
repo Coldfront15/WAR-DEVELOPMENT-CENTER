@@ -60,7 +60,7 @@ switch (_shell) do {
 private _veh = nearestObjects [player, [_shell], 3];
 {
 	if (typeOf _x == _shell) exitWith {
-		if (_x isKindOf QUOTE(TBD_MORTARS_105mm_ROUND_DPICM_CHARGE_1)) then {
+		if (_x isKindOf QUOTE(wdc_artillery_SPE_M3_M1_HE_CHARGE_1)) then {
 			private _timer = _x getVariable ["tbd_mortars_105mm_dpicm_fuse_timer", 99999];
 			_arty setVariable [QGVAR(DPICM_FUSE_TIMER), _timer, true];
 		};

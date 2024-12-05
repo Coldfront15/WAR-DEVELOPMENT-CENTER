@@ -11,7 +11,7 @@ PREP(load);
 PREP(unload);
 PREP(projectileHeightCheck);
 PREP(handleLGShell);
-PREP(canCLose);
+PREP(canClose);
 PREP(canOpen);
 PREP(open);
 PREP(close);

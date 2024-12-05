@@ -52,7 +52,7 @@ class CfgVehicles {
         };
         class AnimationSources: AnimationSources 
         {
-            class recoil_source: recoil_source {};
+            class recoil_source;
         };
         class ACE_Actions: ACE_Actions {
             class ACE_MainActions;
@@ -69,7 +69,7 @@ class CfgVehicles {
         };
         class AnimationSources: AnimationSources 
         {
-            class recoil_source: recoil_source {};
+            class recoil_source;
         };
         class ACE_Actions: ACE_Actions {
             class ACE_MainActions;
@@ -144,21 +144,42 @@ class CfgVehicles {
         {
 			class recoil_source: recoil_source
 			{   
-                source = "reload";
+                source = "user";
 				weapon = "wdc_M3_WEAPON";
+                initPhase = 0;
+                animPeriod = 1;
+            
+                forceAnimatePhase1 = 0;
+                forceAnimate[] = { 
+                    "recoil", 1,
+                    "cannon_muzzle_flash", 1,
+                    "breech_open", 0.94,
+                    "firing_handle", 1,
+                    "shock", 1,
+                    "wheel_1_1_shock", 1, 
+                    "wheel_2_1_shock", 1 };
+
+                forceAnimatePhase2 = 0;
+                forceAnimate2[] = { 
+                    "recoil", 0,
+                    "cannon_muzzle_flash", 0,
+                    "breech_open", 0,
+                    "firing_handle", 0,
+                    "shock", 0,
+                    "wheel_1_1_shock", 0, 
+                    "wheel_2_1_shock", 0 };
 			};
-			class muzzle_rot_cannon: muzzle_rot_cannon
+			class muzzle_rot_cannon
 			{
 				source = "user";
                 initPhase = 0;
                 animPeriod = 1;
 			};
-			class SPE_M3_105mm_reload_weapon_state: SPE_M3_105mm_reload_weapon_state
+			class SPE_M3_105mm_reload_weapon_state
 			{
 				source = "user";
                 initPhase = 0;
                 animPeriod = 1;
-                sound = "close";
 			};
 			class SPE_M3_105mm_reload_magazine_state: SPE_M3_105mm_reload_weapon_state
 			{
@@ -471,6 +492,12 @@ class CfgVehicles {
                     displayName = CSTRING(105mm_disassemble);
                     condition = "true";
                     statement = QUOTE([ARR_1(_target)] call FUNC(disassemble));
+                    distance = 2;
+                };
+                class wdc_artillery_SetTimer {
+                    displayName = "Set Timer";
+                    condition = "true";
+                    statement = QUOTE(GVAR(shell) = _target; createDialog QUOTE(QUOTE(RscTBDTimer)));
                     distance = 2;
                 };
             };

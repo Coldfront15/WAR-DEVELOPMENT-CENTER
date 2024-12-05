@@ -33,6 +33,9 @@ _arty setVariable [QGVAR(fired), false, true];
 
 _arty animate ["breech_open_bullet_hide", 0.2];
 
+_arty setOwner 2;
+diag_log format ["[DEBUG] Ownership transferred to server via initArty for %1", _arty];
+
 _arty enableRopeAttach true;
 
 _arty addAction [

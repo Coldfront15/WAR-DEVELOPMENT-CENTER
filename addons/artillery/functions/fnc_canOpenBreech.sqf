@@ -28,6 +28,5 @@
 
 params ["_arty"];
 
-private _ret = (!(_arty getVariable [QGVAR(breech), false]) && 
-_arty animationPhase "breech_close_reload" == 0 );
+private _ret = (!(_arty getVariable [QGVAR(breech), false]));
 _ret

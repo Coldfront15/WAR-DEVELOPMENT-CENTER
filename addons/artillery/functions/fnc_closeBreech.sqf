@@ -29,7 +29,6 @@ params ["_arty"];
 
 if !([_arty] call FUNC(canCloseBreech)) exitWith {};
 
-_arty animate ["breech_lever_close_reload", 0];
-_arty animate ["breech_close_reload", 0];
-
+_arty animateSource ["SPE_M3_105mm_reload_magazine_state", 0];
+playSound3D [QPATHTOF(SPE_M3\sounds\close.ogg), _arty];
 _arty setVariable [QGVAR(breech), false, true];
