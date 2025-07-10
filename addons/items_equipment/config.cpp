@@ -16,6 +16,57 @@ class CfgPatches {
 };
 
 #include "CfgEventHandlers.hpp"
+class CfgAmmo
+{
+	
+	class BombCore;
+	class SPE_Bomb_base: BombCore {};
+	class SPE_US_500lb_Bomb: SPE_Bomb_base {};
+	class SPE_M47_Bomb_WP: SPE_US_500lb_Bomb
+	{
+		SPE_Fire_Range = 15;
+		SPE_Fire_BurnTime= 10;
+		class EventHandlers
+		{
+			class WDC_Fire
+			{
+				init = "_this call wdc_medical_equipment_fnc_WPFire";
+			};
+		};
+	};
+	class GrenadeHand;
+	class SPE_GrenadeHand_base: GrenadeHand {};
+	class SPE_US_M15: SPE_GrenadeHand_base
+	{
+		ACE_damageType = "ace_compat_spe_explosive_wp";
+		ace_grenades_incendiary = 1;
+		SPE_Fire_Range = 3;
+		SPE_Fire_BurnTime= 3;
+		class EventHandlers
+		{
+			class WDC_Fire
+			{
+				init = "_this call wdc_medical_equipment_fnc_WPFire";
+			};
+		};
+	};
+	class ShellCore;
+	class ShellBase: ShellCore {};
+	class SPE_ShellHE_base : ShellBase {};
+	class SPE_M48_HE: SPE_ShellHE_base {};	
+	class SPE_M64_WP: SPE_M48_HE
+	{
+		SPE_Fire_Range = 6;
+		SPE_Fire_BurnTime= 6;
+		class EventHandlers
+		{
+			class WDC_Fire
+			{
+				init = "_this call wdc_medical_equipment_fnc_WPFire";
+			};
+		};
+	};
+};
 
 class CfgWeapons
 {

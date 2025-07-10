@@ -24,6 +24,7 @@ class CfgPatches {
 
 #include "CfgEventHandlers.hpp"
 #include "CfgReplacementItems.hpp"
+#include "ACE_Medical_Injuries.hpp"
 
 class CfgWeapons
 {

@@ -15,5 +15,6 @@ class CfgPatches {
 };
 
 #include "CfgMagazineGroups.hpp"
+#include "CfgAmmo.hpp"
 #include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"

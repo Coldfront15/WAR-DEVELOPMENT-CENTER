@@ -2,112 +2,187 @@
 
 #define US_321_NCO_molohon "x\wdc\addons\helmets\US_Airborne\US_Pot_321_NCO_molohon.rvmat"
 
-	//nco
-	class H_SPE_US_AB_Helmet_321_NCO_molohon : H_SPE_US_AB_Helmet_321
+	class H_SPE_US_AB_Helmet_321_NCO_Molohon: H_SPE_US_AB_Helmet_321_NCO
 	{
-		author = "Heavy Ordnance Works";//"AWAR & IFA3 Team"
+		author = "Heavy Ordnance Works";
 		dlc = "SPE";
-		displayName = "US AB Helmet, M2 321st (Molohon, NCO)";
-		hiddenSelectionsTextures[] = {HELMET_ALT,"","","","",""};
+		displayName = "US M2 321GFAB NCO (Molohon, Close)";
+		hiddenSelectionsMaterials[] = {US_321_NCO_molohon,"","","","",""}; 
+		picture = "\WW2\SPE_Assets_t\Characters\Pictures_t\Clothing\Headgear\H_US_AB_Helmet_NCO_ca.paa";
+		class ItemInfo: ItemInfo
+		{
+			uniformmodel = "\simc_lcd_42\lcd_us_helmet_m2_cs.p3d";
+		};
+	};
+	class H_SPE_US_AB_Helmet_321_NCO_ns_Molohon: H_SPE_US_AB_Helmet_321_NCO_ns
+	{
+		author = "Heavy Ordnance Works";
+		dlc = "SPE";
+		displayName = "US M2 321GFAB NCO (Molohon, Open)";
+		hiddenSelectionsMaterials[] = {US_321_NCO_molohon,"","","","",""};
+		picture = "\WW2\SPE_Assets_t\Characters\Pictures_t\Clothing\Headgear\H_US_AB_Helmet_NCO_ns_ca.paa";
+		class ItemInfo: ItemInfo
+		{
+			uniformmodel = "\simc_lcd_42\lcd_us_helmet_m2_OS.p3d";
+			hiddenSelections[] = {"camo","band","jokes","liner","liner_erla"};
+		};
+	};
+	class H_SPE_US_AB_Helmet_321_NCO_net_Molohon: H_SPE_US_AB_Helmet_321_NCO_net
+	{
+		author = "Motta + Ethridge";//"AWAR & IFA3 Team"
+		dlc = "SPE";
+		displayName = "US M2 321GFAB NCO Net 1/2 (Molohon, Open)";
 		hiddenSelectionsMaterials[] = {US_321_NCO_molohon,"",""};
-		picture = "\WW2\SPE_Assets_t\Characters\Pictures_t\Clothing\Headgear\H_US_AB_Helmet_502_NCO_ca.paa";
-		//Model = "\WW2\SPE_Assets_m\Characters\Americans_U1_m\US_Airborne\SPE_US_Airborne_Helmet_NS.p3d";
+		picture = "\WW2\SPE_Assets_t\Characters\Pictures_t\Clothing\Headgear\H_US_Helmet_NCO_net_ca.paa";
 		class ItemInfo: ItemInfo
 		{
-			uniformModel = "\WW2\SPE_Assets_m\Characters\Americans_U1_m\US_Airborne\SPE_US_Airborne_Helmet_NS.p3d";
+			uniformModel = "\simc_lcd_42\lcd_us_helmet_m2_net_os_3.p3d";
+			hiddenSelections[] = {"camo","camo0","camo1","pfak"};
 		};
 	};
-	class H_SPE_US_AB_Helmet_321_NCO_ns_molohon: H_SPE_US_AB_Helmet_321_NCO_molohon
+	class H_SPE_US_AB_Helmet_321_NCO_net_ns_Molohon: H_SPE_US_AB_Helmet_321_NCO_net_ns
 	{
-		author = "Heavy Ordnance Works";//"AWAR & IFA3 Team"
+		author = "Motta + Ethridge";//"AWAR & IFA3 Team"
 		dlc = "SPE";
-		displayName = "US AB Helmet, M2 321st (Molohon, NCO, Opened)";
-		hiddenSelectionsTextures[] = {HELMET_DUNKEL,"","","","",""};
-		picture = "\WW2\SPE_Assets_t\Characters\Pictures_t\Clothing\Headgear\H_US_AB_Helmet_502_NCO_ns_ca.paa";
-		//Model = "\WW2\SPE_Assets_m\Characters\Americans_U1_m\US_Airborne\SPE_US_Airborne_Helmet_OS.p3d";
+		displayName = "US M2 321GFAB NCO Net 1/2 (Molohon, Fold)";
+		hiddenSelectionsMaterials[] = {US_321_NCO_molohon,"",""};
+		picture = "\WW2\SPE_Assets_t\Characters\Pictures_t\Clothing\Headgear\H_US_Helmet_NCO_net_ca.paa";
 		class ItemInfo: ItemInfo
 		{
-			uniformModel = "\WW2\SPE_Assets_m\Characters\Americans_U1_m\US_Airborne\SPE_US_Airborne_Helmet_OS.p3d";
+			uniformModel = "\simc_lcd_42\lcd_us_helmet_m2_net_ns_4.p3d";
+			hiddenSelections[] = {"camo","camo0","camo1","pfak","jokes"};
 		};
 	};
-	class H_SPE_US_AB_Helmet_321_NCO_Net_molohon: H_SPE_US_AB_Helmet_321_NCO_molohon
+	class H_SPE_US_AB_Helmet_321_NCO_Scrim_Molohon: H_SPE_US_AB_Helmet_321_NCO_Scrim
 	{
-		author = "Heavy Ordnance Works";//"AWAR & IFA3 Team"
+		author = "Motta + Ethridge";//"AWAR & IFA3 Team"
 		dlc = "SPE";
-		displayName = "US AB Helmet, M2 321st (Molohon, Net, NCO)";
-		hiddenSelectionsTextures[] = {HELMET_DUNKEL,NET,"","","",""};
-		picture = "\WW2\SPE_Assets_t\Characters\Pictures_t\Clothing\Headgear\H_US_AB_Helmet_502_NCO_Net_ca.paa";
-		//Model = "\WW2\SPE_Assets_m\Characters\Americans_U1_m\US_Airborne\SPE_US_Airborne_Helmet_CS_2.p3d";
+		displayName = "US M2 321GFAB NCO Scrim 1/2 (Molohon, Open)";
+		hiddenSelectionsMaterials[] = {US_321_NCO_molohon,"",MTL_SALAD,""};
+		picture = "\WW2\SPE_Assets_t\Characters\Pictures_t\Clothing\Headgear\H_US_Helmet_NCO_Scrim_ca.paa";
 		class ItemInfo: ItemInfo
 		{
-			uniformModel = "\WW2\SPE_Assets_m\Characters\Americans_U1_m\US_Airborne\SPE_US_Airborne_Helmet_CS_2.p3d";
+			uniformModel = "\simc_lcd_42\lcd_us_helmet_m2_net_os_3.p3d";
 		};
 	};
-	class H_SPE_US_AB_Helmet_321_NCO_Net_ns_molohon: H_SPE_US_AB_Helmet_321_NCO_molohon
+	class H_SPE_US_AB_Helmet_321_NCO_Scrim_ns_Molohon: H_SPE_US_AB_Helmet_321_NCO_Scrim_ns
 	{
-		author = "Heavy Ordnance Works";//"AWAR & IFA3 Team"
+		author = "Motta + Ethridge";//"AWAR & IFA3 Team"
 		dlc = "SPE";
-		displayName = "US AB Helmet, M2 321st (Molohon, Net, NCO, Opened)";
-		hiddenSelectionsTextures[] = {HELMET,NET,"","","",""};
-		picture = "\WW2\SPE_Assets_t\Characters\Pictures_t\Clothing\Headgear\H_US_AB_Helmet_502_NCO_Net_ns_ca.paa";
-		//Model = "\WW2\SPE_Assets_m\Characters\Americans_U1_m\US_Airborne\SPE_US_Airborne_Helmet_OS_2.p3d";
+		displayName = "US M2 321GFAB NCO Scrim 1/2 (Molohon, Fold)";
+		hiddenSelectionsMaterials[] = {US_321_NCO_molohon,"",MTL_SALAD,""};
+		picture = "\WW2\SPE_Assets_t\Characters\Pictures_t\Clothing\Headgear\H_US_Helmet_NCO_Scrim_ca.paa";
 		class ItemInfo: ItemInfo
 		{
-			uniformModel = "\WW2\SPE_Assets_m\Characters\Americans_U1_m\US_Airborne\SPE_US_Airborne_Helmet_OS_2.p3d";
+			uniformModel = "\simc_lcd_42\lcd_us_helmet_m2_net_ns_4.p3d";
+			hiddenSelections[] = {"camo","camo0","camo1","pfak","jokes"};
+		};
+	};
+
+	// Late War 1/4" Net
+
+	class H_SPE_US_AB_Helmet_321_NCO_net4_Molohon: H_SPE_US_AB_Helmet_321_NCO_net4
+	{
+		author = "Motta + Ethridge";//"AWAR & IFA3 Team"
+		dlc = "SPE";
+		displayName = "US M2 321GFAB NCO Net 1/4 (Molohon, Open)";
+		hiddenSelectionsMaterials[] = {US_321_NCO_molohon,"",""};
+		picture = "\WW2\SPE_Assets_t\Characters\Pictures_t\Clothing\Headgear\H_US_Helmet_NCO_net_ca.paa";
+		class ItemInfo: ItemInfo
+		{
+			uniformModel = "\simc_lcd_42\lcd_us_helmet_m2_net_os_3.p3d";
+		};
+	};
+	class H_SPE_US_AB_Helmet_321_NCO_net4_ns_Molohon: H_SPE_US_AB_Helmet_321_NCO_net4_ns
+	{
+		author = "Motta + Ethridge";//"AWAR & IFA3 Team"
+		dlc = "SPE";
+		displayName = "US M2 321GFAB NCO Net 1/4 (Molohon, Fold)";
+		hiddenSelectionsMaterials[] = {US_321_NCO_molohon,"",""};
+		picture = "\WW2\SPE_Assets_t\Characters\Pictures_t\Clothing\Headgear\H_US_Helmet_NCO_net_ca.paa";
+		class ItemInfo: ItemInfo
+		{
+			uniformModel = "\simc_lcd_42\lcd_us_helmet_m2_net_ns_4.p3d";
+			hiddenSelections[] = {"camo","camo0","camo1","pfak","jokes"};
+		};
+	};
+	class H_SPE_US_AB_Helmet_321_NCO_Scrim4_Molohon: H_SPE_US_AB_Helmet_321_NCO_Scrim4
+	{
+		author = "Motta + Ethridge";//"AWAR & IFA3 Team"
+		dlc = "SPE";
+		displayName = "US M2 321GFAB NCO Scrim 1/4 (Molohon, Open)";
+		hiddenSelectionsMaterials[] = {US_321_NCO_molohon,"",MTL_SALAD,""};
+		picture = "\WW2\SPE_Assets_t\Characters\Pictures_t\Clothing\Headgear\H_US_Helmet_NCO_scrim_ca.paa";
+		class ItemInfo: ItemInfo
+		{
+			uniformModel = "\simc_lcd_42\lcd_us_helmet_m2_net_os_3.p3d";
+			hiddenSelections[] = {"camo","camo0","camo1","pfak"};
+		};
+	};
+	class H_SPE_US_AB_Helmet_321_NCO_Scrim4_ns_Molohon: H_SPE_US_AB_Helmet_321_NCO_Scrim4_ns
+	{
+		author = "Motta + Ethridge";//"AWAR & IFA3 Team"
+		dlc = "SPE";
+		displayName = "US M2 321GFAB NCO Scrim 1/4 (Molohon, Fold)";
+		hiddenSelectionsMaterials[] = {US_321_NCO_molohon,"",MTL_SALAD,""};
+		picture = "\WW2\SPE_Assets_t\Characters\Pictures_t\Clothing\Headgear\H_US_Helmet_NCO_scrim_ca.paa";
+		class ItemInfo: ItemInfo
+		{
+			uniformModel = "\simc_lcd_42\lcd_us_helmet_m2_net_ns_4.p3d";
+			hiddenSelections[] = {"camo","camo0","camo1","pfak","jokes"};
+		};
+	};
+
+	//Late War PFAK
+
+	class H_SPE_US_AB_Helmet_321_NCO_PFAK_Molohon: H_SPE_US_AB_Helmet_321_NCO_PFAK
+	{
+		author = "Motta + Ethridge";//"AWAR & IFA3 Team"
+		dlc = "SPE";
+		displayName = "US M2 321GFAB NCO PFAK (Molohon, Open)";
+		hiddenSelectionsMaterials[] = {US_321_NCO_molohon,"",""};
+		picture = "\WW2\SPE_Assets_t\Characters\Pictures_t\Clothing\Headgear\H_US_Helmet_NCO_net_ca.paa";
+		class ItemInfo: ItemInfo
+		{
+			uniformModel = "\simc_lcd_42\lcd_us_helmet_m2_net_os_3.p3d";
+		};
+	};
+	class H_SPE_US_AB_Helmet_321_NCO_PFAK_ns_Molohon: H_SPE_US_AB_Helmet_321_NCO_PFAK_ns
+	{
+		author = "Motta + Ethridge";//"AWAR & IFA3 Team"
+		dlc = "SPE";
+		displayName = "US M2 321GFAB NCO PFAK (Molohon, Fold)";
+		hiddenSelectionsMaterials[] = {US_321_NCO_molohon,"",""};
+		picture = "\WW2\SPE_Assets_t\Characters\Pictures_t\Clothing\Headgear\H_US_Helmet_NCO_net_ca.paa";
+		class ItemInfo: ItemInfo
+		{
+			uniformModel = "\simc_lcd_42\lcd_us_helmet_m2_net_ns_4.p3d";
+			hiddenSelections[] = {"camo","camo0","camo1","jokes"};
+		};
+	};
+	class H_SPE_US_AB_Helmet_321_NCO_PFAK_Scrim_Molohon: H_SPE_US_AB_Helmet_321_NCO_PFAK_Scrim
+	{
+		author = "Motta + Ethridge";//"AWAR & IFA3 Team"
+		dlc = "SPE";
+		displayName = "US M2 321GFAB NCO Scrim PFAK (Molohon, Open)";
+		hiddenSelectionsMaterials[] = {US_321_NCO_molohon,"",MTL_SALAD,""};
+		picture = "\WW2\SPE_Assets_t\Characters\Pictures_t\Clothing\Headgear\H_US_Helmet_NCO_scrim_ca.paa";
+		class ItemInfo: ItemInfo
+		{
+			uniformModel = "\simc_lcd_42\lcd_us_helmet_m2_net_os_3.p3d";
 			hiddenSelections[] = {"camo","camo0","camo1"};
 		};
 	};
-	class H_SPE_US_AB_Helmet_321_NCO_ShrimpNet_molohon: H_SPE_US_AB_Helmet_321_NCO_molohon
+	class H_SPE_US_AB_Helmet_321_NCO_PFAK_Scrim_ns_Molohon: H_SPE_US_AB_Helmet_321_NCO_PFAK_Scrim_ns
 	{
-		author = "Heavy Ordnance Works";//"AWAR & IFA3 Team"
+		author = "Motta + Ethridge";//"AWAR & IFA3 Team"
 		dlc = "SPE";
-		displayName = "US AB Helmet, M2 321st (Molohon, 1/4 Net, NCO)";
-		hiddenSelectionsTextures[] = {HELMET_DUNKEL,NET_MOTTA,"","","",""};
-		picture = "\WW2\SPE_Assets_t\Characters\Pictures_t\Clothing\Headgear\H_US_AB_Helmet_502_NCO_Net_ca.paa";
-		//Model = "\WW2\SPE_Assets_m\Characters\Americans_U1_m\US_Airborne\SPE_US_Airborne_Helmet_CS_2.p3d";
+		displayName = "US M2 321GFAB NCO Scrim PFAK (Molohon, Fold)";
+		hiddenSelectionsMaterials[] = {US_321_NCO_molohon,"",MTL_SALAD,""};
+		picture = "\WW2\SPE_Assets_t\Characters\Pictures_t\Clothing\Headgear\H_US_Helmet_NCO_scrim_ca.paa";
 		class ItemInfo: ItemInfo
 		{
-			uniformModel = "\WW2\SPE_Assets_m\Characters\Americans_U1_m\US_Airborne\SPE_US_Airborne_Helmet_CS_2.p3d";
-		};
-	};
-	class H_SPE_US_AB_Helmet_321_NCO_ShrimpNet_ns_molohon: H_SPE_US_AB_Helmet_321_NCO_molohon
-	{
-		author = "Heavy Ordnance Works";//"AWAR & IFA3 Team"
-		dlc = "SPE";
-		displayName = "US AB Helmet, M2 321st (Molohon, 1/4 Net, NCO, Opened)";
-		hiddenSelectionsTextures[] = {HELMET,NET_MOTTA,"","","",""};
-		picture = "\WW2\SPE_Assets_t\Characters\Pictures_t\Clothing\Headgear\H_US_AB_Helmet_502_NCO_Net_ns_ca.paa";
-		//Model = "\WW2\SPE_Assets_m\Characters\Americans_U1_m\US_Airborne\SPE_US_Airborne_Helmet_OS_2.p3d";
-		class ItemInfo: ItemInfo
-		{
-			uniformModel = "\WW2\SPE_Assets_m\Characters\Americans_U1_m\US_Airborne\SPE_US_Airborne_Helmet_OS_2.p3d";
-			hiddenSelections[] = {"camo","camo0","camo1"};
-		};
-	};
-	class H_SPE_US_AB_Helmet_321_NCO_Scrim_molohon: H_SPE_US_AB_Helmet_321_NCO_molohon
-	{
-		author = "Heavy Ordnance Works";//"AWAR & IFA3 Team"
-		dlc = "SPE";
-		displayName = "US AB Helmet, M2 321st (Molohon, Scrim, NCO)";
-		hiddenSelectionsTextures[] = {HELMET_DUNKEL,SALAD,SALAD,"","",""};
-		picture = "\WW2\SPE_Assets_t\Characters\Pictures_t\Clothing\Headgear\H_US_AB_Helmet_502_NCO_Scrim_ca.paa";
-		//Model = "\WW2\SPE_Assets_m\Characters\Americans_U1_m\US_Airborne\SPE_US_Airborne_Helmet_CS_2.p3d";
-		class ItemInfo: ItemInfo
-		{
-			uniformModel = "\WW2\SPE_Assets_m\Characters\Americans_U1_m\US_Airborne\SPE_US_Airborne_Helmet_CS_2.p3d";
-		};
-	};
-	class H_SPE_US_AB_Helmet_321_NCO_Scrim_ns_molohon: H_SPE_US_AB_Helmet_321_NCO_Scrim
-	{
-		author = "Heavy Ordnance Works";//"AWAR & IFA3 Team"
-		dlc = "SPE";
-		displayName = "US AB Helmet, M2 321st (Molohon, Scrim, NCO, Opened)";
-		hiddenSelectionsTextures[] = {HELMET,SALAD,SALAD,"","",""};
-		picture = "\WW2\SPE_Assets_t\Characters\Pictures_t\Clothing\Headgear\H_US_AB_Helmet_502_NCO_Scrim_ns_ca.paa";
-		//Model = "\WW2\SPE_Assets_m\Characters\Americans_U1_m\US_Airborne\SPE_US_Airborne_Helmet_NS_2.p3d";
-		class ItemInfo: ItemInfo
-		{
-			uniformModel = "\WW2\SPE_Assets_m\Characters\Americans_U1_m\US_Airborne\SPE_US_Airborne_Helmet_NS_2.p3d";
-			hiddenSelections[] = {"camo","camo0","camo1","joke"};
+			uniformModel = "\simc_lcd_42\lcd_us_helmet_m2_net_ns_4.p3d";
+			hiddenSelections[] = {"camo","camo0","camo1","jokes"};
 		};
 	};

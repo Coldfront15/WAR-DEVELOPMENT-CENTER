@@ -1,3 +1,5 @@
 PREP(ammoniaInhalant);
 PREP(ammoniaInhalantLocal);
-PREP(LOCChecker)
+PREP(LOCChecker);
+PREP(woundsHandlerWP);
+PREP(WPFire);
