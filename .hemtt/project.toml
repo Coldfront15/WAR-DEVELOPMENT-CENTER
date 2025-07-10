@@ -11,13 +11,14 @@ pdrive = "require"
 workshop = [
     "450814997", # CBA_A3
     "463939057", # ACE
-    "2369477168", # Advanced Developer Tools 
     "3058335345", # TBD Mortars
     "3119699935", # SIMC LCD
     "3117898674", # SPE-X
     "1341387001",
     "1862880106",
     "3233638297", # m119
+    "751965892", # ACRE2
+    "1779063631", #zen
 ]
 
 dlc = [
@@ -38,7 +39,7 @@ executable = "arma3_x64" # Default: "arma3_x64"
 [version]
 major = 1 # Overrides path when set
 minor = 0
-patch = 1
+patch = 5
 build = 0 # Optional
 
 git_hash = 4

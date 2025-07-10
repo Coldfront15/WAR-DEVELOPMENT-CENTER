@@ -10,7 +10,19 @@ class CfgAmmo {
 	class SPE_ShellSmoke_base: ShellBase {};
 	class SPE_ShellHE_base: ShellBase {};
 	class SPE_M3_M1_HE: SPE_ShellHE_base {};
-	class SPE_M3_M60_WP: SPE_M3_M1_HE {};
+	class SPE_M3_M60_WP: SPE_M3_M1_HE 
+	{
+		ACE_damageType = "ace_compat_spe_explosive_incendiary";
+		SPE_Fire_Range = 10;
+		SPE_Fire_BurnTime= 10;
+		class EventHandlers
+		{
+			class WDC_Fire
+			{
+				init = "_this call wdc_medical_equipment_fnc_WPFire";
+			};
+		};
+	};
 	class SPE_M3_M84_SMK: SPE_ShellSmoke_base {};
 
 	class wdc_artillery_SPE_M3_M1_HE_SHELL_HE: SPE_M3_M1_HE {};
@@ -83,7 +95,23 @@ class CfgAmmo {
         ace_frag_force = 1;  // (Optional) Force fragmentation system (0-disabled, 1-enabled) - information below
 	};
 
-	class wdc_artillery_SPE_M3_M60_WP_SHELL_WP: SPE_M3_M60_WP {};
+	class wdc_artillery_SPE_M3_M60_WP_SHELL_WP: SPE_M3_M60_WP 
+	{
+		ACE_damageType = "ace_compat_spe_explosive_incendiary";
+		SPE_Fire_Range = 10;
+		SPE_Fire_BurnTime= 10;
+		SPE_WP_Delay = 0.8; //How often damage is dealt, minimum 0.5
+		SPE_WP_Intensity = 0.1; // How much damage
+		SPE_WP_BurnTime = 45; //How long the cloud deals damage
+		SPE_WP_Range = 20; // Range of damage
+		class EventHandlers
+		{
+			class WDC_Fire
+			{
+				init = "_this call wdc_medical_equipment_fnc_WPFire";
+			};
+		};
+	};
 
 	// class wdc_artillery_SPE_M3_M84_SMK: SPE_M3_M84_SMK {
 	// 	model = QPATHTOF(spe_m3\wdc_M84_SMK);
