@@ -1,3 +1,4 @@
+
 class CfgAmmo {
 	class BulletCore;
 	class BulletBase: BulletCore {};
@@ -9,25 +10,15 @@ class CfgAmmo {
 
 	class SPE_ShellSmoke_base: ShellBase {};
 	class SPE_ShellHE_base: ShellBase {};
-	class SPE_M3_M1_HE: SPE_ShellHE_base {};
-	class SPE_M3_M60_WP: SPE_M3_M1_HE 
+	class SPE_M101_M1_HE: SPE_ShellHE_base {};
+	class SPE_M101_M1_HE_Arty: SPE_M101_M1_HE {};
+	//105mm Rounds
+	class SPE_M3_M1_HE: SPE_M101_M1_HE_Arty 
 	{
-		ACE_damageType = "ace_compat_spe_explosive_incendiary";
-		SPE_Fire_Range = 10;
-		SPE_Fire_BurnTime= 10;
-		class EventHandlers
-		{
-			class WDC_Fire
-			{
-				init = "_this call wdc_medical_equipment_fnc_WPFire";
-			};
-		};
+		dangerRadiusHit = 300;
+		suppressionRadiusHit = 65;
 	};
-	class SPE_M3_M84_SMK: SPE_ShellSmoke_base {};
-
 	class wdc_artillery_SPE_M3_M1_HE_SHELL_HE: SPE_M3_M1_HE {};
-
-
 	class wdc_artillery_SPE_M3_M1_HE_Airburst_Submunition: BulletBase
 	{
 		explosionEffects = "SPE_M2_API_ImpactEffect_P47";
@@ -67,8 +58,8 @@ class CfgAmmo {
 		indirectHitRange = 3;
 		cost = 1000;
 		audibleFire = 64;
-		dangerRadiusHit = 1250;
-		suppressionRadiusHit = 120;
+		dangerRadiusHit = 300;
+		suppressionRadiusHit = 65;
 		deflecting = 0;
 		airFriction = 0;
 		muzzleEffect = "";
@@ -76,7 +67,6 @@ class CfgAmmo {
 		warheadName = "Incendiary";
 		craterEffects = "ExploAmmoCrater";
 	};
-
 	class wdc_artillery_SPE_M3_M1_HE_SHELL_VT: SPE_M3_M1_HE {
 		triggerDistance = 10;
 		submunitionConeAngle = 55;
@@ -94,7 +84,19 @@ class CfgAmmo {
         ace_frag_classes[] = {"ACE_frag_medium","ACE_frag_large"};  // Type of fragments - information below
         ace_frag_force = 1;  // (Optional) Force fragmentation system (0-disabled, 1-enabled) - information below
 	};
-
+	class SPE_M3_M60_WP: SPE_M3_M1_HE 
+	{
+		ACE_damageType = "ace_compat_spe_explosive_incendiary";
+		SPE_Fire_Range = 10;
+		SPE_Fire_BurnTime= 10;
+		class EventHandlers
+		{
+			class WDC_Fire
+			{
+				init = "_this call wdc_medical_equipment_fnc_WPFire";
+			};
+		};
+	};
 	class wdc_artillery_SPE_M3_M60_WP_SHELL_WP: SPE_M3_M60_WP 
 	{
 		ACE_damageType = "ace_compat_spe_explosive_incendiary";
@@ -113,7 +115,99 @@ class CfgAmmo {
 		};
 	};
 
-	// class wdc_artillery_SPE_M3_M84_SMK: SPE_M3_M84_SMK {
-	// 	model = QPATHTOF(spe_m3\wdc_M84_SMK);
-	// };
+	class SPE_M3_M84_SMK: SPE_ShellSmoke_base {};
+
+	
+	
+
+	
+
+	
+	//155mm Rounds
+	class wdc_artillery_SPE_M1_M102_HE_SHELL_HE: SPE_M101_M1_HE_Arty // 155mm M1 Howitzer
+	{
+		
+		hit = 800;
+		indirectHit = 100;
+		indirectHitRange = 25; // 155mm = +30% radius
+		typicalSpeed = 550;
+		dangerRadiusHit = 300;
+		suppressionRadiusHit = 65;
+		sideAirFriction = 0.1;
+		airFriction = -0.000016;
+		whistleDist = 80;
+		SPE_massEM = 45; //used for explosion particles
+		CraterEffects = "ArtyShellCrater";//"HEShellCrater";
+		ExplosionEffects = "ArtyShellExplosion";//"HEShellExplosion";
+	};
+	class wdc_artillery_SPE_M1_M102_HE_SHELL_VT: wdc_artillery_SPE_M1_M102_HE_SHELL_HE // 155mm M1 Howitzer
+	{
+		triggerDistance = 13;
+		submunitionConeAngle = 55;
+		submunitionConeType[] = {"randomcenter", 45};
+		submunitionAmmo[] = {"wdc_artillery_SPE_M3_M1_HE_Airburst_Submunition",1};
+		submunitionInitSpeed = 90;
+		submunitionParentSpeedCoef = 0.1;
+		deleteParentWhenTriggered = 0;
+		explosive = 0.1;
+		explosionEffects = "ExploAmmoExplosion";
+        ace_frag_metal = 4250;  // Amount of metal being fragmented (grams) - information below
+        ace_frag_charge = 1400;  // Amount of explosive filler (grams) - information below
+        ace_frag_gurney_c = 2700;  // Gurney velocity constant for explosive type - information below
+        ace_frag_gurney_k = 3/5;  // Gurney shape factor - information below
+        ace_frag_classes[] = {"ACE_frag_medium","ACE_frag_large"};  // Type of fragments - information below
+        ace_frag_force = 1;  // (Optional) Force fragmentation system (0-disabled, 1-enabled) - information below
+	};
+	class wdc_artillery_SPE_M1_M110_WP_SHELL_WP: SPE_M3_M60_WP 
+	{
+		ACE_damageType = "ace_compat_spe_explosive_incendiary";
+		SPE_Fire_Range = 15;
+		SPE_Fire_BurnTime= 15;
+		SPE_WP_Delay = 0.8; //How often damage is dealt, minimum 0.5
+		SPE_WP_Intensity = 0.1; // How much damage
+		SPE_WP_BurnTime = 60; //How long the cloud deals damage
+		SPE_WP_Range = 30; // Range of damage
+		class EventHandlers
+		{
+			class WDC_Fire
+			{
+				init = "_this call wdc_medical_equipment_fnc_WPFire";
+			};
+		};
+	};
+	//8Inch Rounds
+	class wdc_artillery_SPE_M1_M106_HE_SHELL_HE: wdc_artillery_SPE_M1_M102_HE_SHELL_HE // 203mm M1 Howitzer
+	{
+		
+		hit = 1100;
+		indirectHit = 115;
+		indirectHitRange = 40; // 155mm = +30% radius
+		typicalSpeed = 700;
+		dangerRadiusHit = 300;
+		suppressionRadiusHit = 65;
+		sideAirFriction = 0.1;
+		airFriction = -0.000016;
+		whistleDist = 120;
+		SPE_massEM = 70; //used for explosion particles
+		CraterEffects = "ArtyShellCrater";//"HEShellCrater";
+		ExplosionEffects = "ArtyShellExplosion";//"HEShellExplosion";
+	};
+	class wdc_artillery_SPE_M1_M106_HE_SHELL_VT: wdc_artillery_SPE_M1_M106_HE_SHELL_HE // 203mm M1 Howitzer
+	{
+		triggerDistance = 17;
+		submunitionConeAngle = 55;
+		submunitionConeType[] = {"randomcenter", 45};
+		submunitionAmmo[] = {"wdc_artillery_SPE_M3_M1_HE_Airburst_Submunition",1};
+		submunitionInitSpeed = 90;
+		submunitionParentSpeedCoef = 0.1;
+		deleteParentWhenTriggered = 0;
+		explosive = 0.1;
+		explosionEffects = "ExploAmmoExplosion";
+        ace_frag_metal = 4250;  // Amount of metal being fragmented (grams) - information below
+        ace_frag_charge = 1800;  // Amount of explosive filler (grams) - information below
+        ace_frag_gurney_c = 2700;  // Gurney velocity constant for explosive type - information below
+        ace_frag_gurney_k = 3/5;  // Gurney shape factor - information below
+        ace_frag_classes[] = {"ACE_frag_medium","ACE_frag_large"};  // Type of fragments - information below
+        ace_frag_force = 1;  // (Optional) Force fragmentation system (0-disabled, 1-enabled) - information below
+	};
 };
