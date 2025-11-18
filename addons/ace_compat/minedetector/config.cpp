@@ -27,3 +27,20 @@ class CfgAmmo
 		ace_minedetector_detectable = 1;
 	};
 };
+
+class CfgVehicles {
+    class Man;
+    class CAManBase: Man {
+        class ACE_SelfActions {
+			class ACE_Equipment {
+				class probeForMines {
+					displayName = "Probe for Mines";
+					condition = "[_player] call wdc_ace_compat_fnc_canDetectMine";
+					exceptions[] = {};
+					statement = "[_player] call wdc_ace_compat_fnc_detectMine";
+					icon = "";
+				};
+			};
+        };
+    };
+};
