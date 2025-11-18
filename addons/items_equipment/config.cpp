@@ -105,7 +105,7 @@ class CfgWeapons
 	{
 		author = "Letlev";
 		displayName = "US TL-122 Flashlight";
-		descriptionShort = "Standard US flashlight";
+		descriptionShort = "Standard US flashlight (Map Flashlight)";
 		model = "\WW2\SPE_Assets_m\Misc\Items_m\SPE_US_Flashlight_Ground.p3d";
 		picture = "\WW2\SPE_Assets_t\Weapons\Equipment_U1_t\Weapons\Items\Gear_US_FL_TL122_X_ca.paa";
 		class ItemInfo: CBA_MiscItem_ItemInfo
@@ -122,7 +122,7 @@ class CfgWeapons
 	class ACE_Flashlight_KSF1: ACE_ItemCore
 	{
 		displayName = "GER 2213 Signallampe";
-		descriptionShort = "Standard WWII German flashlight";
+		descriptionShort = "Standard WWII German flashlight (Map Flashlight)";
 		model = "\WW2\SPE_Assets_m\Misc\Items_m\SPE_GER_Flashlight_Ground.p3d";
 		picture = "\WW2\SPE_Assets_t\Weapons\Equipment_U1_t\Weapons\Items\Gear_GER_FL_Signal_Flashlight_X_ca.paa";
 		class ItemInfo: CBA_MiscItem_ItemInfo
