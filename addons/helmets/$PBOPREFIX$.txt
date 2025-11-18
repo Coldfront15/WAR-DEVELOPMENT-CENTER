@@ -1,0 +1,7 @@
+//<'wdc_helmets.pbo' properties via Mikero's dos tools, dll version 9.98>
+prefix=x\wdc\addons\helmets;
+hemtt=1.12.5;
+version=1.0.1.0-9977;
+git=9977fbe7746162f881a111f93cadb20732e310be;
+//PboType=Arma Addon;
+//</properties>
