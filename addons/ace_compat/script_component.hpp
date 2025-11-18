@@ -1,17 +1,17 @@
-#define COMPONENT csw
-#define COMPONENT_BEAUTIFIED csw
+#define COMPONENT ace_compat
+#define COMPONENT_BEAUTIFIED Ace_Compat
 #include "\x\wdc\addons\main\script_mod.hpp"
 
 // #define DEBUG_MODE_FULL
 // #define DISABLE_COMPILE_CACHE
 // #define ENABLE_PERFORMANCE_COUNTERS
 
-#ifdef DEBUG_ENABLED_CSW
+#ifdef DEBUG_ENABLED_PLANES
     #define DEBUG_MODE_FULL
 #endif
 
-#ifdef DEBUG_SETTINGS_CSW
-    #define DEBUG_SETTINGS DEBUG_SETTINGS_CSW
+#ifdef DEBUG_SETTINGS_PLANES
+    #define DEBUG_SETTINGS DEBUG_SETTINGS_PLANES
 #endif
 
 #include "\x\wdc\addons\main\script_macros.hpp"
