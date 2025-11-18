@@ -7,18 +7,18 @@ Welcome to the front... we've got a lot of lead flyin' around here boys, keep yo
 This mod adds various textures to Spearhead, WWII Ace Items, and SimC LCD items for the 101st Airborne Division (https://discord.gg/j2uhxmr), and incorporates custom items from WDC and Spearhead 1944 ACE Items
 
 Features
- - US ACE Medical Items
- - US ACE Equipment
- - 3DEN/Zeus Ordnance & Artillery Barrage Modules
- 
+ - New US ACE Medical Items
+ - New US ACE Equipment
+ - Self Interaction to probe for mines/traps (Must have SPE/SPEX bayonet in inventory)
 
  ACE Compatibility Changes
  - SPEX 60mm Mortar compatible with crew served weapon system
+ - Fixed missing detection for SPE Mines/PipeBomb classes.
  - White Phosphorous has an Incendiary (ace burning) effect on dismounted infantry, scaled radius per ordnance class.
- - 
 
  Optionals
- - Optional TBD_Mortars patch for M3 Howitzer (Requires TBD Mortars)
+ - Interactable M3 Howitzer & Specialized Rounds (Requires TBD_Mortars)
+ - 3DEN/Zeus Ordnance & Artillery Barrage Modules (Requires TBD_Mortars)
 
 
 This mod does not modify the Medical Treatment properties of bandages and other basic medical items from ACE, however items such as added stimulants have their own uses. Check the bulleted list below:
