@@ -9,7 +9,7 @@ class CfgPatches
 		requiredVersion = 0.5;
 		skipWhenMissingDependencies = 1;
 		weapons[] = {};
-		units[] = {"WDC_ModuleOrdnanceMediumHowitzer_F","WDC_ModuleOrdnanceSuperHowitzer_F","WDC_ModuleOrdnanceLightHowitzerVT_F","WDC_ModuleOrdnanceLightHowitzerWP_F","WDC_ModuleBarrage_F","WDC_ModuleBarrage_Zeus_F","WDC_ModuleOrdnanceMediumHowitzerVT_F","WDC_ModuleOrdnanceMediumHowitzerWP_F","WDC_ModuleOrdnanceSuperHowitzerVT_F"};
+		units[] = {};
 	};
 };
 class Mode_SemiAuto;
