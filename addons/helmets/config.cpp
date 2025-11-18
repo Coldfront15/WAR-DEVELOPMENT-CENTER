@@ -9,7 +9,7 @@
 
 class CfgPatches
 {
-	class wdc_helemts
+	class ADDON
 	{
 		units[] = {};
 		weapons[] = {};
