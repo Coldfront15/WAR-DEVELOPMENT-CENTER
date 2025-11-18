@@ -1,7 +1,7 @@
 /*
 	FILE: fnc_timerHandler.sqf
 
-	Name: tbd_mortars_105mm_fnc_timerHandler
+	Name: wdc_artillery_fnc_timerHandler
 
 	Author(s):
 		ilbinek
@@ -17,13 +17,13 @@
 		Nothing
 
 	Examples:
-		> ["init", _this] call tbd_mortars_105mm_fnc_timerHandler;
+		> ["init", _this] call wdc_artillery_fnc_timerHandler;
 
 	Public:
 		No
 */
 
-#define IDC_TBD_TIMER_TEXT 69420
+#define IDC_TBD_TIMER_TEXT 67420
 
 #include "..\script_component.hpp"
 
@@ -36,7 +36,7 @@ switch (_event) do {
         private _text = _dialog displayCtrl IDC_TBD_TIMER_TEXT;   
         ctrlSetFocus _text;
 
-        _text ctrlSetText str((GVAR(shell) getVariable [QGVAR(DPICM_FUSE_TIMER), 99999]));
+        _text ctrlSetText str((GVAR(shell) getVariable [QGVAR(FUSE_TIMER), 99999]));
         uiNamespace setVariable [QGVAR(timer_dialog), _dialog];
     };
     
@@ -44,9 +44,9 @@ switch (_event) do {
         private _dialog = uiNamespace getVariable QGVAR(timer_dialog);
         private _text = _dialog displayCtrl IDC_TBD_TIMER_TEXT;   
 
-        GVAR(DPICM_FUSE_TIMER) = parseNumber (ctrlText _text);
+        GVAR(FUSE_TIMER) = parseNumber (ctrlText _text);
 
-        GVAR(shell) setVariable [QGVAR(DPICM_FUSE_TIMER), GVAR(DPICM_FUSE_TIMER), true];
+        GVAR(shell) setVariable [QGVAR(FUSE_TIMER), GVAR(FUSE_TIMER), true];
     };
 
     case "close": {

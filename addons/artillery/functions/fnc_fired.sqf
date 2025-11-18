@@ -67,7 +67,7 @@ if (_ammo in ["wdc_artillery_SPE_M3_M1_HE_SHELL_VT", "wdc_artillery_SPE_M3_M1_HE
 			triggerAmmo _projectile;
 		},
 		[_projectile],
-		_arty getVariable [QGVAR(DPICM_FUSE_TIMER), 99999]] call CBA_fnc_waitAndExecute;
+		_arty getVariable [QGVAR(FUSE_TIMER), 99999]] call CBA_fnc_waitAndExecute;
 		
 	};
 };

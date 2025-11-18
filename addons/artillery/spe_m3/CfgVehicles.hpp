@@ -497,7 +497,7 @@ class CfgVehicles {
                 class wdc_artillery_SetTimer {
                     displayName = "Set Timer";
                     condition = "true";
-                    statement = QUOTE(GVAR(shell) = _target; createDialog QUOTE(QUOTE(RscTBDTimer)));
+                    statement = QUOTE(GVAR(shell) = _target; createDialog QUOTE(QUOTE(RscWDCTimer)));
                     distance = 2;
                 };
             };
@@ -748,6 +748,12 @@ class CfgVehicles {
                     displayName = CSTRING(105mm_disassemble);
                     condition = "true";
                     statement = QUOTE([ARR_1(_target)] call FUNC(disassemble));
+                    distance = 2;
+                };
+                class wdc_artillery_SetTimer {
+                    displayName = "Set Timer";
+                    condition = "true";
+                    statement = QUOTE(GVAR(shell) = _target; createDialog QUOTE(QUOTE(RscWDCTimer)));
                     distance = 2;
                 };
             };
