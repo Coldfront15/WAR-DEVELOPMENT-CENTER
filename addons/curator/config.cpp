@@ -74,7 +74,7 @@ class CfgVehicles {
 		portrait = "\a3\Modules_F_Curator\Data\portraitOrdnanceHowitzer_ca.paa";
 		function = "SPE_fnc_moduleBarrage";
 		model = "\A3\Weapons_f\empty";
-		curatorInfoType = "WDC_RscDisplayAttributesModuleBarrage";
+		curatorInfoType = "SPE_RscDisplayAttributesModuleOrdnance";
 		curatorCost = 12;
 		class Arguments
 		{
