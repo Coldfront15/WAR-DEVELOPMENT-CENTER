@@ -10,7 +10,15 @@ Features
  - US ACE Medical Items
  - US ACE Equipment
  - 3DEN/Zeus Ordnance & Artillery Barrage Modules
+ 
+
+ ACE Compatibility Changes
+ - SPEX 60mm Mortar compatible with crew served weapon system
+ - White Phosphorous has an Incendiary (ace burning) effect on dismounted infantry, scaled radius per ordnance class.
  - 
+
+ Optionals
+ - Optional TBD_Mortars patch for M3 Howitzer (Requires TBD Mortars)
 
 
 This mod does not modify the Medical Treatment properties of bandages and other basic medical items from ACE, however items such as added stimulants have their own uses. Check the bulleted list below:
