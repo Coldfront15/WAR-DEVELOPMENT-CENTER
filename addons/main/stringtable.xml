@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="wdc_main">
+    <Package name="Translation">
+        <Key ID="STR_SPE_DN_ASSETS_WEAPONS_M19_RIFLE_GRENADE">
+			<Original>Rifle Grenade M19 (WP)</Original>
+			<English>Rifle Grenade M19 (WP)</English>
+		</Key>
+        <Key ID="STR_WDC_Assets_Weapons_InfantryWeapons_displayNameShort_WP">
+			<Original>WP</Original>
+			<English>WP</English>
+		</Key>
+        <Key ID="STR_WDC_DSS_ASSETS_WEAPONS_M19_RIFLE_GRENADE">
+			<Original>Type: White Phosphorous Grenade&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: M1, M7, M8 Rifle Grenade Adapters</Original>
+			<English>Type: White Phosphorous Grenade&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: M1, M7, M8 Rifle Grenade Adapters</English>
+		</Key>
+    </Package>
+</Project>

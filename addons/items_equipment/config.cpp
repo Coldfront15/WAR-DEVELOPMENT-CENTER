@@ -9,11 +9,14 @@ class CfgPatches {
 		requiredAddons[] = {
             "ace_flashlights",
             "ace_trenches",
-            "ace_explosives"
+            "ace_explosives",
+			"WW2_SPE_Assets_c_Weapons_InfantryWeapons_c"
         };
         VERSION_CONFIG;
 	};
 };
+
+
 
 #include "CfgEventHandlers.hpp"
 class CfgAmmo
@@ -36,6 +39,8 @@ class CfgAmmo
 	};
 	class GrenadeHand;
 	class SPE_GrenadeHand_base: GrenadeHand {};
+	class GrenadeBase;
+	class SPE_Grenade_base: GrenadeBase {};
 	class SPE_US_M15: SPE_GrenadeHand_base
 	{
 		ACE_damageType = "ace_compat_spe_explosive_wp";
@@ -64,6 +69,78 @@ class CfgAmmo
 			{
 				init = "_this call wdc_medical_equipment_fnc_WPFire";
 			};
+		};
+	};
+	class WDC_G_M19_Instant: SPE_US_M15 
+	{
+		explosionTime = 0.01;
+	};
+	class WDC_G_M19WP: SPE_Grenade_base
+	{
+		cost = 50;
+		hit = 6;
+		indirectHit = 4;
+		indirectHitRange = 1.5;
+		warheadName = "WP";
+		allowAgainstInfantry = 1;
+		aiAmmoUsageFlags = "64 + 128";
+		model = "\x\wdc\addons\items_equipment\wdc_m19_ammo.p3d";
+		airFriction = -0.009;
+		typicalSpeed = 197.51;
+		submunitionAmmo = "WDC_G_M19_Instant";
+		submunitionDirectionType = "SubmunitionModelDirection";
+		submunitionInitialOffset[] = {0,0,-0.2};
+		submunitionParentSpeedCoef = 0;
+		submunitionInitSpeed = 1000;
+		triggerOnImpact = 1;
+		deleteParentWhenTriggered = 0;
+	};
+};
+
+class CfgMagazines
+{
+	class CA_Magazine;
+	class SPE_BaseRifleGrenade: CA_Magazine	{};
+
+	class WDC_1Rnd_G_M19WP: SPE_BaseRifleGrenade
+	{
+		scope = 2;
+		type = 16;
+		author = "Heavy Ordnance Works";//"Crotmoul"
+		dlc = "SPE";
+		displayName = "$STR_SPE_DN_ASSETS_WEAPONS_M19_RIFLE_GRENADE";
+		displayNameShort = "$STR_WDC_Assets_Weapons_InfantryWeapons_displayNameShort_WP";
+		picture = "\x\wdc\addons\items_equipment\data\UI\wdc_m19_ui_ca.paa";
+		model = "\x\wdc\addons\items_equipment\wdc_m19.p3d";
+		ammo = "WDC_G_M19WP";
+		initSpeed = 197.51;
+		nameSound = "grenadelauncher";
+		descriptionShort = "$STR_WDC_DSS_ASSETS_WEAPONS_M19_RIFLE_GRENADE";
+		mass = 14.8;
+		modelSpecial = "\x\wdc\addons\items_equipment\wdc_m19.p3d";
+		modelSpecialIsProxy = 1;
+	};
+};
+
+class CfgMagazineWells
+{
+	class SPE_22mm_US_Riflegrenade
+	{
+		SPE_Magazines[] =
+		{
+			"SPE_1Rnd_G_Mk2",
+			"SPE_1Rnd_G_M9A1",
+			"SPE_1Rnd_G_M2_AN_M14",
+			"SPE_1Rnd_G_M2_ANM8",
+			"SPE_1Rnd_G_M2_M18_Red",
+			"SPE_1Rnd_G_M2_M18_Green",
+			"SPE_1Rnd_G_M2_M18_Yellow",
+			"SPE_1Rnd_G_M2_M18_Violet",
+			"SPE_1Rnd_G_M17A1",
+			"SPE_1Rnd_G_M19A1",
+			"SPE_1Rnd_G_M21A1",
+			"SPE_1Rnd_G_M51A1",
+			"WDC_1Rnd_G_M19WP"
 		};
 	};
 };
