@@ -2,15 +2,16 @@
 
 class CfgPatches {
     class SUBADDON {
-        name = COMPONENT_NAME;
+		name = COMPONENT_NAME;
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {
-            "ww2_spex_assets_c_vehicles_staticweapons_c",
-            "ace_csw"
-        };
+		requiredAddons[] = {"cba_main"};
+		skipWhenMissingDependencies = 1;
+		author = "Coldfront15";
         VERSION_CONFIG;
+		
+		addonRootClass = QUOTE(ADDON);
     };
 };
 

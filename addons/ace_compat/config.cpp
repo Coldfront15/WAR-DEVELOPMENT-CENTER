@@ -1,19 +1,15 @@
-class CfgPatches
-{
-	class wdc_ace_compat
-	{
-		units[] = {};
-		weapons[] = {};
-		requiredVersion = 0.1;
-		requiredAddons[] = {
-			"ace_compat_spe",
-			"ace_csw",
-			"ace_cargo",
-			"ace_explosives",
-			"ace_fire",
-			"ace_flashlights",
-			"ace_minedetector"};
-	};
+#include "script_component.hpp"
+
+class CfgPatches {
+    class ADDON {
+		name = COMPONENT_NAME;
+        units[] = {};
+        weapons[] = {};
+        requiredVersion = REQUIRED_VERSION;
+		requiredAddons[] = {"cba_main","ace_interact_menu","ww2_spe_assets_c_vehicles_staticweapons_u1_c"};
+		author = "Coldfront15";
+        VERSION_CONFIG;
+    };
 };
 
 class Extended_PreInit_EventHandlers

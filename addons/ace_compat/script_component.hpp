@@ -1,5 +1,5 @@
 #define COMPONENT ace_compat
-#define COMPONENT_BEAUTIFIED Ace_Compat
+#define COMPONENT_BEAUTIFIED ACE Compatibility
 #include "\x\wdc\addons\main\script_mod.hpp"
 
 // #define DEBUG_MODE_FULL
