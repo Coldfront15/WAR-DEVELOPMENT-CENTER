@@ -1,4 +1,3 @@
-
 #include "script_component.hpp"
 
 class CfgPatches {
@@ -8,12 +7,10 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
 		requiredAddons[] = {"cba_main","ace_interact_menu","tbd_mortars_main","ww2_spe_assets_c_vehicles_staticweapons_u1_c"};
-		skipWhenMissingDependencies = 1;
 		author = "Coldfront15";
         VERSION_CONFIG;
     };
 };
-
 class RscText;
 class RscEdit;
 class RscButton;

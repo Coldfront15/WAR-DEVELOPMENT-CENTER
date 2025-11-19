@@ -1,21 +1,15 @@
-////////////////////////////////////////////////////////////////////
-//DeRap: config.bin
-//Produced from mikero's Dos Tools Dll version 9.98
-//https://mikero.bytex.digital/Downloads
-//'now' is Wed Jul 09 13:30:40 2025 : 'file' last modified on Wed Dec 31 17:00:00 1969
-////////////////////////////////////////////////////////////////////
+#include "script_component.hpp"
 
-#define _ARMA_
-
-class CfgPatches
-{
-	class ADDON
-	{
-		units[] = {};
-		weapons[] = {};
-		requiredVersion = 0.1;
-		requiredAddons[] = {"WW2_SPE_Assets_c_Characters_Americans_c_US_Army_Gear"};
-	};
+class CfgPatches {
+    class ADDON {
+		name = COMPONENT_NAME;
+        units[] = {};
+        weapons[] = {};
+        requiredVersion = REQUIRED_VERSION;
+		requiredAddons[] = {"cba_main","ace_interact_menu","WW2_SPE_Assets_c_Characters_Americans_c_US_Army_Gear"};
+		author = "Coldfront15";
+        VERSION_CONFIG;
+    };
 };
 class cfgWeapons
 {

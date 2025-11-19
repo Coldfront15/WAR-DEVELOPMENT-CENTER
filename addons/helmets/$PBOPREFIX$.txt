@@ -1,1 +1,1 @@
-prefix=x\wdc\addons\helmets;
+prefix=x\wdc\addons\helmets
