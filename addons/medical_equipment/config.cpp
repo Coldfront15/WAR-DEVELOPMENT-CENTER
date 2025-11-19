@@ -160,9 +160,9 @@ class CfgWeapons
 		author = "Coldfront15/Letlev";
 		displayName = "US Tourniquet";
 		picture = "\x\wdc\addons\medical_equipment\ui\tourniquet_ui_ca.paa";
-		model = "\a3\Characters_F_Enoch\Facewear\G_Blindfold_01_F.p3d";
+		model = "\x\wdc\addons\medical_equipment\wdc_tourniquet.p3d";
         hiddenSelections[] = {"camo"};
-		hiddenSelectionsTextures[] = {"\A3\Characters_F_Enoch\Facewear\data\G_Blindfold_01_White_CO"};
+		hiddenSelectionsTextures[] = {"\x\wdc\addons\medical_equipment\data\wdc_tourniquet_co.paa"};
 	};
     class wdc_US_Splint: ACE_splint
 	{
