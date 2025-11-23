@@ -31,4 +31,8 @@ class CfgEditorSubcategories
 	{
 		displayName = "Medical Corps"; // Name visible in the list
 	};
+    class WDC_Items // Category class, you point to it in editorSubcategory property
+	{
+		displayName = "Items"; // Name visible in the list
+	};
 };
