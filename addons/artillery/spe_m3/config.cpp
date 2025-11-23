@@ -1,17 +1,19 @@
-#include "..\script_component.hpp"
+#include "script_component.hpp"
 
-class CfgPatches
-{
-	class wdc_m3
-	{
-		addonRootClass = "A3_Armor_F_Beta";
-		requiredAddons[] = {"cba_main","ace_interact_menu","tbd_mortars_main","ww2_spe_assets_c_vehicles_staticweapons_u1_c"};
-		requiredVersion = 0.5;
+class CfgPatches {
+    class SUBADDON {
+		name = COMPONENT_NAME;
+        units[] = {};
+        weapons[] = {};
+        requiredVersion = REQUIRED_VERSION;
+		requiredAddons[] = {"cba_main"};
 		skipWhenMissingDependencies = 1;
-		weapons[] = {};
-		units[] = {};
-	};
+		author = "Coldfront15";
+        VERSION_CONFIG;
+		addonRootClass = QUOTE(ADDON);
+    };
 };
+
 class Mode_SemiAuto;
 
 #include "CfgCloudlets.hpp"

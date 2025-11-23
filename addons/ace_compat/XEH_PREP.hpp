@@ -1,2 +1,0 @@
-PREP(canDetectMine);
-PREP(detectMine);
