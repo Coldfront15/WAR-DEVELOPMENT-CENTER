@@ -25,10 +25,10 @@ class CfgVehicles
 		scopeCurator = 0;
         icon = "iconObject_1x1";
         editorCategory = "WDC_Items";
-		editorSubcategory = "WDC_Items";
+		editorSubcategory = "WDC_Forms";
 		hiddenSelections[] = {"camo"};
 		hiddenSelectionsTextures[] = {"a3\weapons_f_orange\ammo\data\leaflet_default_co.paa"};
-		editorPreview = "\A3\EditorPreviews_F_Orange\Data\CfgVehicles\Leaflet_05_Stack_F.jpg";
+		editorPreview = "\x\wdc\addons\objects\data\ui\wdc_form_a4_400.jpg";
 		displayName = "Form A4 - Base Form";
 		model = "\x\wdc\addons\objects\wdc_us_form_a4.p3d";
 		class Attributes
@@ -60,7 +60,7 @@ class CfgVehicles
         hiddenSelections[] = {"camo"};
 		hiddenSelectionsTextures[] = {"a3\weapons_f_orange\ammo\data\leaflet_default_co.paa"};
 		hiddenSelectionsMaterials[] = {""};
-		editorPreview = "\A3\EditorPreviews_F_Orange\Data\CfgVehicles\Leaflet_05_Stack_F.jpg";
+		editorPreview = "\x\wdc\addons\objects\data\ui\wdc_form_a4_stack_400.jpg";
 		displayName = "Form A4 - Base Form (Stack)";
 		model = "\x\wdc\addons\objects\wdc_us_form_a4_stack.p3d";
 	};
@@ -68,7 +68,7 @@ class CfgVehicles
 	{
 		author = "Coldfront15";
         editorCategory = "WDC_Items";
-		editorSubcategory = "WDC_Items";
+		editorSubcategory = "WDC_Forms";
 		hiddenSelections[] = {"camo"};
 		hiddenSelectionsTextures[] = {"\x\wdc\addons\objects\data\wdc_us_form_400.paa"};
 		class SimpleObject
@@ -80,7 +80,7 @@ class CfgVehicles
 			verticalOffsetWorld = 0;
 			init = "''";
 		};
-		editorPreview = "\x\wdc\addons\objects\data\prev\wdc_form_a4_400.jpg";
+		editorPreview = "\x\wdc\addons\objects\data\ui\wdc_form_a4_400.jpg";
 		scope = 2;
 		scopeCurator = 2;
 		displayName = "Form 400 - Requisition";
@@ -99,7 +99,7 @@ class CfgVehicles
 			verticalOffsetWorld = 0;
 			init = "''";
 		};
-		editorPreview = "\x\wdc\addons\objects\data\prev\wdc_form_a4_stack_400.jpg";
+		editorPreview = "\x\wdc\addons\objects\data\ui\wdc_form_a4_stack_400.jpg";
 		scope = 2;
 		scopeCurator = 2;
 		displayName = "Form 400 - Requisition (Stack)";
@@ -108,7 +108,7 @@ class CfgVehicles
 	{
 		author = "Coldfront15";
         editorCategory = "WDC_Items";
-		editorSubcategory = "WDC_Items";
+		editorSubcategory = "WDC_Forms";
 		hiddenSelections[] = {"camo"};
 		hiddenSelectionsTextures[] = {"\x\wdc\addons\objects\data\wdc_us_form_81.paa"};
 		class SimpleObject
@@ -120,7 +120,7 @@ class CfgVehicles
 			verticalOffsetWorld = 0;
 			init = "''";
 		};
-		editorPreview = "\x\wdc\addons\objects\data\prev\wdc_form_a4_81.jpg";
+		editorPreview = "\x\wdc\addons\objects\data\ui\wdc_form_a4_81.jpg";
 		scope = 2;
 		scopeCurator = 2;
 		displayName = "Form 81 - Immunizations";
@@ -130,7 +130,7 @@ class CfgVehicles
 	{
 		author = "Coldfront15";
         editorCategory = "WDC_Items";
-		editorSubcategory = "WDC_Items";
+		editorSubcategory = "WDC_Forms";
 		hiddenSelections[] = {"camo"};
 		hiddenSelectionsTextures[] = {"\x\wdc\addons\objects\data\wdc_us_form_81.paa"};
 		class SimpleObject
@@ -142,7 +142,7 @@ class CfgVehicles
 			verticalOffsetWorld = 0;
 			init = "''";
 		};
-		editorPreview = "\x\wdc\addons\objects\data\prev\wdc_form_a4_81_stack.jpg";
+		editorPreview = "\x\wdc\addons\objects\data\ui\wdc_form_a4_81_stack.jpg";
 		scope = 2;
 		scopeCurator = 2;
 		displayName = "Form 81 - Immunizations (Stack)";
@@ -152,7 +152,7 @@ class CfgVehicles
 	{
 		author = "Coldfront15";
         editorCategory = "WDC_Items";
-		editorSubcategory = "WDC_Items";
+		editorSubcategory = "WDC_Intelligence";
 		class SimpleObject
 		{
 			eden = 1;
@@ -162,7 +162,7 @@ class CfgVehicles
 			verticalOffsetWorld = 0;
 			init = "''";
 		};
-		editorPreview = "\A3\EditorPreviews_F_Orange\Data\CfgVehicles\Leaflet_05_Stack_F.jpg";
+		editorPreview = "\x\wdc\addons\objects\data\ui\wdc_map_utah.jpg";
 		scope = 2;
 		scopeCurator = 2;
 		displayName = "Map (Utah Beach)";
@@ -172,7 +172,7 @@ class CfgVehicles
 	{
 		author = "Coldfront15";
         editorCategory = "WDC_Items";
-		editorSubcategory = "WDC_Items";
+		editorSubcategory = "WDC_Intelligence";
 		class SimpleObject
 		{
 			eden = 1;
@@ -182,7 +182,7 @@ class CfgVehicles
 			verticalOffsetWorld = 0;
 			init = "''";
 		};
-		editorPreview = "\A3\EditorPreviews_F_Orange\Data\CfgVehicles\Leaflet_05_Stack_F.jpg";
+		editorPreview = "\x\wdc\addons\objects\data\ui\wdc_map_carentan.jpg";
 		scope = 2;
 		scopeCurator = 2;
 		displayName = "Map (Carentan)";
@@ -192,7 +192,7 @@ class CfgVehicles
 	{
 		author = "Coldfront15";
         editorCategory = "WDC_Items";
-		editorSubcategory = "WDC_Items";
+		editorSubcategory = "WDC_Intelligence";
 		class SimpleObject
 		{
 			eden = 1;
@@ -202,7 +202,7 @@ class CfgVehicles
 			verticalOffsetWorld = 0;
 			init = "''";
 		};
-		editorPreview = "\A3\EditorPreviews_F_Orange\Data\CfgVehicles\Leaflet_05_Stack_F.jpg";
+		editorPreview = "\x\wdc\addons\objects\data\ui\wdc_map_lingevres.jpg";
 		scope = 2;
 		scopeCurator = 2;
 		displayName = "Map (Lingevres)";
@@ -212,7 +212,7 @@ class CfgVehicles
 	{
 		author = "Coldfront15";
         editorCategory = "WDC_Items";
-		editorSubcategory = "WDC_Items";
+		editorSubcategory = "WDC_Intelligence";
 		class SimpleObject
 		{
 			eden = 1;
@@ -222,7 +222,7 @@ class CfgVehicles
 			verticalOffsetWorld = 0;
 			init = "''";
 		};
-		editorPreview = "\A3\EditorPreviews_F_Orange\Data\CfgVehicles\Leaflet_05_Stack_F.jpg";
+		editorPreview = "\x\wdc\addons\objects\data\ui\wdc_map_mortain.jpg";
 		scope = 2;
 		scopeCurator = 2;
 		displayName = "Map (Mortain)";
@@ -232,7 +232,7 @@ class CfgVehicles
 	{
 		author = "Coldfront15";
         editorCategory = "WDC_Items";
-		editorSubcategory = "WDC_Items";
+		editorSubcategory = "WDC_Intelligence";
 		class SimpleObject
 		{
 			eden = 1;
@@ -242,7 +242,7 @@ class CfgVehicles
 			verticalOffsetWorld = 0;
 			init = "''";
 		};
-		editorPreview = "\A3\EditorPreviews_F_Orange\Data\CfgVehicles\Leaflet_05_Stack_F.jpg";
+		editorPreview = "\x\wdc\addons\objects\data\ui\wdc_map_normandy.jpg";
 		scope = 2;
 		scopeCurator = 2;
 		displayName = "Map (Normandy)";
@@ -252,7 +252,7 @@ class CfgVehicles
 	{
 		author = "Coldfront15";
         editorCategory = "WDC_Items";
-		editorSubcategory = "WDC_Items";
+		editorSubcategory = "WDC_Intelligence";
 		class SimpleObject
 		{
 			eden = 1;
@@ -262,7 +262,7 @@ class CfgVehicles
 			verticalOffsetWorld = 0;
 			init = "''";
 		};
-		editorPreview = "\A3\EditorPreviews_F_Orange\Data\CfgVehicles\Leaflet_05_Stack_F.jpg";
+		editorPreview = "\x\wdc\addons\objects\data\ui\wdc_map_angola.jpg";
 		scope = 2;
 		scopeCurator = 2;
 		displayName = "Map (Algeria)";
@@ -272,7 +272,7 @@ class CfgVehicles
 	{
 		author = "Coldfront15";
         editorCategory = "WDC_Items";
-		editorSubcategory = "WDC_Items";
+		editorSubcategory = "WDC_Intelligence";
 		class SimpleObject
 		{
 			eden = 1;
@@ -282,7 +282,7 @@ class CfgVehicles
 			verticalOffsetWorld = 0;
 			init = "''";
 		};
-		editorPreview = "\A3\EditorPreviews_F_Orange\Data\CfgVehicles\Leaflet_05_Stack_F.jpg";
+		editorPreview = "\x\wdc\addons\objects\data\ui\wdc_map_anizay.jpg";
 		scope = 2;
 		scopeCurator = 2;
 		displayName = "Map (Tunisia)";
@@ -292,7 +292,7 @@ class CfgVehicles
 	{
 		author = "Coldfront15";
         editorCategory = "WDC_Items";
-		editorSubcategory = "WDC_Items";
+		editorSubcategory = "WDC_Intelligence";
 		class SimpleObject
 		{
 			eden = 1;
@@ -302,7 +302,7 @@ class CfgVehicles
 			verticalOffsetWorld = 0;
 			init = "''";
 		};
-		editorPreview = "\A3\EditorPreviews_F_Orange\Data\CfgVehicles\Leaflet_05_Stack_F.jpg";
+		editorPreview = "\x\wdc\addons\objects\data\ui\wdc_map_bastogne.jpg";
 		scope = 2;
 		scopeCurator = 2;
 		displayName = "Map (Bastogne)";
@@ -312,7 +312,7 @@ class CfgVehicles
 	{
 		author = "Coldfront15";
         editorCategory = "WDC_Items";
-		editorSubcategory = "WDC_Items";
+		editorSubcategory = "WDC_Intelligence";
 		class SimpleObject
 		{
 			eden = 1;
@@ -322,7 +322,7 @@ class CfgVehicles
 			verticalOffsetWorld = 0;
 			init = "''";
 		};
-		editorPreview = "\A3\EditorPreviews_F_Orange\Data\CfgVehicles\Leaflet_05_Stack_F.jpg";
+		editorPreview = "\x\wdc\addons\objects\data\ui\wdc_map_benouville.jpg";
 		scope = 2;
 		scopeCurator = 2;
 		displayName = "Map (Benouville)";
@@ -332,7 +332,7 @@ class CfgVehicles
 	{
 		author = "Coldfront15";
         editorCategory = "WDC_Items";
-		editorSubcategory = "WDC_Items";
+		editorSubcategory = "WDC_Intelligence";
 		class SimpleObject
 		{
 			eden = 1;
@@ -342,17 +342,17 @@ class CfgVehicles
 			verticalOffsetWorld = 0;
 			init = "''";
 		};
-		editorPreview = "\A3\EditorPreviews_F_Orange\Data\CfgVehicles\Leaflet_05_Stack_F.jpg";
+		editorPreview = "\x\wdc\addons\objects\data\ui\wdc_map_garmanda.jpg";
 		scope = 2;
 		scopeCurator = 2;
 		displayName = "Map (Sauerland)";
 		model = "\x\wdc\addons\objects\wdc_us_map_garmanda.p3d";
 	};
-	class wdc_map_henderson: Items_base_F
+	class wdc_map_sumava: Items_base_F
 	{
 		author = "Coldfront15";
         editorCategory = "WDC_Items";
-		editorSubcategory = "WDC_Items";
+		editorSubcategory = "WDC_Intelligence";
 		class SimpleObject
 		{
 			eden = 1;
@@ -362,7 +362,27 @@ class CfgVehicles
 			verticalOffsetWorld = 0;
 			init = "''";
 		};
-		editorPreview = "\A3\EditorPreviews_F_Orange\Data\CfgVehicles\Leaflet_05_Stack_F.jpg";
+		editorPreview = "\x\wdc\addons\objects\data\ui\wdc_map_garmanda.jpg";
+		scope = 2;
+		scopeCurator = 2;
+		displayName = "Map (Sauerland)";
+		model = "\x\wdc\addons\objects\wdc_us_map_sumava.p3d";
+	};
+	class wdc_map_henderson: Items_base_F
+	{
+		author = "Coldfront15";
+        editorCategory = "WDC_Items";
+		editorSubcategory = "WDC_Intelligence";
+		class SimpleObject
+		{
+			eden = 1;
+			animate[] = {};
+			hide[] = {};
+			verticalOffset = 0.076;
+			verticalOffsetWorld = 0;
+			init = "''";
+		};
+		editorPreview = "\x\wdc\addons\objects\data\ui\wdc_map_henderson.jpg";
 		scope = 2;
 		scopeCurator = 2;
 		displayName = "Map (Henderson Field)";
@@ -372,7 +392,7 @@ class CfgVehicles
 	{
 		author = "Coldfront15";
         editorCategory = "WDC_Items";
-		editorSubcategory = "WDC_Items";
+		editorSubcategory = "WDC_Intelligence";
 		class SimpleObject
 		{
 			eden = 1;
@@ -382,7 +402,7 @@ class CfgVehicles
 			verticalOffsetWorld = 0;
 			init = "''";
 		};
-		editorPreview = "\A3\EditorPreviews_F_Orange\Data\CfgVehicles\Leaflet_05_Stack_F.jpg";
+		editorPreview = "\x\wdc\addons\objects\data\ui\wdc_map_holland.jpg";
 		scope = 2;
 		scopeCurator = 2;
 		displayName = "Map (Holland)";
@@ -392,7 +412,7 @@ class CfgVehicles
 	{
 		author = "Coldfront15";
         editorCategory = "WDC_Items";
-		editorSubcategory = "WDC_Items";
+		editorSubcategory = "WDC_Intelligence";
 		class SimpleObject
 		{
 			eden = 1;
@@ -402,7 +422,7 @@ class CfgVehicles
 			verticalOffsetWorld = 0;
 			init = "''";
 		};
-		editorPreview = "\A3\EditorPreviews_F_Orange\Data\CfgVehicles\Leaflet_05_Stack_F.jpg";
+		editorPreview = "\x\wdc\addons\objects\data\ui\wdc_map_iwojima.jpg";
 		scope = 2;
 		scopeCurator = 2;
 		displayName = "Map (Iwo Jima)";
@@ -412,7 +432,7 @@ class CfgVehicles
 	{
 		author = "Coldfront15";
         editorCategory = "WDC_Items";
-		editorSubcategory = "WDC_Items";
+		editorSubcategory = "WDC_Intelligence";
 		class SimpleObject
 		{
 			eden = 1;
@@ -422,7 +442,7 @@ class CfgVehicles
 			verticalOffsetWorld = 0;
 			init = "''";
 		};
-		editorPreview = "\A3\EditorPreviews_F_Orange\Data\CfgVehicles\Leaflet_05_Stack_F.jpg";
+		editorPreview = "\x\wdc\addons\objects\data\ui\wdc_map_manila.jpg";
 		scope = 2;
 		scopeCurator = 2;
 		displayName = "Map (Manila)";
@@ -432,7 +452,7 @@ class CfgVehicles
 	{
 		author = "Coldfront15";
         editorCategory = "WDC_Items";
-		editorSubcategory = "WDC_Items";
+		editorSubcategory = "WDC_Intelligence";
 		class SimpleObject
 		{
 			eden = 1;
@@ -442,7 +462,7 @@ class CfgVehicles
 			verticalOffsetWorld = 0;
 			init = "''";
 		};
-		editorPreview = "\A3\EditorPreviews_F_Orange\Data\CfgVehicles\Leaflet_05_Stack_F.jpg";
+		editorPreview = "\x\wdc\addons\objects\data\ui\wdc_map_moder.jpg";
 		scope = 2;
 		scopeCurator = 2;
 		displayName = "Map (Moder)";
@@ -452,7 +472,7 @@ class CfgVehicles
 	{
 		author = "Coldfront15";
         editorCategory = "WDC_Items";
-		editorSubcategory = "WDC_Items";
+		editorSubcategory = "WDC_Intelligence";
 		class SimpleObject
 		{
 			eden = 1;
@@ -462,7 +482,7 @@ class CfgVehicles
 			verticalOffsetWorld = 0;
 			init = "''";
 		};
-		editorPreview = "\A3\EditorPreviews_F_Orange\Data\CfgVehicles\Leaflet_05_Stack_F.jpg";
+		editorPreview = "\x\wdc\addons\objects\data\ui\wdc_map_okinawa.jpg";
 		scope = 2;
 		scopeCurator = 2;
 		displayName = "Map (Okinawa)";
@@ -472,7 +492,7 @@ class CfgVehicles
 	{
 		author = "Coldfront15";
         editorCategory = "WDC_Items";
-		editorSubcategory = "WDC_Items";
+		editorSubcategory = "WDC_Intelligence";
 		class SimpleObject
 		{
 			eden = 1;
@@ -482,7 +502,7 @@ class CfgVehicles
 			verticalOffsetWorld = 0;
 			init = "''";
 		};
-		editorPreview = "\A3\EditorPreviews_F_Orange\Data\CfgVehicles\Leaflet_05_Stack_F.jpg";
+		editorPreview = "\x\wdc\addons\objects\data\ui\wdc_map_omaha.jpg";
 		scope = 2;
 		scopeCurator = 2;
 		displayName = "Map (Omaha)";
@@ -492,7 +512,7 @@ class CfgVehicles
 	{
 		author = "Coldfront15";
         editorCategory = "WDC_Items";
-		editorSubcategory = "WDC_Items";
+		editorSubcategory = "WDC_Intelligence";
 		class SimpleObject
 		{
 			eden = 1;
@@ -502,7 +522,7 @@ class CfgVehicles
 			verticalOffsetWorld = 0;
 			init = "''";
 		};
-		editorPreview = "\A3\EditorPreviews_F_Orange\Data\CfgVehicles\Leaflet_05_Stack_F.jpg";
+		editorPreview = "\x\wdc\addons\objects\data\ui\wdc_map_palau.jpg";
 		scope = 2;
 		scopeCurator = 2;
 		displayName = "Map (Peleliu)";
@@ -512,7 +532,7 @@ class CfgVehicles
 	{
 		author = "Coldfront15";
         editorCategory = "WDC_Items";
-		editorSubcategory = "WDC_Items";
+		editorSubcategory = "WDC_Intelligence";
 		class SimpleObject
 		{
 			eden = 1;
@@ -522,7 +542,7 @@ class CfgVehicles
 			verticalOffsetWorld = 0;
 			init = "''";
 		};
-		editorPreview = "\A3\EditorPreviews_F_Orange\Data\CfgVehicles\Leaflet_05_Stack_F.jpg";
+		editorPreview = "\x\wdc\addons\objects\data\ui\wdc_map_rhineland.jpg";
 		scope = 2;
 		scopeCurator = 2;
 		displayName = "Map (Rhineland)";
@@ -532,7 +552,7 @@ class CfgVehicles
 	{
 		author = "Coldfront15";
         editorCategory = "WDC_Items";
-		editorSubcategory = "WDC_Items";
+		editorSubcategory = "WDC_Intelligence";
 		class SimpleObject
 		{
 			eden = 1;
@@ -542,7 +562,7 @@ class CfgVehicles
 			verticalOffsetWorld = 0;
 			init = "''";
 		};
-		editorPreview = "\A3\EditorPreviews_F_Orange\Data\CfgVehicles\Leaflet_05_Stack_F.jpg";
+		editorPreview = "\x\wdc\addons\objects\data\ui\wdc_map_stvith.jpg";
 		scope = 2;
 		scopeCurator = 2;
 		displayName = "Map (Saint Vith)";
@@ -552,7 +572,7 @@ class CfgVehicles
 	{
 		author = "Coldfront15";
         editorCategory = "WDC_Items";
-		editorSubcategory = "WDC_Items";
+		editorSubcategory = "WDC_Intelligence";
 		class SimpleObject
 		{
 			eden = 1;
@@ -562,7 +582,7 @@ class CfgVehicles
 			verticalOffsetWorld = 0;
 			init = "''";
 		};
-		editorPreview = "\A3\EditorPreviews_F_Orange\Data\CfgVehicles\Leaflet_05_Stack_F.jpg";
+		editorPreview = "\x\wdc\addons\objects\data\ui\wdc_map_tarawa.jpg";
 		scope = 2;
 		scopeCurator = 2;
 		displayName = "Map (Tarawa)";
@@ -572,7 +592,7 @@ class CfgVehicles
 	{
 		author = "Coldfront15";
         editorCategory = "WDC_Items";
-		editorSubcategory = "WDC_Items";
+		editorSubcategory = "WDC_Intelligence";
 		class SimpleObject
 		{
 			eden = 1;
@@ -582,7 +602,7 @@ class CfgVehicles
 			verticalOffsetWorld = 0;
 			init = "''";
 		};
-		editorPreview = "\A3\EditorPreviews_F_Orange\Data\CfgVehicles\Leaflet_05_Stack_F.jpg";
+		editorPreview = "\x\wdc\addons\objects\data\ui\wdc_map_vossenac.jpg";
 		scope = 2;
 		scopeCurator = 2;
 		displayName = "Map (Vossenac)";
@@ -592,7 +612,7 @@ class CfgVehicles
 	{
 		author = "Coldfront15";
         editorCategory = "WDC_Items";
-		editorSubcategory = "WDC_Items";
+		editorSubcategory = "WDC_Intelligence";
 		class SimpleObject
 		{
 			eden = 1;
@@ -602,7 +622,7 @@ class CfgVehicles
 			verticalOffsetWorld = 0;
 			init = "''";
 		};
-		editorPreview = "\A3\EditorPreviews_F_Orange\Data\CfgVehicles\Leaflet_05_Stack_F.jpg";
+		editorPreview = "\x\wdc\addons\objects\data\ui\wdc_map_wesel.jpg";
 		scope = 2;
 		scopeCurator = 2;
 		displayName = "Map (Wesel)";

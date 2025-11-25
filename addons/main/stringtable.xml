@@ -1,17 +1,141 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="wdc_main">
     <Package name="Translation">
-        <Key ID="STR_SPE_DN_ASSETS_WEAPONS_M19_RIFLE_GRENADE">
-            <Original>Rifle Grenade M19 (WP)</Original>
-            <English>Rifle Grenade M19 (WP)</English>
+        <Key ID="STR_WDC_Assets_Weapons_InfantryWeapons_displayNameShort_GSMK">
+            <Original>Green Smoke</Original>
+            <English>Green Smoke</English>
+        </Key>
+        <Key ID="STR_WDC_Assets_Weapons_InfantryWeapons_displayNameShort_GSTR">
+            <Original>Green Streamer</Original>
+            <English>Green Streamer</English>
+        </Key>
+        <Key ID="STR_WDC_Assets_Weapons_InfantryWeapons_displayNameShort_RSMK">
+            <Original>Red Smoke</Original>
+            <English>Red Smoke</English>
+        </Key>
+        <Key ID="STR_WDC_Assets_Weapons_InfantryWeapons_displayNameShort_RSTR">
+            <Original>Red Streamer</Original>
+            <English>Red Streamer</English>
+        </Key>
+        <Key ID="STR_WDC_Assets_Weapons_InfantryWeapons_displayNameShort_VSMK">
+            <Original>Violet Smoke</Original>
+            <English>Violet Smoke</English>
+        </Key>
+        <Key ID="STR_WDC_Assets_Weapons_InfantryWeapons_displayNameShort_VSTR">
+            <Original>Violet Streamer</Original>
+            <English>Violet Streamer</English>
         </Key>
         <Key ID="STR_WDC_Assets_Weapons_InfantryWeapons_displayNameShort_WP">
             <Original>WP</Original>
             <English>WP</English>
         </Key>
+        <Key ID="STR_WDC_Assets_Weapons_InfantryWeapons_displayNameShort_WSMK">
+            <Original>White Smoke</Original>
+            <English>White Smoke</English>
+        </Key>
+        <Key ID="STR_WDC_Assets_Weapons_InfantryWeapons_displayNameShort_WSTR">
+            <Original>White Streamer</Original>
+            <English>White Streamer</English>
+        </Key>
+        <Key ID="STR_WDC_Assets_Weapons_InfantryWeapons_displayNameShort_YSMK">
+            <Original>Yellow Smoke</Original>
+            <English>Yellow Smoke</English>
+        </Key>
+        <Key ID="STR_WDC_Assets_Weapons_InfantryWeapons_displayNameShort_YSTR">
+            <Original>Yellow Streamer</Original>
+            <English>Yellow Streamer</English>
+        </Key>
+        <Key ID="STR_WDC_DN_ASSETS_WEAPONS_M19_OD_RIFLE_GRENADE">
+            <Original>Rifle Grenade M19 (OD/WP)</Original>
+            <English>Rifle Grenade M19 (OD/WP)</English>
+        </Key>
+        <Key ID="STR_WDC_DN_ASSETS_WEAPONS_M19_RIFLE_GRENADE">
+            <Original>Rifle Grenade M19 (WP)</Original>
+            <English>Rifle Grenade M19 (WP)</English>
+        </Key>
+        <Key ID="STR_WDC_DN_ASSETS_WEAPONS_M22_GREEN_RIFLE_SMOKE">
+            <Original>Rifle Smoke M22 (Green)</Original>
+            <English>Rifle Smoke M22 (Green)</English>
+        </Key>
+        <Key ID="STR_WDC_DN_ASSETS_WEAPONS_M22_RED_RIFLE_SMOKE">
+            <Original>Rifle Smoke M22 (Red)</Original>
+            <English>Rifle Smoke M22 (Red)</English>
+        </Key>
+        <Key ID="STR_WDC_DN_ASSETS_WEAPONS_M22_VIOLET_RIFLE_SMOKE">
+            <Original>Rifle Smoke M22 (Violet)</Original>
+            <English>Rifle Smoke M22 (Violet)</English>
+        </Key>
+        <Key ID="STR_WDC_DN_ASSETS_WEAPONS_M22_WHITE_RIFLE_SMOKE">
+            <Original>Rifle Smoke M22 (White)</Original>
+            <English>Rifle Smoke M22 (White)</English>
+        </Key>
+        <Key ID="STR_WDC_DN_ASSETS_WEAPONS_M22_YELLOW_RIFLE_SMOKE">
+            <Original>Rifle Smoke M22 (Yellow)</Original>
+            <English>Rifle Smoke M22 (Yellow)</English>
+        </Key>
+        <Key ID="STR_WDC_DN_ASSETS_WEAPONS_M23A1_GREEN_RIFLE_Streamer">
+            <Original>Rifle Streamer M23A1 (Green)</Original>
+            <English>Rifle Streamer M23A1 (Green)</English>
+        </Key>
+        <Key ID="STR_WDC_DN_ASSETS_WEAPONS_M23A1_RED_RIFLE_Streamer">
+            <Original>Rifle Streamer M23A1 (Red)</Original>
+            <English>Rifle Streamer M23A1 (Red)</English>
+        </Key>
+        <Key ID="STR_WDC_DN_ASSETS_WEAPONS_M23A1_VIOLET_RIFLE_Streamer">
+            <Original>Rifle Streamer M23A1 (Violet)</Original>
+            <English>Rifle Streamer M23A1 (Violet)</English>
+        </Key>
+        <Key ID="STR_WDC_DN_ASSETS_WEAPONS_M23A1_WHITE_RIFLE_Streamer">
+            <Original>Rifle Streamer M23A1 (White)</Original>
+            <English>Rifle Streamer M23A1 (White)</English>
+        </Key>
+        <Key ID="STR_WDC_DN_ASSETS_WEAPONS_M23A1_YELLOW_RIFLE_Streamer">
+            <Original>Rifle Streamer M23A1 (Yellow)</Original>
+            <English>Rifle Streamer M23A1 (Yellow)</English>
+        </Key>
         <Key ID="STR_WDC_DSS_ASSETS_WEAPONS_M19_RIFLE_GRENADE">
             <Original>Type: White Phosphorous Grenade&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: M1, M7, M8 Rifle Grenade Adapters</Original>
             <English>Type: White Phosphorous Grenade&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: M1, M7, M8 Rifle Grenade Adapters</English>
+        </Key>
+        <Key ID="STR_WDC_DSS_ASSETS_WEAPONS_M22_GREEN_RIFLE_SMOKE">
+            <Original>Type: Green Smoke Grenade&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: M1, M7, M8 Rifle Grenade Adapters</Original>
+            <English>Type: Green Smoke Grenade&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: M1, M7, M8 Rifle Grenade Adapters</English>
+        </Key>
+        <Key ID="STR_WDC_DSS_ASSETS_WEAPONS_M22_RED_RIFLE_SMOKE">
+            <Original>Type: Red Smoke Grenade&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: M1, M7, M8 Rifle Grenade Adapters</Original>
+            <English>Type: Red Smoke Grenade&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: M1, M7, M8 Rifle Grenade Adapters</English>
+        </Key>
+        <Key ID="STR_WDC_DSS_ASSETS_WEAPONS_M22_VIOLET_RIFLE_SMOKE">
+            <Original>Type: Violet Smoke Grenade&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: M1, M7, M8 Rifle Grenade Adapters</Original>
+            <English>Type: Violet Smoke Grenade&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: M1, M7, M8 Rifle Grenade Adapters</English>
+        </Key>
+        <Key ID="STR_WDC_DSS_ASSETS_WEAPONS_M22_WHITE_RIFLE_SMOKE">
+            <Original>Type: White Smoke Grenade&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: M1, M7, M8 Rifle Grenade Adapters</Original>
+            <English>Type: White Smoke Grenade&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: M1, M7, M8 Rifle Grenade Adapters</English>
+        </Key>
+        <Key ID="STR_WDC_DSS_ASSETS_WEAPONS_M22_YELLOW_RIFLE_SMOKE">
+            <Original>Type: Yellow Smoke Grenade&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: M1, M7, M8 Rifle Grenade Adapters</Original>
+            <English>Type: Yellow Smoke Grenade&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: M1, M7, M8 Rifle Grenade Adapters</English>
+        </Key>
+        <Key ID="STR_WDC_DSS_ASSETS_WEAPONS_M23A1_GREEN_RIFLE_Streamer">
+            <Original>Type: Green Streamer Grenade&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: M1, M7, M8 Rifle Grenade Adapters</Original>
+            <English>Type: Green Streamer Grenade&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: M1, M7, M8 Rifle Grenade Adapters</English>
+        </Key>
+        <Key ID="STR_WDC_DSS_ASSETS_WEAPONS_M23A1_RED_RIFLE_Streamer">
+            <Original>Type: Red Streamer Grenade&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: M1, M7, M8 Rifle Grenade Adapters</Original>
+            <English>Type: Red Streamer Grenade&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: M1, M7, M8 Rifle Grenade Adapters</English>
+        </Key>
+        <Key ID="STR_WDC_DSS_ASSETS_WEAPONS_M23A1_VIOLET_RIFLE_Streamer">
+            <Original>Type: Violet Streamer Grenade&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: M1, M7, M8 Rifle Grenade Adapters</Original>
+            <English>Type: Violet Streamer Grenade&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: M1, M7, M8 Rifle Grenade Adapters</English>
+        </Key>
+        <Key ID="STR_WDC_DSS_ASSETS_WEAPONS_M23A1_WHITE_RIFLE_Streamer">
+            <Original>Type: White Streamer Grenade&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: M1, M7, M8 Rifle Grenade Adapters</Original>
+            <English>Type: White Streamer Grenade&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: M1, M7, M8 Rifle Grenade Adapters</English>
+        </Key>
+        <Key ID="STR_WDC_DSS_ASSETS_WEAPONS_M23A1_YELLOW_RIFLE_Streamer">
+            <Original>Type: Yellow Streamer Grenade&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: M1, M7, M8 Rifle Grenade Adapters</Original>
+            <English>Type: Yellow Streamer Grenade&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: M1, M7, M8 Rifle Grenade Adapters</English>
         </Key>
     </Package>
 </Project>
