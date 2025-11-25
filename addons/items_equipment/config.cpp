@@ -95,7 +95,7 @@ class CfgAmmo
 		submunitionDirectionType = "SubmunitionModelDirection";
 		submunitionInitialOffset[] = {0,0,-0.2};
 		submunitionParentSpeedCoef = 0;
-		submunitionInitSpeed = 1000;
+		submunitionInitSpeed = 0;
 		triggerOnImpact = 1;
 		deleteParentWhenTriggered = 1;
 	};
@@ -115,7 +115,7 @@ class CfgAmmo
 		submunitionDirectionType = "SubmunitionModelDirection";
 		submunitionInitialOffset[] = {0,0,-0.2};
 		submunitionParentSpeedCoef = 0;
-		submunitionInitSpeed = 1000;
+		submunitionInitSpeed = 0;
 		triggerOnImpact = 1;
 		deleteParentWhenTriggered = 1;
 	};
