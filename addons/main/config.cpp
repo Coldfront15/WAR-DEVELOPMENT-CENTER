@@ -35,4 +35,12 @@ class CfgEditorSubcategories
 	{
 		displayName = "Items"; // Name visible in the list
 	};
+    class WDC_Forms // Category class, you point to it in editorSubcategory property
+	{
+		displayName = "Forms"; // Name visible in the list
+	};
+     class WDC_Intelligence // Category class, you point to it in editorSubcategory property
+	{
+		displayName = "Intelligence"; // Name visible in the list
+	};
 };
