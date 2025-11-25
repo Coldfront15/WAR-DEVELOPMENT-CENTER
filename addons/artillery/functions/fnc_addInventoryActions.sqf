@@ -27,7 +27,7 @@
 #define ADD_ACTION(var1,var2) [\
 	_class,\
 	"CONTAINER",\
-	LLSTRING(DOUBLES(105mm_charge_change,var1)),\
+	LLSTRING(DOUBLES(charge_change,var1)),\
 	nil,\
 	"\a3\ui_f\data\igui\cfg\simpletasks\types\destroy_ca.paa",\
 	{true},\
@@ -35,13 +35,13 @@
 		params ["_unit", "", "_item", "_slot"];\
 		switch _slot do {\
 			case "UNIFORM_CONTAINER": {\
-				[LLSTRING(105mm_charge_change), tbd_mortars_main_chargeChangeTime, {true}, {params ["_args"]; _args params ["_unit"]; _unit addItemToUniform QUOTE(DOUBLES(var2,var1));}, {params ["_args"]; _args params ["_unit", "_item"]; _unit addItemToUniform _item;}, [_unit, _item]] call CBA_fnc_progressBar;\
+				[LLSTRING(charge_change), tbd_mortars_main_chargeChangeTime, {true}, {params ["_args"]; _args params ["_unit"]; _unit addItemToUniform QUOTE(DOUBLES(var2,var1));}, {params ["_args"]; _args params ["_unit", "_item"]; _unit addItemToUniform _item;}, [_unit, _item]] call CBA_fnc_progressBar;\
 			};\
 			case "VEST_CONTAINER": {\
-				[LLSTRING(105mm_charge_change), tbd_mortars_main_chargeChangeTime, {true}, {params ["_args"]; _args params ["_unit"]; _unit addItemToVest QUOTE(DOUBLES(var2,var1));}, {params ["_args"]; _args params ["_unit", "_item"]; _unit addItemToVest _item;}, [_unit, _item]] call CBA_fnc_progressBar;\
+				[LLSTRING(charge_change), tbd_mortars_main_chargeChangeTime, {true}, {params ["_args"]; _args params ["_unit"]; _unit addItemToVest QUOTE(DOUBLES(var2,var1));}, {params ["_args"]; _args params ["_unit", "_item"]; _unit addItemToVest _item;}, [_unit, _item]] call CBA_fnc_progressBar;\
 			};\
 			case "BACKPACK_CONTAINER": {\
-				[LLSTRING(105mm_charge_change), tbd_mortars_main_chargeChangeTime, {true}, {params ["_args"]; _args params ["_unit"]; _unit addItemToBackpack QUOTE(DOUBLES(var2,var1));}, {params ["_args"]; _args params ["_unit", "_item"]; _unit addItemToBackpack _item;}, [_unit, _item]] call CBA_fnc_progressBar;\
+				[LLSTRING(charge_change), tbd_mortars_main_chargeChangeTime, {true}, {params ["_args"]; _args params ["_unit"]; _unit addItemToBackpack QUOTE(DOUBLES(var2,var1));}, {params ["_args"]; _args params ["_unit", "_item"]; _unit addItemToBackpack _item;}, [_unit, _item]] call CBA_fnc_progressBar;\
 			};\
 		};\
 	},\
@@ -52,7 +52,7 @@
 #define ADD_ACTION_CREATE_SHELL(var1,var2,var3) [\
 	_class,\
 	"CONTAINER",\
-	LLSTRING(DOUBLES(105mm_assemble,var1)),\
+	LLSTRING(DOUBLES(assemble,var1)),\
 	nil,\
 	"\a3\ui_f\data\igui\cfg\simpletasks\types\destroy_ca.paa",\
 	[\
@@ -85,13 +85,13 @@
 		playSound3D [QPATHTOF(SPE_M3\sounds\create_round.ogg), _unit];\
 		switch _slot do {\
 			case "UNIFORM_CONTAINER": {\
-				[LLSTRING(105mm_assembling), tbd_mortars_main_assemble105time, {true}, {params ["_args"]; _args params ["_unit"]; _unit removeItemFromUniform QUOTE(var2); private _shell = QUOTE(DOUBLES(var3,var1)) createVehicle (getPos _unit); [_unit, _shell] call ace_dragging_fnc_startCarry;}, {params ["_args"]; _args params ["_unit", "_item"]; _unit addItemToUniform _item}, [_unit, _item]] call CBA_fnc_progressBar;\
+				[LLSTRING(assembling), tbd_mortars_main_assemble105time, {true}, {params ["_args"]; _args params ["_unit"]; _unit removeItemFromUniform QUOTE(var2); private _shell = QUOTE(DOUBLES(var3,var1)) createVehicle (getPos _unit); [_unit, _shell] call ace_dragging_fnc_startCarry;}, {params ["_args"]; _args params ["_unit", "_item"]; _unit addItemToUniform _item}, [_unit, _item]] call CBA_fnc_progressBar;\
 			};\
 			case "VEST_CONTAINER": {\
-				[LLSTRING(105mm_assembling), tbd_mortars_main_assemble105time, {true}, {params ["_args"]; _args params ["_unit"]; _unit removeItemFromVest QUOTE(var2); private _shell = QUOTE(DOUBLES(var3,var1)) createVehicle (getPos _unit); [_unit, _shell] call ace_dragging_fnc_startCarry;}, {params ["_args"]; _args params ["_unit", "_item"]; _unit addItemToVest _item}, [_unit, _item]] call CBA_fnc_progressBar;\
+				[LLSTRING(assembling), tbd_mortars_main_assemble105time, {true}, {params ["_args"]; _args params ["_unit"]; _unit removeItemFromVest QUOTE(var2); private _shell = QUOTE(DOUBLES(var3,var1)) createVehicle (getPos _unit); [_unit, _shell] call ace_dragging_fnc_startCarry;}, {params ["_args"]; _args params ["_unit", "_item"]; _unit addItemToVest _item}, [_unit, _item]] call CBA_fnc_progressBar;\
 			};\
 			case "BACKPACK_CONTAINER": {\
-				[LLSTRING(105mm_assembling), tbd_mortars_main_assemble105time, {true}, {params ["_args"]; _args params ["_unit"]; _unit removeItemFromBackpack QUOTE(var2); private _shell = QUOTE(DOUBLES(var3,var1)) createVehicle (getPos _unit); [_unit, _shell] call ace_dragging_fnc_startCarry;}, {params ["_args"]; _args params ["_unit", "_item"]; _unit addItemToBackpack _item}, [_unit, _item]] call CBA_fnc_progressBar;\
+				[LLSTRING(assembling), tbd_mortars_main_assemble105time, {true}, {params ["_args"]; _args params ["_unit"]; _unit removeItemFromBackpack QUOTE(var2); private _shell = QUOTE(DOUBLES(var3,var1)) createVehicle (getPos _unit); [_unit, _shell] call ace_dragging_fnc_startCarry;}, {params ["_args"]; _args params ["_unit", "_item"]; _unit addItemToBackpack _item}, [_unit, _item]] call CBA_fnc_progressBar;\
 			};\
 		};\
 	},\
@@ -102,7 +102,7 @@
 #define ADD_ACTION_PACK(var1,var2) [\
 	_class,\
 	"CONTAINER",\
-	LLSTRING(DOUBLES(105mm_pack,var1)),\
+	LLSTRING(DOUBLES(pack,var1)),\
 	nil,\
 	"\a3\ui_f\data\igui\cfg\simpletasks\types\box_ca.paa",\
 	[\
@@ -116,13 +116,13 @@
 		playSound3D [QPATHTOF(SPE_M3\sounds\pack_tube.ogg), _unit];\
 		switch _slot do {\
 			case "UNIFORM_CONTAINER": {\
-				[LLSTRING(105mm_pack), tbd_mortars_main_pack105Time, {true}, {params ["_args"]; _args params ["_unit"]; if !([QUOTE(DOUBLES(wdc_artillery_SPE_M3_CASING_CHARGE,var1))] call tbd_mortars_main_fnc_isMineNearby) exitWith {}; [QUOTE(DOUBLES(wdc_artillery_SPE_M3_CASING_CHARGE,var1))] call tbd_mortars_main_fnc_removeNearbyShell; [QUOTE(var2)] call tbd_mortars_main_fnc_addNearbyShell;}, {params ["_args"]; _args params ["_unit", "_item"]; _unit addItemToUniform _item;}, [_unit, _item]] call CBA_fnc_progressBar;\
+				[LLSTRING(pack), tbd_mortars_main_pack105Time, {true}, {params ["_args"]; _args params ["_unit"]; if !([QUOTE(DOUBLES(wdc_artillery_SPE_M3_CASING_CHARGE,var1))] call tbd_mortars_main_fnc_isMineNearby) exitWith {}; [QUOTE(DOUBLES(wdc_artillery_SPE_M3_CASING_CHARGE,var1))] call tbd_mortars_main_fnc_removeNearbyShell; [QUOTE(var2)] call tbd_mortars_main_fnc_addNearbyShell;}, {params ["_args"]; _args params ["_unit", "_item"]; _unit addItemToUniform _item;}, [_unit, _item]] call CBA_fnc_progressBar;\
 			};\
 			case "VEST_CONTAINER": {\
-				[LLSTRING(105mm_pack), tbd_mortars_main_pack105Time, {true}, {params ["_args"]; _args params ["_unit"]; if !([QUOTE(DOUBLES(wdc_artillery_SPE_M3_CASING_CHARGE,var1))] call tbd_mortars_main_fnc_isMineNearby) exitWith {}; [QUOTE(DOUBLES(wdc_artillery_SPE_M3_CASING_CHARGE,var1))] call tbd_mortars_main_fnc_removeNearbyShell; [QUOTE(var2)] call tbd_mortars_main_fnc_addNearbyShell}, {params ["_args"]; _args params ["_unit", "_item"]; _unit addItemToVest _item;}, [_unit, _item]] call CBA_fnc_progressBar;\
+				[LLSTRING(pack), tbd_mortars_main_pack105Time, {true}, {params ["_args"]; _args params ["_unit"]; if !([QUOTE(DOUBLES(wdc_artillery_SPE_M3_CASING_CHARGE,var1))] call tbd_mortars_main_fnc_isMineNearby) exitWith {}; [QUOTE(DOUBLES(wdc_artillery_SPE_M3_CASING_CHARGE,var1))] call tbd_mortars_main_fnc_removeNearbyShell; [QUOTE(var2)] call tbd_mortars_main_fnc_addNearbyShell}, {params ["_args"]; _args params ["_unit", "_item"]; _unit addItemToVest _item;}, [_unit, _item]] call CBA_fnc_progressBar;\
 			};\
 			case "BACKPACK_CONTAINER": {\
-				[LLSTRING(105mm_pack), tbd_mortars_main_pack105Time, {true}, {params ["_args"]; _args params ["_unit"]; if !([QUOTE(DOUBLES(wdc_artillery_SPE_M3_CASING_CHARGE,var1))] call tbd_mortars_main_fnc_isMineNearby) exitWith {}; [QUOTE(DOUBLES(wdc_artillery_SPE_M3_CASING_CHARGE,var1))] call tbd_mortars_main_fnc_removeNearbyShell; [QUOTE(var2)] call tbd_mortars_main_fnc_addNearbyShell;}, {params ["_args"]; _args params ["_unit", "_item"]; _unit addItemToBackpack _item;}, [_unit, _item]] call CBA_fnc_progressBar;\
+				[LLSTRING(pack), tbd_mortars_main_pack105Time, {true}, {params ["_args"]; _args params ["_unit"]; if !([QUOTE(DOUBLES(wdc_artillery_SPE_M3_CASING_CHARGE,var1))] call tbd_mortars_main_fnc_isMineNearby) exitWith {}; [QUOTE(DOUBLES(wdc_artillery_SPE_M3_CASING_CHARGE,var1))] call tbd_mortars_main_fnc_removeNearbyShell; [QUOTE(var2)] call tbd_mortars_main_fnc_addNearbyShell;}, {params ["_args"]; _args params ["_unit", "_item"]; _unit addItemToBackpack _item;}, [_unit, _item]] call CBA_fnc_progressBar;\
 			};\
 		};\
 	},\
@@ -133,7 +133,7 @@
 #define ADD_ACTION_UNPACK(var1,var2) [\
 	_class,\
 	"CONTAINER",\
-	LLSTRING(105mm_unpack),\
+	LLSTRING(unpack),\
 	nil,\
 	"\a3\ui_f\data\igui\cfg\simpletasks\types\rearm_ca.paa",\
 	{true},\
@@ -141,7 +141,7 @@
 		params ["_unit", "", "_item", "_slot"];\
 		switch _slot do {\
 			case "UNIFORM_CONTAINER": {\
-				[LLSTRING(105mm_unpacking), tbd_mortars_main_unpack105Time, {true}, {\
+				[LLSTRING(unpacking), tbd_mortars_main_unpack105Time, {true}, {\
 					params ["_args"];\
 					_args params ["_unit"];\
 					_unit addItemToUniform QUOTE(var1);\
@@ -154,7 +154,7 @@
 				}, [_unit, _item]] call CBA_fnc_progressBar;\
 			};\
 			case "VEST_CONTAINER": {\
-				[LLSTRING(105mm_unpack), tbd_mortars_main_unpack105Time, {true}, {\
+				[LLSTRING(unpack), tbd_mortars_main_unpack105Time, {true}, {\
 					params ["_args"];\
 					_args params ["_unit"];\
 					_unit addItemToVest QUOTE(var1);\
@@ -167,7 +167,7 @@
 				}, [_unit, _item]] call CBA_fnc_progressBar;\
 			};\
 			case "BACKPACK_CONTAINER": {\
-				[LLSTRING(105mm_unpack), tbd_mortars_main_unpack105Time, {true}, {\
+				[LLSTRING(unpack), tbd_mortars_main_unpack105Time, {true}, {\
 					params ["_args"];\
 					_args params ["_unit"];\
 					_unit addItemToBackpack QUOTE(var1);\

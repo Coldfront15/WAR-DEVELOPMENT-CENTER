@@ -82,7 +82,7 @@ class CfgVehicles {
         ace_artillerytables_showGunLaying = 1;   // "fix" rangetables not showing up
         author = "Spearhead/Coldfront15/WDC";
         scope = 2;
-        displayName = "105-mm Light Howitzer, M3";
+        displayName = CSTRING(name);
         side = 2;
 		faction = "SPE_US_ARMY";
 		crew = "SPE_US_Guncrew";
@@ -229,7 +229,8 @@ class CfgVehicles {
                 class wdc_LoadHE {
                     displayName = CSTRING(HE);
                     class wdc_LoadHECh1 {         
-                        displayName = "$STR_WDC_ARTILLERY_105mm_HE_CHARGE_1";      
+                        displayName = "$STR_WDC_ARTILLERY_105mm_HE_CH1";
+                        displayNameShort = "$STR_WDC_ARTILLERY_105mm_HE_CH1_SHORT";      
                         condition = QUOTE([ARR_2(_target,QUOTE(QUOTE(wdc_artillery_SPE_M3_M1_HE_CHARGE_1)))] call FUNC(canLoad));
                         statement = QUOTE([ARR_3(_target,QUOTE(QUOTE(wdc_artillery_SPE_M3_M1_HE_CHARGE_1)),0)] call FUNC(load));
                         showDisabled = 0;
@@ -237,7 +238,8 @@ class CfgVehicles {
                     };
 
                     class wdc_LoadHECh2 {         
-                        displayName = "$STR_WDC_ARTILLERY_105mm_HE_CHARGE_2";      
+                        displayName = "$STR_WDC_ARTILLERY_105mm_HE_CH2";
+                        displayNameShort = "$STR_WDC_ARTILLERY_105mm_HE_CH2_SHORT";      
                         condition = QUOTE([ARR_2(_target,QUOTE(QUOTE(wdc_artillery_SPE_M3_M1_HE_CHARGE_2)))] call FUNC(canLoad));
                         statement = QUOTE([ARR_3(_target,QUOTE(QUOTE(wdc_artillery_SPE_M3_M1_HE_CHARGE_2)),0)] call FUNC(load));
                         showDisabled = 0;
@@ -245,7 +247,8 @@ class CfgVehicles {
                     };
 
                     class wdc_LoadHECh3 {         
-                        displayName = "$STR_WDC_ARTILLERY_105mm_HE_CHARGE_3";      
+                        displayName = "$STR_WDC_ARTILLERY_105mm_HE_CH3";
+                        displayNameShort = "$STR_WDC_ARTILLERY_105mm_HE_CH3_SHORT";      
                         condition = QUOTE([ARR_2(_target,QUOTE(QUOTE(wdc_artillery_SPE_M3_M1_HE_CHARGE_3)))] call FUNC(canLoad));
                         statement = QUOTE([ARR_3(_target,QUOTE(QUOTE(wdc_artillery_SPE_M3_M1_HE_CHARGE_3)),0)] call FUNC(load));
                         showDisabled = 0;
@@ -253,7 +256,8 @@ class CfgVehicles {
                     };
 
                     class wdc_LoadHECh4 {         
-                        displayName = "$STR_WDC_ARTILLERY_105mm_HE_CHARGE_4";      
+                        displayName = "$STR_WDC_ARTILLERY_105mm_HE_CH4";
+                        displayNameShort = "$STR_WDC_ARTILLERY_105mm_HE_CH4_SHORT";      
                         condition = QUOTE([ARR_2(_target,QUOTE(QUOTE(wdc_artillery_SPE_M3_M1_HE_CHARGE_4)))] call FUNC(canLoad));
                         statement = QUOTE([ARR_3(_target,QUOTE(QUOTE(wdc_artillery_SPE_M3_M1_HE_CHARGE_4)),0)] call FUNC(load));
                         showDisabled = 0;
@@ -261,7 +265,8 @@ class CfgVehicles {
                     };
 
                     class wdc_LoadHECh5 {         
-                        displayName = "$STR_WDC_ARTILLERY_105mm_HE_CHARGE_5";      
+                        displayName = "$STR_WDC_ARTILLERY_105mm_HE_CH5";
+                        displayNameShort = "$STR_WDC_ARTILLERY_105mm_HE_CH5_SHORT";      
                         condition = QUOTE([ARR_2(_target,QUOTE(QUOTE(wdc_artillery_SPE_M3_M1_HE_CHARGE_5)))] call FUNC(canLoad));
                         statement = QUOTE([ARR_3(_target,QUOTE(QUOTE(wdc_artillery_SPE_M3_M1_HE_CHARGE_5)),0)] call FUNC(load));
                         showDisabled = 0;
@@ -272,7 +277,8 @@ class CfgVehicles {
                 class wdc_LoadHEVT {
                     displayName = CSTRING(HE_VT);
                     class wdc_LoadHEVTCh1 {         
-                        displayName = "$STR_WDC_ARTILLERY_105mm_HE_VT_CHARGE_1";      
+                        displayName = "$STR_WDC_ARTILLERY_105mm_HE_VT_CH1";
+                        displayNameShort = "$STR_WDC_ARTILLERY_105mm_HE_VT_CH1_SHORT";      
                         condition = QUOTE([ARR_2(_target,QUOTE(QUOTE(wdc_artillery_SPE_M3_M1_HE_VT_CHARGE_1)))] call FUNC(canLoad));
                         statement = QUOTE([ARR_3(_target,QUOTE(QUOTE(wdc_artillery_SPE_M3_M1_HE_VT_CHARGE_1)),0)] call FUNC(load));
                         showDisabled = 0;
@@ -280,7 +286,8 @@ class CfgVehicles {
                     };
 
                     class wdc_LoadHEVTCh2 {         
-                        displayName = "$STR_WDC_ARTILLERY_105mm_HE_VT_CHARGE_2";      
+                        displayName = "$STR_WDC_ARTILLERY_105mm_HE_VT_CH2";
+                        displayNameShort = "$STR_WDC_ARTILLERY_105mm_HE_VT_CH2_SHORT";      
                         condition = QUOTE([ARR_2(_target,QUOTE(QUOTE(wdc_artillery_SPE_M3_M1_HE_VT_CHARGE_2)))] call FUNC(canLoad));
                         statement = QUOTE([ARR_3(_target,QUOTE(QUOTE(wdc_artillery_SPE_M3_M1_HE_VT_CHARGE_2)),0)] call FUNC(load));
                         showDisabled = 0;
@@ -288,7 +295,8 @@ class CfgVehicles {
                     };
 
                     class wdc_LoadHEVTCh3 {         
-                        displayName = "$STR_WDC_ARTILLERY_105mm_HE_VT_CHARGE_3";      
+                        displayName = "$STR_WDC_ARTILLERY_105mm_HE_VT_CH3";      
+                        displayNameShort = "$STR_WDC_ARTILLERY_105mm_HE_VT_CH3_SHORT";      
                         condition = QUOTE([ARR_2(_target,QUOTE(QUOTE(wdc_artillery_SPE_M3_M1_HE_VT_CHARGE_3)))] call FUNC(canLoad));
                         statement = QUOTE([ARR_3(_target,QUOTE(QUOTE(wdc_artillery_SPE_M3_M1_HE_VT_CHARGE_3)),0)] call FUNC(load));
                         showDisabled = 0;
@@ -296,7 +304,8 @@ class CfgVehicles {
                     };
 
                     class wdc_LoadHEVTCh4 {         
-                        displayName = "$STR_WDC_ARTILLERY_105mm_HE_VT_CHARGE_4";      
+                        displayName = "$STR_WDC_ARTILLERY_105mm_HE_VT_CH4";
+                        displayNameShort = "$STR_WDC_ARTILLERY_105mm_HE_VT_CH4_SHORT";      
                         condition = QUOTE([ARR_2(_target,QUOTE(QUOTE(wdc_artillery_SPE_M3_M1_HE_VT_CHARGE_4)))] call FUNC(canLoad));
                         statement = QUOTE([ARR_3(_target,QUOTE(QUOTE(wdc_artillery_SPE_M3_M1_HE_VT_CHARGE_4)),0)] call FUNC(load));
                         showDisabled = 0;
@@ -304,7 +313,8 @@ class CfgVehicles {
                     };
 
                     class wdc_LoadHEVTCh5 {         
-                        displayName = "$STR_WDC_ARTILLERY_105mm_HE_VT_CHARGE_5";      
+                        displayName = "$STR_WDC_ARTILLERY_105mm_HE_VT_CH5";      
+                        displayNameShort = "$STR_WDC_ARTILLERY_105mm_HE_VT_CH5_SHORT";      
                         condition = QUOTE([ARR_2(_target,QUOTE(QUOTE(wdc_artillery_SPE_M3_M1_HE_VT_CHARGE_5)))] call FUNC(canLoad));
                         statement = QUOTE([ARR_3(_target,QUOTE(QUOTE(wdc_artillery_SPE_M3_M1_HE_VT_CHARGE_5)),0)] call FUNC(load));
                         showDisabled = 0;
@@ -315,7 +325,8 @@ class CfgVehicles {
                 class wdc_LoadHEAT {
                     displayName = CSTRING(HEAT);
                     class wdc_LoadHEATCh1 {         
-                        displayName = "$STR_WDC_ARTILLERY_105mm_HEAT_SHORT";      
+                        displayName = "$STR_WDC_ARTILLERY_105mm_HEAT";      
+                        displayNameShort = "$STR_WDC_ARTILLERY_105mm_HEAT_SHORT";
                         condition = QUOTE([ARR_2(_target,QUOTE(QUOTE(wdc_artillery_SPE_M3_M67_HEAT_CHARGE_5)))] call FUNC(canLoad));
                         statement = QUOTE([ARR_3(_target,QUOTE(QUOTE(wdc_artillery_SPE_M3_M67_HEAT_CHARGE_5)),0)] call FUNC(load));
                         showDisabled = 0;
@@ -323,10 +334,11 @@ class CfgVehicles {
                     };
                 };
 
-                class wdc_LoadSMOKECh6 {
+                class wdc_LoadSMOKE {
                     displayName = CSTRING(WP);
                     class wdc_LoadSMOKECh1 {         
-                        displayName = "$STR_WDC_ARTILLERY_105mm_WP_CHARGE_1";      
+                        displayName = "$STR_WDC_ARTILLERY_105mm_WP_CH1";
+                        displayNameShort = "$STR_WDC_ARTILLERY_105mm_WP_CH1_SHORT";      
                         condition = QUOTE([ARR_2(_target,QUOTE(QUOTE(wdc_artillery_SPE_M3_M60_WP_CHARGE_1)))] call FUNC(canLoad));
                         statement = QUOTE([ARR_3(_target,QUOTE(QUOTE(wdc_artillery_SPE_M3_M60_WP_CHARGE_1)),0)] call FUNC(load));
                         showDisabled = 0;
@@ -334,7 +346,8 @@ class CfgVehicles {
                     };
 
                     class wdc_LoadSMOKECh2 {         
-                        displayName = "$STR_WDC_ARTILLERY_105mm_WP_CHARGE_2";      
+                        displayName = "$STR_WDC_ARTILLERY_105mm_WP_CH2";      
+                        displayNameShort = "$STR_WDC_ARTILLERY_105mm_WP_CH2_SHORT";      
                         condition = QUOTE([ARR_2(_target,QUOTE(QUOTE(wdc_artillery_SPE_M3_M60_WP_CHARGE_2)))] call FUNC(canLoad));
                         statement = QUOTE([ARR_3(_target,QUOTE(QUOTE(wdc_artillery_SPE_M3_M60_WP_CHARGE_2)),0)] call FUNC(load));
                         showDisabled = 0;
@@ -342,7 +355,8 @@ class CfgVehicles {
                     };
 
                     class wdc_LoadSMOKECh3 {         
-                        displayName = "$STR_WDC_ARTILLERY_105mm_WP_CHARGE_3";      
+                        displayName = "$STR_WDC_ARTILLERY_105mm_WP_CH3";      
+                        displayNameShort = "$STR_WDC_ARTILLERY_105mm_WP_CH3_SHORT";      
                         condition = QUOTE([ARR_2(_target,QUOTE(QUOTE(wdc_artillery_SPE_M3_M60_WP_CHARGE_3)))] call FUNC(canLoad));
                         statement = QUOTE([ARR_3(_target,QUOTE(QUOTE(wdc_artillery_SPE_M3_M60_WP_CHARGE_3)),0)] call FUNC(load));
                         showDisabled = 0;
@@ -350,7 +364,8 @@ class CfgVehicles {
                     };
 
                     class wdc_LoadSMOKECh4 {         
-                        displayName = "$STR_WDC_ARTILLERY_105mm_WP_CHARGE_4";      
+                        displayName = "$STR_WDC_ARTILLERY_105mm_WP_CH4";      
+                        displayNameShort = "$STR_WDC_ARTILLERY_105mm_WP_CH4_SHORT";      
                         condition = QUOTE([ARR_2(_target,QUOTE(QUOTE(wdc_artillery_SPE_M3_M60_WP_CHARGE_4)))] call FUNC(canLoad));
                         statement = QUOTE([ARR_3(_target,QUOTE(QUOTE(wdc_artillery_SPE_M3_M60_WP_CHARGE_4)),0)] call FUNC(load));
                         showDisabled = 0;
@@ -358,7 +373,8 @@ class CfgVehicles {
                     };
 
                     class wdc_LoadSMOKECh5 {         
-                        displayName = "$STR_WDC_ARTILLERY_105mm_WP_CHARGE_5";      
+                        displayName = "$STR_WDC_ARTILLERY_105mm_WP_CH5";      
+                        displayNameShort = "$STR_WDC_ARTILLERY_105mm_WP_CH5_SHORT";      
                         condition = QUOTE([ARR_2(_target,QUOTE(QUOTE(wdc_artillery_SPE_M3_M60_WP_CHARGE_5)))] call FUNC(canLoad));
                         statement = QUOTE([ARR_3(_target,QUOTE(QUOTE(wdc_artillery_SPE_M3_M60_WP_CHARGE_5)),0)] call FUNC(load));
                         showDisabled = 0;
@@ -397,8 +413,8 @@ class CfgVehicles {
         scope = 2;
 		scopeArsenal = 2;
 		author = "WDC";
-        displayName = "2-Rnd 105mm HE/PD Box";
-		displayNameShort = "105mm HE/PD Box";
+        displayName = CSTRING(105mm_BOX_HE);
+		displayNameShort = CSTRING(105mm_BOX_HE_SHORT);
         model = QPATHTOF(spe_m3\wdc_105_M1_HE_M54_PD\wdc_105_box_M1_HE_PD);
         editorPreview = QPATHTOF(spe_m3\wdc_105_M1_HE_M54_PD\data\HE_PD_box.jpg);
         ace_cargo_size = 0.5;
@@ -478,7 +494,7 @@ class CfgVehicles {
     class wdc_artillery_SPE_M3_M1_HE_CHARGE_1 : NATO_Box_Base {
         scope = 2;
         author = "Coldfront15";
-        displayName = CSTRING(105mm_he_charge_1);
+        displayName = CSTRING(105mm_he_ch1);
         model = QPATHTOF(spe_m3\wdc_105_M1_HE_M54_PD\wdc_105_shell_M1_HE_PD);
         editorPreview = QPATHTOF(spe_m3\data\HE_shell.jpg);
         ace_cargo_size = 0.5;
@@ -489,7 +505,7 @@ class CfgVehicles {
         class ACE_Actions: ACE_Actions {
             class ACE_MainActions: ACE_MainActions {
                 class wdc_artillery_SPE_M3_M1_HE_CHARGE_DISASSEMBLE {
-                    displayName = CSTRING(105mm_disassemble);
+                    displayName = CSTRING(disassemble);
                     condition = "true";
                     statement = QUOTE([ARR_1(_target)] call FUNC(disassemble));
                     distance = 2;
@@ -505,19 +521,19 @@ class CfgVehicles {
     };
 
     class wdc_artillery_SPE_M3_M1_HE_CHARGE_2 : wdc_artillery_SPE_M3_M1_HE_CHARGE_1 {
-        displayName = CSTRING(105mm_he_charge_2);
+        displayName = CSTRING(105mm_he_ch2);
     };
 
     class wdc_artillery_SPE_M3_M1_HE_CHARGE_3 : wdc_artillery_SPE_M3_M1_HE_CHARGE_1 {
-        displayName = CSTRING(105mm_he_charge_3);
+        displayName = CSTRING(105mm_he_ch3);
     };
 
     class wdc_artillery_SPE_M3_M1_HE_CHARGE_4 : wdc_artillery_SPE_M3_M1_HE_CHARGE_1 {
-        displayName = CSTRING(105mm_he_charge_4);
+        displayName = CSTRING(105mm_he_ch4);
     };
 
     class wdc_artillery_SPE_M3_M1_HE_CHARGE_5 : wdc_artillery_SPE_M3_M1_HE_CHARGE_1 {
-        displayName = CSTRING(105mm_he_charge_5);
+        displayName = CSTRING(105mm_he_ch5);
     };
 
     // M1 HE/VT
@@ -526,8 +542,8 @@ class CfgVehicles {
         scope = 2;
 		scopeArsenal = 2;
 		author = "WDC";
-        displayName = "2-Rnd 105mm HE/VT Box";
-		displayNameShort = "105mm HE/VT Box";
+        displayName = CSTRING(105mm_BOX_HEVT);
+		displayNameShort = CSTRING(105mm_BOX_HEVT_SHORT);
         model = QPATHTOF(spe_m3\wdc_105_M1_HE_VT_T80E6\wdc_105_box_M1_HE_VT);
         editorPreview = QPATHTOF(spe_m3\wdc_105_M1_HE_VT_T80E6\data\HE_VT_box.jpg);
         ace_cargo_size = 0.5;
@@ -572,7 +588,7 @@ class CfgVehicles {
     class wdc_artillery_SPE_M3_M1_HE_VT_CHARGE_1 : NATO_Box_Base {
         scope = 2;
         author = "Coldfront15";
-        displayName = CSTRING(105mm_he_VT_charge_1);
+        displayName = CSTRING(105mm_he_VT_ch1);
         model = QPATHTOF(spe_m3\wdc_105_M1_HE_VT_T80E6\wdc_105_shell_M1_HE_VT);
         editorPreview = QPATHTOF(spe_m3\data\HE_shell.jpg);
         ace_cargo_size = 0.5;
@@ -583,7 +599,7 @@ class CfgVehicles {
         class ACE_Actions: ACE_Actions {
             class ACE_MainActions: ACE_MainActions {
                 class wdc_artillery_SPE_M3_M1_HE_VT_CHARGE_DISASSEMBLE {
-                    displayName = CSTRING(105mm_disassemble);
+                    displayName = CSTRING(disassemble);
                     condition = "true";
                     statement = QUOTE([ARR_1(_target)] call FUNC(disassemble));
                     distance = 2;
@@ -593,19 +609,19 @@ class CfgVehicles {
     };
 
     class wdc_artillery_SPE_M3_M1_HE_VT_CHARGE_2 : wdc_artillery_SPE_M3_M1_HE_VT_CHARGE_1 {
-        displayName = CSTRING(105mm_he_VT_charge_2);
+        displayName = CSTRING(105mm_he_VT_ch2);
     };
 
     class wdc_artillery_SPE_M3_M1_HE_VT_CHARGE_3 : wdc_artillery_SPE_M3_M1_HE_VT_CHARGE_1 {
-        displayName = CSTRING(105mm_he_VT_charge_3);
+        displayName = CSTRING(105mm_he_VT_ch3);
     };
 
     class wdc_artillery_SPE_M3_M1_HE_VT_CHARGE_4 : wdc_artillery_SPE_M3_M1_HE_VT_CHARGE_1 {
-        displayName = CSTRING(105mm_he_VT_charge_4);
+        displayName = CSTRING(105mm_he_VT_ch4);
     };
 
     class wdc_artillery_SPE_M3_M1_HE_VT_CHARGE_5 : wdc_artillery_SPE_M3_M1_HE_VT_CHARGE_1 {
-        displayName = CSTRING(105mm_he_VT_charge_5);
+        displayName = CSTRING(105mm_he_VT_ch5);
     };
 
 
@@ -614,7 +630,7 @@ class CfgVehicles {
     class wdc_artillery_SPE_M3_M67_HEAT_CHARGE_5 : NATO_Box_Base {
         scope = 2;
         author = "Coldfront15";
-        displayName = CSTRING(105MM_heat);
+        displayName = CSTRING(105mm_heat);
         model = QPATHTOF(spe_m3\wdc_105_M67_HEAT_BD_M62\wdc_105_shell_M67_HEAT);
         editorPreview = QPATHTOF(spe_m3\data\HE_shell.jpg);
         ace_cargo_size = 0.5;
@@ -625,7 +641,7 @@ class CfgVehicles {
         class ACE_Actions: ACE_Actions {
             class ACE_MainActions: ACE_MainActions {
                 class wdc_artillery_SPE_M3_M67_HE_CHARGE_DISASSEMBLE {
-                    displayName = CSTRING(105mm_disassemble);
+                    displayName = CSTRING(disassemble);
                     condition = "true";
                     statement = QUOTE([ARR_1(_target)] call FUNC(disassemble));
                     distance = 2;
@@ -638,8 +654,8 @@ class CfgVehicles {
         scope = 2;
 		scopeArsenal = 2;
 		author = "WDC";
-        displayName = "2-Rnd 105mm HEAT Box";
-		displayNameShort = "105mm HEAT Box";
+        displayName = CSTRING(105mm_BOX_HEAT);
+		displayNameShort = CSTRING(105mm_BOX_HEAT_SHORT);
         model = QPATHTOF(spe_m3\wdc_105_M67_HEAT_BD_M62\wdc_105_box_M67_HEAT);
         editorPreview = QPATHTOF(spe_m3\wdc_105_M67_HEAT_BD_M62\data\HEAT_box.jpg);
         ace_cargo_size = 0.5;
@@ -687,8 +703,8 @@ class CfgVehicles {
         scope = 2;
 		scopeArsenal = 2;
 		author = "WDC";
-        displayName = "2-Rnd 105mm WP Box";
-		displayNameShort = "105mm WP Box";
+        displayName = CSTRING(105mm_BOX_WP);
+		displayNameShort = CSTRING(105mm_BOX_WP_SHORT);
         model = QPATHTOF(spe_m3\wdc_105_M60_WP_PD_M57\wdc_105_box_M60_WP_PD);
         editorPreview = QPATHTOF(spe_m3\wdc_105_M60_WP_PD_M57\data\WP_box.jpg);
 		picture = QPATHTOF(spe_m3\data\tube.paa);
@@ -734,7 +750,7 @@ class CfgVehicles {
     class wdc_artillery_SPE_M3_M60_WP_CHARGE_1 : NATO_Box_Base {
         scope = 2;
         author = "Coldfront15";
-        displayName = CSTRING(105mm_WP_CHARGE_1);
+        displayName = CSTRING(105mm_WP_CH1);
         model = QPATHTOF(spe_m3\wdc_105_M60_WP_PD_M57\wdc_105_shell_M60_WP);
         editorPreview = QPATHTOF(spe_m3\data\SMK_shell.jpg);
         ace_cargo_size = 0.5;
@@ -745,7 +761,7 @@ class CfgVehicles {
         class ACE_Actions: ACE_Actions {
             class ACE_MainActions: ACE_MainActions {
                 class wdc_artillery_SPE_M3_M1_HE_CHARGE_DISASSEMBLE {
-                    displayName = CSTRING(105mm_disassemble);
+                    displayName = CSTRING(disassemble);
                     condition = "true";
                     statement = QUOTE([ARR_1(_target)] call FUNC(disassemble));
                     distance = 2;
@@ -761,18 +777,18 @@ class CfgVehicles {
     };
 
     class wdc_artillery_SPE_M3_M60_WP_CHARGE_2 : wdc_artillery_SPE_M3_M60_WP_CHARGE_1 {
-        displayName = CSTRING(105mm_WP_charge_2);
+        displayName = CSTRING(105mm_WP_ch2);
     };
 
     class wdc_artillery_SPE_M3_M60_WP_CHARGE_3 : wdc_artillery_SPE_M3_M60_WP_CHARGE_1 {
-        displayName = CSTRING(105mm_WP_charge_3);
+        displayName = CSTRING(105mm_WP_ch3);
     };
 
     class wdc_artillery_SPE_M3_M60_WP_CHARGE_4 : wdc_artillery_SPE_M3_M60_WP_CHARGE_1 {
-        displayName = CSTRING(105mm_WP_charge_4);
+        displayName = CSTRING(105mm_WP_ch4);
     };
 
     class wdc_artillery_SPE_M3_M60_WP_CHARGE_5 : wdc_artillery_SPE_M3_M60_WP_CHARGE_1 {
-        displayName = CSTRING(105mm_WP_charge_5);
+        displayName = CSTRING(105mm_WP_ch5);
     };
 };

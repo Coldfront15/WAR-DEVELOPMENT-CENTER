@@ -10,8 +10,8 @@ class CfgMagazines {
 		scopeArsenal = 2;
 		author = "WDC Team";
         displayName = "105mm Casing, Charge 1";
-		displayNameShort = CSTRING(105_casing_charge_1_short);
-		descriptionShort = CSTRING(105_casing_charge_1_desc);
+		displayNameShort = CSTRING(105_casing_ch1_short);
+		descriptionShort = CSTRING(105_casing_ch1_desc);
         model = "\WW2\SPE_Assets_m\Weapons\Misc_U1_m\Particles\SPE_Shellcases_M1.p3d";
         editorPreview = QPATHTOF(spe_m3\data\casing.jpg);
 		picture = QPATHTOF(spe_m3\data\casing.paa);
@@ -21,27 +21,27 @@ class CfgMagazines {
 	};
 
 	class wdc_artillery_SPE_M3_CASING_CHARGE_2: wdc_artillery_SPE_M3_CASING_CHARGE_1 {
-        displayName = CSTRING(105_casing_charge_2);
-		displayNameShort = CSTRING(105_casing_charge_2_short);
-		descriptionShort = CSTRING(105_casing_charge_2_desc);
+        displayName = CSTRING(105_casing_ch2);
+		displayNameShort = CSTRING(105_casing_ch2_short);
+		descriptionShort = CSTRING(105_casing_ch2_desc);
 	};
 
 	class wdc_artillery_SPE_M3_CASING_CHARGE_3: wdc_artillery_SPE_M3_CASING_CHARGE_1 {
-		displayName = CSTRING(105_casing_charge_3);
-		displayNameShort = CSTRING(105_casing_charge_3_short);
-		descriptionShort = CSTRING(105_casing_charge_3_desc);
+		displayName = CSTRING(105_casing_ch3);
+		displayNameShort = CSTRING(105_casing_ch3_short);
+		descriptionShort = CSTRING(105_casing_ch3_desc);
 	};
 
 	class wdc_artillery_SPE_M3_CASING_CHARGE_4: wdc_artillery_SPE_M3_CASING_CHARGE_1 {
-		displayName = CSTRING(105_casing_charge_4);
-		displayNameShort = CSTRING(105_casing_charge_4_short);
-		descriptionShort = CSTRING(105_casing_charge_4_desc);
+		displayName = CSTRING(105_casing_ch4);
+		displayNameShort = CSTRING(105_casing_ch4_short);
+		descriptionShort = CSTRING(105_casing_ch4_desc);
 	};
 
 	class wdc_artillery_SPE_M3_CASING_CHARGE_5: wdc_artillery_SPE_M3_CASING_CHARGE_1 {
-		displayName = CSTRING(105_casing_charge_5);
-		displayNameShort = CSTRING(105_casing_charge_5_short);
-		descriptionShort = CSTRING(105_casing_charge_5_desc);
+		displayName = CSTRING(105_casing_ch5);
+		displayNameShort = CSTRING(105_casing_ch5_short);
+		descriptionShort = CSTRING(105_casing_ch5_desc);
 	};
 	
 	class wdc_artillery_SPE_M3_M1_HE_Tube: 8Rnd_82mm_Mo_shells
@@ -79,10 +79,10 @@ class CfgMagazines {
 		scope = 1;
 		scopeArsenal = 1;
 		author = "wdc Team";
-		displayName = CSTRING(105mm_HE_CHARGE_1);
-		displayNameShort = CSTRING(105mm_HE_CHARGE_1);
+		displayName = CSTRING(105mm_HE_CH1);
+		displayNameShort = CSTRING(105mm_HE_CH1);
 		model = QPATHTOF(spe_m3\wdc_105_M1_HE_M54_PD\wdc_105_shell_M1_HE_PD);
-		descriptionShort = CSTRING(105mm_HE_CHARGE_DESC);
+		descriptionShort = CSTRING(105mm_HE_CH1_DESC);
 		initSpeed = 110;
 		mass = 50;
 		count = 1;
@@ -91,29 +91,33 @@ class CfgMagazines {
 	};
 
 	class wdc_artillery_SPE_M3_M1_HE_CHARGE_MAG_2: wdc_artillery_SPE_M3_M1_HE_CHARGE_MAG_1 {
-		displayName = CSTRING(105mm_HE_CHARGE_2);
-		displayNameShort = CSTRING(105mm_HE_CHARGE_2);
+		displayName = CSTRING(105mm_HE_CH2);
+		displayNameShort = CSTRING(105mm_HE_CH2);
+		descriptionShort = CSTRING(105mm_HE_CH2_DESC);
 		model = QPATHTOF(spe_m3\wdc_105_M1_HE_M54_PD\wdc_105_shell_M1_HE_PD);
 		initSpeed = 143;
 	};
 
 	class wdc_artillery_SPE_M3_M1_HE_CHARGE_MAG_3: wdc_artillery_SPE_M3_M1_HE_CHARGE_MAG_1 {
-		displayName = CSTRING(105mm_HE_CHARGE_3);
-		displayNameShort = CSTRING(105mm_HE_CHARGE_3);
+		displayName = CSTRING(105mm_HE_CH3);
+		displayNameShort = CSTRING(105mm_HE_CH3);
+		descriptionShort = CSTRING(105mm_HE_CH3_DESC);
 		model = QPATHTOF(spe_m3\wdc_105_M1_HE_M54_PD\wdc_105_shell_M1_HE_PD);
 		initSpeed = 186;
 	};
 
 	class wdc_artillery_SPE_M3_M1_HE_CHARGE_MAG_4: wdc_artillery_SPE_M3_M1_HE_CHARGE_MAG_1 {
-		displayName = CSTRING(105mm_HE_CHARGE_4);
-		displayNameShort = CSTRING(105mm_HE_CHARGE_4);
+		displayName = CSTRING(105mm_HE_CH4);
+		displayNameShort = CSTRING(105mm_HE_CH4);
+		descriptionShort = CSTRING(105mm_HE_CH4_DESC);
 		model = QPATHTOF(spe_m3\wdc_105_M1_HE_M54_PD\wdc_105_shell_M1_HE_PD);
 		initSpeed = 248;
 	};
 
 	class wdc_artillery_SPE_M3_M1_HE_CHARGE_MAG_5: wdc_artillery_SPE_M3_M1_HE_CHARGE_MAG_1 {
-		displayName = CSTRING(105mm_HE_CHARGE_5);
-		displayNameShort = CSTRING(105mm_HE_CHARGE_5);
+		displayName = CSTRING(105mm_HE_CH5);
+		displayNameShort = CSTRING(105mm_HE_CH5);
+		descriptionShort = CSTRING(105mm_HE_CH5_DESC);
 		model = QPATHTOF(spe_m3\wdc_105_M1_HE_M54_PD\wdc_105_shell_M1_HE_PD);
 		initSpeed = 311;
 	};
@@ -153,10 +157,10 @@ class CfgMagazines {
 		scope = 1;
 		scopeArsenal = 1;
 		author = "wdc Team";
-		displayName = CSTRING(105mm_HE_VT_CHARGE_1);
-		displayNameShort = CSTRING(105mm_HE_CHARGE_1);
+		displayName = CSTRING(105mm_HE_VT_CH1);
+		displayNameShort = CSTRING(105mm_HE_VT_CH1);
 		model = QPATHTOF(spe_m3\wdc_105_M1_HE_VT_T80E6\wdc_105_shell_M1_HE_VT);
-		descriptionShort = CSTRING(105mm_HE_CHARGE_DESC);
+		descriptionShort = CSTRING(105mm_HE_VT_CH1_DESC);
 		initSpeed = 110;
 		mass = 50;
 		count = 1;
@@ -165,32 +169,36 @@ class CfgMagazines {
 	};
 
 	class wdc_artillery_SPE_M3_M1_HE_VT_CHARGE_MAG_2: wdc_artillery_SPE_M3_M1_HE_CHARGE_MAG_1 {
-		displayName = CSTRING(105mm_HE_VT_CHARGE_2);
-		displayNameShort = CSTRING(105mm_HE_VT_CHARGE_2);
+		displayName = CSTRING(105mm_HE_VT_CH2);
+		displayNameShort = CSTRING(105mm_HE_VT_CH2);
+		descriptionShort = CSTRING(105mm_HE_VT_CH2_DESC);
 		model = QPATHTOF(spe_m3\wdc_105_M1_HE_VT_T80E6\wdc_105_shell_M1_HE_VT);
 		ammo = QUOTE(wdc_artillery_SPE_M3_M1_HE_SHELL_VT);
 		initSpeed = 143;
 	};
 
 	class wdc_artillery_SPE_M3_M1_HE_VT_CHARGE_MAG_3: wdc_artillery_SPE_M3_M1_HE_CHARGE_MAG_1 {
-		displayName = CSTRING(105mm_HE_VT_CHARGE_3);
-		displayNameShort = CSTRING(105mm_HE_VT_CHARGE_3);
+		displayName = CSTRING(105mm_HE_VT_CH3);
+		displayNameShort = CSTRING(105mm_HE_VT_CH3);
+		descriptionShort = CSTRING(105mm_HE_VT_CH3_DESC);
 		model = QPATHTOF(spe_m3\wdc_105_M1_HE_VT_T80E6\wdc_105_shell_M1_HE_VT);
 		ammo = QUOTE(wdc_artillery_SPE_M3_M1_HE_SHELL_VT);
 		initSpeed = 186;
 	};
 
 	class wdc_artillery_SPE_M3_M1_HE_VT_CHARGE_MAG_4: wdc_artillery_SPE_M3_M1_HE_CHARGE_MAG_1 {
-		displayName = CSTRING(105mm_HE_VT_CHARGE_4);
-		displayNameShort = CSTRING(105mm_HE_VT_CHARGE_4);
+		displayName = CSTRING(105mm_HE_VT_CH4);
+		displayNameShort = CSTRING(105mm_HE_VT_CH4);
+		descriptionShort = CSTRING(105mm_HE_VT_CH4_DESC);
 		model = QPATHTOF(spe_m3\wdc_105_M1_HE_VT_T80E6\wdc_105_shell_M1_HE_VT);
 		ammo = QUOTE(wdc_artillery_SPE_M3_M1_HE_SHELL_VT);
 		initSpeed = 248;
 	};
 
 	class wdc_artillery_SPE_M3_M1_HE_VT_CHARGE_MAG_5: wdc_artillery_SPE_M3_M1_HE_CHARGE_MAG_1 {
-		displayName = CSTRING(105mm_HE_VT_CHARGE_5);
-		displayNameShort = CSTRING(105mm_HE_VT_CHARGE_5);
+		displayName = CSTRING(105mm_HE_VT_CH5);
+		displayNameShort = CSTRING(105mm_HE_VT_CH5);
+		descriptionShort = CSTRING(105mm_HE_VT_CH5_DESC);
 		model = QPATHTOF(spe_m3\wdc_105_M1_HE_VT_T80E6\wdc_105_shell_M1_HE_VT);
 		ammo = QUOTE(wdc_artillery_SPE_M3_M1_HE_SHELL_VT);
 		initSpeed = 311;
@@ -279,10 +287,10 @@ class CfgMagazines {
 		scope = 1;
 		scopeArsenal = 1;
 		author = "War Development Center";
-		displayName = CSTRING(105mm_WP_CHARGE_1);
-		displayNameShort = CSTRING(105mm_WP_CHARGE_1);
+		displayName = CSTRING(105mm_WP_CH1);
+		displayNameShort = CSTRING(105mm_WP_CH1);
 		model = QPATHTOF(spe_m3\wdc_105_M60_WP_PD_M57\wdc_105_shell_M60_WP);
-		descriptionShort = CSTRING(105mm_WP_CHARGE_DESC);
+		descriptionShort = CSTRING(105mm_WP_CH1_DESC);
 		initSpeed = 110;
 		mass = 50;
 		count = 1;
@@ -291,29 +299,33 @@ class CfgMagazines {
 	};
 	
 	class wdc_artillery_SPE_M3_M60_WP_CHARGE_MAG_2: wdc_artillery_SPE_M3_M60_WP_CHARGE_MAG_1 {
-		displayName = CSTRING(105mm_WP_CHARGE_2);
-		displayNameShort = CSTRING(105mm_WP_CHARGE_2);
+		displayName = CSTRING(105mm_WP_CH2);
+		displayNameShort = CSTRING(105mm_WP_CH2);
+		descriptionShort = CSTRING(105mm_WP_CH2_DESC);
 		model = QPATHTOF(spe_m3\wdc_105_M60_WP_PD_M57\wdc_105_shell_M60_WP);
 		initSpeed = 143;
 	};
 
 	class wdc_artillery_SPE_M3_M60_WP_CHARGE_MAG_3: wdc_artillery_SPE_M3_M60_WP_CHARGE_MAG_1 {
-		displayName = CSTRING(105mm_WP_CHARGE_3);
-		displayNameShort = CSTRING(105mm_WP_CHARGE_3);
+		displayName = CSTRING(105mm_WP_CH3);
+		displayNameShort = CSTRING(105mm_WP_CH3);
+		descriptionShort = CSTRING(105mm_WP_CH3_DESC);
 		model = QPATHTOF(spe_m3\wdc_105_M60_WP_PD_M57\wdc_105_shell_M60_WP);
 		initSpeed = 186;
 	};
 
 	class wdc_artillery_SPE_M3_M60_WP_CHARGE_MAG_4: wdc_artillery_SPE_M3_M60_WP_CHARGE_MAG_1 {
-		displayName = CSTRING(105mm_WP_CHARGE_4);
-		displayNameShort = CSTRING(105mm_WP_CHARGE_4);
+		displayName = CSTRING(105mm_WP_CH4);
+		displayNameShort = CSTRING(105mm_WP_CH4);
+		descriptionShort = CSTRING(105mm_WP_CH4_DESC);
 		model = QPATHTOF(spe_m3\wdc_105_M60_WP_PD_M57\wdc_105_shell_M60_WP);
 		initSpeed = 248;
 	};
 	
 	class wdc_artillery_SPE_M3_M60_WP_CHARGE_MAG_5: wdc_artillery_SPE_M3_M60_WP_CHARGE_MAG_1 {
-		displayName = CSTRING(105mm_WP_CHARGE_5);
-		displayNameShort = CSTRING(105mm_WP_CHARGE_5);
+		displayName = CSTRING(105mm_WP_CH5);
+		displayNameShort = CSTRING(105mm_WP_CH5);
+		descriptionShort = CSTRING(105mm_WP_CH5_DESC);
 		model = QPATHTOF(spe_m3\wdc_105_M60_WP_PD_M57\wdc_105_shell_M60_WP);
 		initSpeed = 311;
 	};

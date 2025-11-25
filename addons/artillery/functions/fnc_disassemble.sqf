@@ -27,7 +27,7 @@
 params ["_shell"];
 
 [
-	LLSTRING(105mm_disassembling),
+	LLSTRING(disassembling),
 	tbd_mortars_main_disassemble105Time,
 	{ true },
 	{
