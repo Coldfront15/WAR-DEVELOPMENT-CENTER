@@ -7,9 +7,7 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
-            "A3_Data_F_Tank_Loadorder",
-            "cba_main",
-            "ace_main"
+            "A3_Data_F_Tank_Loadorder"
         };
         author = "Coldfront15";
         VERSION_CONFIG;
@@ -627,5 +625,230 @@ class CfgVehicles
 		scopeCurator = 2;
 		displayName = "Map (Wesel)";
 		model = "\x\wdc\addons\objects\wdc_us_map_wesel.p3d";
+	};
+	class All
+    {
+		class ViewCargo;
+		class ViewOptics;
+	};
+	class AllVehicles: All
+	{
+		class NewTurret
+		{
+			class ViewGunner;
+			class ViewOptics;
+        };
+        class ViewPilot;
+		class ViewCargo;
+		class ViewOptics;
+        class CargoTurret: NewTurret
+		{
+			class ViewGunner: ViewCargo {};
+		};
+	};
+	class Land: AllVehicles
+	{
+	};
+	class LandVehicle: Land
+	{
+		class CommanderOptics: NewTurret
+		{
+			class ViewOptics: ViewOptics {};
+			class ViewGunner: ViewCargo {};
+		};
+	};
+	class StaticWeapon: LandVehicle
+	{
+		class Turrets
+		{
+			class MainTurret: NewTurret {};
+		};
+	};
+	class wdc_Static_Base: StaticWeapon {};
+
+	class wdc_US_ParaExitTrainer_base: wdc_Static_Base
+	{
+		scope = 0;
+		icon = "iconObject_1x3";
+		model = "\x\wdc\addons\objects\wdc_US_ParaExitTrainer.p3d";
+		memoryPointsGetInDriver = "pos cargo";
+		memoryPointsGetInDriverDir = "pos cargo dir";
+		memoryPointsGetInCoDriver = "pos cargo";
+		memoryPointsGetInCoDriverDir = "pos cargo dir";
+		memoryPointsGetInCommander = "pos cargo";
+		memoryPointsGetInCommanderDir = "pos cargo dir";
+		memoryPointsGetInCargo = "pos cargo";
+		memoryPointsGetInCargoDir = "pos cargo dir";
+		memoryPointsGetInGunner = "pos cargo";
+		memoryPointsGetInGunnerDir = "pos cargo dir";
+		destrType = "DestructNo";
+        viewCargoShadow = 1;
+		viewCargoShadowDiff = 1.0;
+		viewCargoShadowAmb = 1.0;
+		canHideDriver = 0;
+		castCargoShadow = 1;
+		hideProxyInCombat = 1;
+		transportSoldier = 18;
+		SPE_WP_CargoProtected[] = {1};
+		mapSize = 29.01;
+		cargoAction[] = {"SPEX_C47_RightSit","SPEX_C47_LeftSit","SPEX_C47_Right3Sit","SPEX_C47_Left2Sit","SPEX_C47_RightSit","SPEX_C47_Left3Sit","SPEX_C47_Right2Sit","SPEX_C47_Left4Sit","SPEX_C47_Right4Sit","SPEX_C47_Left3Sit","SPEX_C47_RightSit","SPEX_C47_LeftSit","SPEX_C47_Right2Sit","SPEX_C47_Left2Sit","SPEX_C47_Right3Sit","SPEX_C47_Left4Sit","SPEX_C47_Right4Sit","SPEX_C47_Left2Sit"};
+		driverCompartments = "Compartment1";
+		cargoCompartments[] = {"Compartment1"};
+        hiddenSelections[] = {"camo1","camo2"};
+        hiddenSelectionsTextures[] = {"\x\wdc\addons\objects\data\wdc_abTrainer1_co.paa","\ww2\spex\addons\assets_t_vehicles_planes_t\c47\dc3_cargo_01_co.paa"};
+		armor = 50;
+		armorStructural = 1;
+		simulation = "tankX";
+		SPEX_JumpMasterTurretIndex = 1;
+		SPEX_DoorTurretIndex = 2;
+		weapons[] = {};
+		magazines[] = {};
+		class UserActions
+		{
+			class cargoStandUp
+			{
+				displayName = "$STR_SPEX_DN_ASSETS_VEHICLES_STAND_UP";
+				displayNameDefault = "";
+				position = "";
+				radius = 20;
+				onlyForPlayer = 1;
+				condition = "[this,(call SPE_fnc_findPlayer)] call SPEX_fnc_System_Planes_C47_StandUp_Condition";
+				statement = "[this,(call SPE_fnc_findPlayer)] call SPEX_fnc_System_Planes_C47_StandUp_Action";
+				priority = 0.95;
+			};
+			class cargoSitDown
+			{
+				displayName = "$STR_SPEX_DN_ASSETS_VEHICLES_SIT_DOWN";
+				displayNameDefault = "";
+				position = "";
+				radius = 20;
+				onlyForPlayer = 1;
+				condition = "[this,(call SPE_fnc_findPlayer)] call SPEX_fnc_System_Planes_C47_SitDown_Condition";
+				statement = "[this,(call SPE_fnc_findPlayer)] call SPEX_fnc_System_Planes_C47_SitDown_Action";
+				priority = 0.6;
+			};
+		};
+		class Turrets
+		{
+			
+			class CargoTurret_01: CargoTurret
+			{
+				gunnerGetInAction = "GetInHigh";
+				gunnerGetOutAction = "GetOutHigh";
+				gunnerAction = "SPEX_C47_Jumpmaster";
+				gunnerInAction = "SPEX_C47_Jumpmaster";
+				gunnerCompartments = "Compartment1";
+				gunnerName = "$STR_SPEX_DN_ASSETS_VEHICLES_JUMPMASTER";
+				maxElev = 60;
+				minElev = -20;
+				maxTurn = 130;
+				minTurn = -110;
+				isPersonTurret = 2;
+				gunnerForceOptics = 0;
+				LODTurnedOut = 1;
+				SPE_WP_TurretProtected = 1;
+				showAsCargo = 1;
+				forceHideGunner = 1;
+				viewGunnerInExternal = 1;
+				disableSoundAttenuation = 0;
+				proxyType = "CPGunner";
+                weapons[] = {};
+				magazines[] = {};
+				proxyIndex = 2;
+				class ViewGunner: ViewCargo
+				{
+					minAngleX = -65;
+					maxAngleX = 85;
+					initAngleX = 0;
+					minAngleY = -150;
+					maxAngleY = 150;
+					initAngleY = 0;
+					minFov = 0.25;
+					initFov = 0.75;
+					maxFov = 1.25;
+				};
+			};
+			class CargoTurret_02: CargoTurret_01
+			{
+				gunnerName = "$STR_A3_TURRETS_DOOR_L";
+				gunnerInAction = "SPEX_C47_AtDoor_In";
+				gunnerAction = "SPEX_C47_AtDoor_Out";
+				LODTurnedIn = 1230;
+				LODTurnedOut = 1230;
+				proxyType = "CPGunner";
+				proxyIndex = 3;
+				forceHideGunner = 0;
+				canHideGunner = 1;
+				hideProxyInCombat = 1;
+				canEject = 0;
+			};
+		};
+		
+		class AnimationSources
+		{
+			class cargo_rotate_1
+			{
+				AnimPeriod = 1.9;
+				source = "user";
+				InitPhase = 0;
+			};
+			class cargo_rotate_2: cargo_rotate_1{};
+			class cargo_rotate_3: cargo_rotate_1{};
+			class cargo_rotate_4: cargo_rotate_1{};
+			class cargo_rotate_5: cargo_rotate_1{};
+			class cargo_rotate_6: cargo_rotate_1{};
+			class cargo_rotate_7: cargo_rotate_1{};
+			class cargo_rotate_8: cargo_rotate_1{};
+			class cargo_rotate_9: cargo_rotate_1{};
+			class cargo_rotate_10: cargo_rotate_1{};
+			class cargo_rotate_11: cargo_rotate_1{};
+			class cargo_rotate_12: cargo_rotate_1{};
+			class cargo_rotate_13: cargo_rotate_1{};
+			class cargo_rotate_14: cargo_rotate_1{};
+			class cargo_rotate_15: cargo_rotate_1{};
+			class cargo_rotate_16: cargo_rotate_1{};
+			class cargo_rotate_17: cargo_rotate_1{};
+			class cargo_rotate_18: cargo_rotate_1{};
+			class cargo_rotate_19: cargo_rotate_1{};
+			class cargo_rotate_20: cargo_rotate_1{};
+			class cargo_rotate_21: cargo_rotate_1{};
+			class cargo_rotate_22: cargo_rotate_1{};
+			class cargo_rotate_23: cargo_rotate_1{};
+			class cargo_rotate_24: cargo_rotate_1{};
+			class cargo_rotate_25: cargo_rotate_1{};
+			class cargo_rotate_26: cargo_rotate_1{};
+			class cargo_rotate_27: cargo_rotate_1{};
+		};
+	};
+
+	class wdc_US_ParaExitTrainer: wdc_US_ParaExitTrainer_base
+	{
+		scope = 2;
+		side = 2;
+		scopeCurator = 2;
+		displayName = "Parachute Exit Trainer";
+		model = "\x\wdc\addons\objects\wdc_US_ParaExitTrainer.p3d";
+		faction = "SPE_US_ARMY";		
+		crew = "SPE_US_101AB_rifleman";
+        hiddenSelections[] = {"camo1","camo2"};
+        hiddenSelectionsTextures[] = {"\x\wdc\addons\objects\data\wdc_abTrainer1_co.paa","\ww2\spex\addons\assets_t_vehicles_planes_t\c47\dc3_cargo_01_co.paa"};
+		typicalCargo[] = {"SPE_US_101AB_SquadLead","SPE_US_101AB_rifleman_carbine","SPE_US_101AB_Sniper"};
+        class textureSources
+		{
+			class standard
+			{
+				displayName = "Standard";
+				textures[] = {"\x\wdc\addons\objects\data\wdc_abTrainer1_co.paa","\ww2\spex\addons\assets_t_vehicles_planes_t\c47\dc3_cargo_01_co.paa"};
+				factions[] = {"SPE_US_ARMY"};
+				materials[] = {"\x\wdc\addons\objects\data\wdc_abTrainer.rvmat","WW2\SPEX\addons\Assets_r_Vehicles_Planes_r\C47\DC3_Body_02.rvmat"};
+			};
+            class coolOne
+			{
+				displayName = "Chalked Up";
+				textures[] = {"\x\wdc\addons\objects\data\wdc_abTrainer2_co.paa","\ww2\spex\addons\assets_t_vehicles_planes_t\c47\dc3_cargo_01_co.paa"};
+				factions[] = {"SPE_US_ARMY"};
+				materials[] = {"\x\wdc\addons\objects\data\wdc_abTrainer.rvmat","WW2\SPEX\addons\Assets_r_Vehicles_Planes_r\C47\DC3_Body_02.rvmat"};
+			};
+        };
 	};
 };
