@@ -43,4 +43,29 @@ class CfgEditorSubcategories
 	{
 		displayName = "Intelligence"; // Name visible in the list
 	};
+	class WDC_Buildings // Category class, you point to it in editorSubcategory property
+	{
+		displayName = "Buildings"; // Name visible in the list
+	};
+};
+
+class CfgUnitInsignia
+{
+	class WDC_502_HQS_S2
+	{
+		author = "WDC";
+		displayName = "502d HQ, S2";
+		texture = "\x\wdc\addons\main\data\US_Badge_502HQS2_mc.paa";
+	};
+};
+
+class CfgUnitBadges
+{
+	class WDC_502_HQS_S2
+	{
+		author = "WDC";
+		displayName = "502d HQ, S2";
+		texture = "\x\wdc\addons\main\data\US_SubBadge_502HQS2_mc.paa";
+        textureVehicle = "";
+	};
 };
