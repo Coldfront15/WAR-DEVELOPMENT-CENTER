@@ -4,12 +4,17 @@ class CfgPatches {
 	class ADDON {
         name = COMPONENT_NAME;
         requiredVersion = REQUIRED_VERSION;
-		units[] = {};
+		units[] = {
+            "SPEX_CW_No75_Grenade",
+            "SPEX_CW_No75_Deploy",
+            "SPEX_CW_No75_Mine"
+        };
 		weapons[] = {};
 		requiredAddons[] = {
             "ace_flashlights",
             "ace_trenches",
             "ace_explosives",
+            "WW2_SPEX_Assets_c_Weapons_InfantryWeapons_c",
 			"WW2_SPE_Assets_c_Weapons_InfantryWeapons_c"
         };
         VERSION_CONFIG;
@@ -55,6 +60,51 @@ class CfgAmmo
 			};
 		};
 	};
+    class SPEX_CW_No75_Grenade: SPE_GrenadeHand_base
+    {
+        hit = 95;
+        indirectHit = 0;
+        indirectHitRange = 0;
+        aiAmmoUsageFlags = "64 + 128 + 512";
+        visibleFire = 0.5;
+        audibleFire = 0.05;
+        visibleFireTime = 1;
+        explosiontime = 0;
+        model = "\x\wdc\addons\items_equipment\wdc_hawkins_1.p3d";
+        submunitionAmmo = "SPEX_CW_No75_Deploy";
+        submunitionDirectionType = "SubmunitionModelDirection";
+        submunitionInitSpeed = 0;
+        submunitionParentSpeedCoef = 0.1;
+        submunitionInitialOffset[] = {0,0,0};
+        triggerOnImpact = 1;
+        deleteParentWhenTriggered = 1;
+    };
+    class ShotDeployBase;
+    class SPEX_CW_No75_Deploy : ShotDeployBase
+    {
+        triggerTime = 1;
+        model = "\x\wdc\addons\items_equipment\wdc_hawkins_1.p3d";
+        submunitionAmmo = "SPEX_CW_No75_Mine";
+    };
+    class MineCore;
+    class SPE_MAIN_mine;
+    class SPEX_CW_No75_Mine: SPE_MAIN_mine
+    {
+        shadow = 1;
+        hit = 95;
+        indirectHit = 180;
+        indirectHitRange = 1.5;
+        model = "\x\wdc\addons\items_equipment\wdc_hawkins_1.p3d";
+        mineModelDisabled = "\x\wdc\addons\items_equipment\wdc_hawkins_1.p3d";
+        defaultMagazine = "SPEX_CW_No75_Grenade";
+        soundActivation[] = {"A3\Sounds_F\dummysound",1,1,1};
+        whistleDist = 100;
+        cost = 400;
+        mineInconspicuousness = 40;
+        mineTrigger = "WDC_CW_No75_MineTrigger";
+        explosionEffects = "MineExplosion";
+        CraterEffects = "MineCrater";
+    };
 	class ShellCore;
 	class ShellBase: ShellCore {};
 	class SubmunitionBase;
@@ -841,4 +891,26 @@ class WDC_SmokeStreamPurpleEffect: WDC_SmokeStreamWhiteEffect
 		intensity = .6;
 		interval = 0.05;
 	};
+};
+
+
+class CfgMineTriggers
+{
+    class SPEX_CW_No75_MineTrigger;
+    class WDC_CW_No75_MineTrigger: SPEX_CW_No75_MineTrigger
+    {
+        mineTriggerRange = 0.3;
+        mineTriggerActivationRange = 0;
+        mineTriggerType = "radius";
+        mineTriggerMass = 30;
+        mineMagnetic = 0;
+        scope = 0;
+        mineDelay = 0.5;
+        mineUnderwaterOnly = 0;
+        mineWireStart[] = {0,1,0};
+        mineWireEnd[] = {0,1,5};
+        restrictZoneCenter[] = {0,0,0};
+        restrictZoneRadius = 0;
+        timerStep = -1;
+    };
 };
