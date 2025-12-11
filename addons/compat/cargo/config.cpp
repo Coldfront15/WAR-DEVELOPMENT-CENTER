@@ -7,7 +7,7 @@ class CfgPatches {
             "SPEX_T3_Trailer",
             "SPEX_T3_Trailer_Ammo",
             "SPEX_T3_Trailer_Fuel",
-            "SPEX_T3_Trailer_Repair",
+            "SPEX_T3_Trailer_Repair"
         };
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
