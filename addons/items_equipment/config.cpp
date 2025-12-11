@@ -4,12 +4,66 @@ class CfgPatches {
 	class ADDON {
         name = COMPONENT_NAME;
         requiredVersion = REQUIRED_VERSION;
-		units[] = {
-            "SPEX_CW_No75_Grenade",
-            "SPEX_CW_No75_Deploy",
-            "SPEX_CW_No75_Mine"
+        ammo[] = {
+            "WDC_M7_Grenade",
+            "WDC_M7_Deploy",
+            "WDC_M7_Mine",
+            "WDC_G_M19_Instant",
+            "WDC_G_M19WP",
+            "WDC_G_M19WP_OD",
+            "WDC_G_M22_White_Instant",
+            "WDC_G_M22_Red_Instant",
+            "WDC_G_M22_Yellow_Instant",
+            "WDC_G_M22_Green_Instant",
+            "WDC_G_M22_Violet_Instant",
+            "WDC_G_M22_White",
+            "WDC_G_M22_Yellow",
+            "WDC_G_M22_Red",
+            "WDC_G_M22_Green",
+            "WDC_G_M22_Violet",
+            "WDC_G_M23A1_white_dummy",
+            "WDC_G_M23A1_white_submunition",
+            "WDC_G_M23A1_White",
+            "WDC_G_M23A1_red_dummy",
+            "WDC_G_M23A1_red_submunition",
+            "WDC_G_M23A1_Red",
+            "WDC_G_M23A1_green_dummy",
+            "WDC_G_M23A1_green_submunition",
+            "WDC_G_M23A1_Green",
+            "WDC_G_M23A1_yellow_dummy",
+            "WDC_G_M23A1_yellow_submunition",
+            "WDC_G_M23A1_Yellow",
+            "WDC_G_M23A1_violet_dummy",
+            "WDC_G_M23A1_violet_submunition",
+            "WDC_G_M23A1_Violet"
         };
-		weapons[] = {};
+        units[] = {
+            "WDC_US_M7_MINE",
+            "WDC_ModuleMine_US_M7_MINE"
+        };
+		magazines[] = {
+            "WDC_1Rnd_G_M19WP",
+            "WDC_1Rnd_G_M19WP_OD",
+            "WDC_1Rnd_G_M22_White",
+            "WDC_1Rnd_G_M22_Red",
+            "WDC_1Rnd_G_M22_Green",
+            "WDC_1Rnd_G_M22_Yellow",
+            "WDC_1Rnd_G_M22_Violet",
+            "WDC_1Rnd_G_M23A1_White",
+            "WDC_1Rnd_G_M23A1_Red",
+            "WDC_1Rnd_G_M23A1_Green",
+            "WDC_1Rnd_G_M23A1_Yellow",
+            "WDC_1Rnd_G_M23A1_Violet",
+            "WDC_M7_Grenade",
+            "WDC_M7_Deploy",
+            "WDC_M7_Mine"
+        };
+		weapons[] = {
+            "wdc_EntrenchingTool_m28",
+            "wdc_EntrenchingTool_m43",
+            "wdc_flastlight_tl22",
+            "wdc_EntrenchingTool_schanzzeug"
+        };
 		requiredAddons[] = {
             "ace_flashlights",
             "ace_trenches",
@@ -21,9 +75,9 @@ class CfgPatches {
 	};
 };
 
-
-
 #include "CfgEventHandlers.hpp"
+
+
 class CfgAmmo
 {
 	
@@ -42,10 +96,29 @@ class CfgAmmo
 			};
 		};
 	};
+    
+    class GrenadeBase;
 	class GrenadeHand;
 	class SPE_GrenadeHand_base: GrenadeHand {};
-	class GrenadeBase;
 	class SPE_Grenade_base: GrenadeBase {};
+    class SPE_G_ANM8: SPE_Grenade_base {};
+	class SPE_G_M18_Green: SPE_Grenade_base {};
+	class SPE_G_M18_Yellow: SPE_Grenade_base {};
+	class SPE_G_M18_Red: SPE_Grenade_base {};
+	class SPE_G_M18_Violet: SPE_Grenade_base {};	
+
+    class ShellCore;
+	class ShellBase: ShellCore {};
+	class SubmunitionBase;
+
+	class SmokeShell;
+    class SPE_SmokeShell_base: SmokeShell {};
+	class SPE_TankSmokeShell_Submunition_Base: SmokeShell {};	
+	class SPE_ShellSmoke_base: ShellBase {};
+	class SPE_ShellHE_base : ShellBase {};
+	class SPE_M48_HE: SPE_ShellHE_base {};
+
+    // WP Patch
 	class SPE_US_M15: SPE_GrenadeHand_base
 	{
 		ACE_damageType = "ace_compat_spe_explosive_wp";
@@ -60,59 +133,6 @@ class CfgAmmo
 			};
 		};
 	};
-    class SPEX_CW_No75_Grenade: SPE_GrenadeHand_base
-    {
-        hit = 95;
-        indirectHit = 0;
-        indirectHitRange = 0;
-        aiAmmoUsageFlags = "64 + 128 + 512";
-        visibleFire = 0.5;
-        audibleFire = 0.05;
-        visibleFireTime = 1;
-        explosiontime = 0;
-        model = "\x\wdc\addons\items_equipment\wdc_hawkins_1.p3d";
-        submunitionAmmo = "SPEX_CW_No75_Deploy";
-        submunitionDirectionType = "SubmunitionModelDirection";
-        submunitionInitSpeed = 0;
-        submunitionParentSpeedCoef = 0.1;
-        submunitionInitialOffset[] = {0,0,0};
-        triggerOnImpact = 1;
-        deleteParentWhenTriggered = 1;
-    };
-    class ShotDeployBase;
-    class SPEX_CW_No75_Deploy : ShotDeployBase
-    {
-        triggerTime = 1;
-        model = "\x\wdc\addons\items_equipment\wdc_hawkins_1.p3d";
-        submunitionAmmo = "SPEX_CW_No75_Mine";
-    };
-    class MineCore;
-    class SPE_MAIN_mine;
-    class SPEX_CW_No75_Mine: SPE_MAIN_mine
-    {
-        shadow = 1;
-        hit = 95;
-        indirectHit = 180;
-        indirectHitRange = 1.5;
-        model = "\x\wdc\addons\items_equipment\wdc_hawkins_1.p3d";
-        mineModelDisabled = "\x\wdc\addons\items_equipment\wdc_hawkins_1.p3d";
-        defaultMagazine = "SPEX_CW_No75_Grenade";
-        soundActivation[] = {"A3\Sounds_F\dummysound",1,1,1};
-        whistleDist = 100;
-        cost = 400;
-        mineInconspicuousness = 40;
-        mineTrigger = "WDC_CW_No75_MineTrigger";
-        explosionEffects = "MineExplosion";
-        CraterEffects = "MineCrater";
-    };
-	class ShellCore;
-	class ShellBase: ShellCore {};
-	class SubmunitionBase;
-	class SmokeShell;
-	class SPE_TankSmokeShell_Submunition_Base: SmokeShell {};	
-	class SPE_ShellSmoke_base: ShellBase {};
-	class SPE_ShellHE_base : ShellBase {};
-	class SPE_M48_HE: SPE_ShellHE_base {};	
 	class SPE_M64_WP: SPE_M48_HE
 	{
 		SPE_Fire_Range = 6;
@@ -125,6 +145,8 @@ class CfgAmmo
 			};
 		};
 	};
+
+    //Rifle Grenades
 	class WDC_G_M19_Instant: SPE_US_M15 
 	{
 		explosionTime = 0.01;
@@ -168,8 +190,7 @@ class CfgAmmo
 		submunitionInitSpeed = 0;
 		triggerOnImpact = 1;
 		deleteParentWhenTriggered = 1;
-	};
-	class SPE_SmokeShell_base: SmokeShell {};	
+	};	
 	class WDC_G_M22_White_Instant: SPE_SmokeShell_base
 	{
 		model = "\x\wdc\addons\items_equipment\wdc_m22_white_ammo.p3d";
@@ -205,11 +226,7 @@ class CfgAmmo
 		explosionTime = 0.01;
 		effectsSmoke = "SPE_SmokeShellPurpleEffect";
 	};
-	class SPE_G_ANM8: SPE_Grenade_base {};
-	class SPE_G_M18_Green: SPE_Grenade_base {};
-	class SPE_G_M18_Yellow: SPE_Grenade_base {};
-	class SPE_G_M18_Red: SPE_Grenade_base {};
-	class SPE_G_M18_Violet: SPE_Grenade_base {};	
+
 	class WDC_G_M22_White: SPE_G_ANM8 
 	{
 		submunitionAmmo = "WDC_G_M22_White_Instant";
@@ -352,19 +369,127 @@ class CfgAmmo
 		submunitionAmmo = "WDC_G_M23A1_violet_dummy";
 		model = "\x\wdc\addons\items_equipment\wdc_m23a1_violet_ammo.p3d";
 	};
+    class SPEX_CW_No75_Grenade: SPE_GrenadeHand_base
+    {
+        hit = 95;
+        indirectHit = 0;
+        indirectHitRange = 0;
+        aiAmmoUsageFlags = "64 + 128 + 512";
+        visibleFire = 0.5;
+        audibleFire = 0.05;
+        visibleFireTime = 1;
+        explosiontime = 0;
+        model = "\x\wdc\addons\items_equipment\wdc_no75_mk1.p3d";
+        submunitionAmmo = "SPEX_CW_No75_Deploy";
+        submunitionDirectionType = "SubmunitionModelDirection";
+        submunitionInitSpeed = 0;
+        submunitionParentSpeedCoef = 0.1;
+        submunitionInitialOffset[] = {0,0,0};
+        triggerOnImpact = 1;
+        deleteParentWhenTriggered = 1;
+    };
+    class WDC_M7_Grenade: SPE_GrenadeHand_base
+    {
+        hit = 180;
+        indirectHit = 0;
+        indirectHitRange = 0;
+        aiAmmoUsageFlags = "64 + 128 + 512";
+        visibleFire = 0.5;
+        audibleFire = 0.05;
+        visibleFireTime = 1;
+        explosiontime = 0;
+        model = "\x\wdc\addons\items_equipment\wdc_m7.p3d";
+        submunitionAmmo = "WDC_M7_Deploy";
+        submunitionDirectionType = "SubmunitionModelDirection";
+        submunitionInitSpeed = 0;
+        submunitionParentSpeedCoef = 0.1;
+        submunitionInitialOffset[] = {0,0,0};
+        triggerOnImpact = 1;
+        deleteParentWhenTriggered = 1;
+    };
+
+    class ShotDeployBase;
+    class SPEX_CW_No75_Deploy : ShotDeployBase
+    {
+        triggerTime = 1;
+        model = "\x\wdc\addons\items_equipment\wdc_no75_mk1.p3d";
+        submunitionAmmo = "SPEX_CW_No75_Mine";
+    };
+    class WDC_M7_Deploy : SPEX_CW_No75_Deploy
+    {
+        triggerTime = 1;
+        model = "\x\wdc\addons\items_equipment\wdc_m7.p3d";
+        submunitionAmmo = "WDC_M7_Mine";
+    };
+
+    class MineCore;
+    class SPE_MAIN_mine;
+    class SPEX_CW_No75_Mine: SPE_MAIN_mine
+    {
+        shadow = 1;
+        hit = 95;
+        indirectHit = 180;
+        indirectHitRange = 1.5;
+        model = "\x\wdc\addons\items_equipment\wdc_no75_mk1.p3d";
+        mineModelDisabled = "\x\wdc\addons\items_equipment\wdc_no75_mk1.p3d";
+        defaultMagazine = "SPEX_CW_No75_Grenade";
+        soundActivation[] = {"A3\Sounds_F\dummysound",1,1,1};
+        whistleDist = 100;
+        cost = 400;
+        mineInconspicuousness = 40;
+        mineTrigger = "WDC_CW_No75_MineTrigger";
+        explosionEffects = "MineExplosion";
+        CraterEffects = "MineCrater";
+    };
+    class WDC_M7_Mine: SPE_MAIN_mine
+    {
+        shadow = 1;
+        hit = 180;
+        indirectHit = 220;
+        indirectHitRange = 1.75;
+        model = "\x\wdc\addons\items_equipment\wdc_m7_ammo.p3d";
+        mineModelDisabled = "\x\wdc\addons\items_equipment\wdc_m7.p3d";
+        defaultMagazine = "WDC_M7_Grenade";
+        soundActivation[] = {"A3\Sounds_F\dummysound",1,1,1};
+        whistleDist = 100;
+        cost = 400;
+        mineInconspicuousness = 40;
+        mineTrigger = "WDC_CW_No75_MineTrigger";
+        explosionEffects = "MineExplosion";
+        CraterEffects = "MineCrater";
+    };
 };
 
 
 class CfgMagazines
 {
 	class CA_Magazine;
+    class HandGrenade;
 	class SPE_BaseRifleGrenade: CA_Magazine	{};
+    class SPE_HandGrenade_base: HandGrenade {};
 	class SPE_1Rnd_G_M2_ANM8: SPE_BaseRifleGrenade {};
 	class SPE_1Rnd_G_M2_M18_Red: SPE_BaseRifleGrenade {};
 	class SPE_1Rnd_G_M2_M18_Green: SPE_BaseRifleGrenade {};
 	class SPE_1Rnd_G_M2_M18_Yellow: SPE_BaseRifleGrenade {};
 	class SPE_1Rnd_G_M2_M18_Violet: SPE_BaseRifleGrenade {};
-
+    class SPEX_CW_No75_Grenade: SPE_HandGrenade_base
+    {
+        model = "\x\wdc\addons\items_equipment\wdc_no75_mk1.p3d";
+    };
+    class WDC_M7_Grenade: SPE_HandGrenade_base
+    {
+        author = "Coldfront15";
+        hit = 180;
+        scope = 2;
+        displayName = "$STR_WDC_DN_ASSETS_WEAPONS_M7_MINE";
+        displayNameShort = "$STR_WDC_Assets_Weapons_InfantryWeapons_displayNameShort_M7MINE";
+        descriptionShort = "$STR_WDC_DSS_ASSETS_WEAPONS_M7_MINE";
+        model = "\x\wdc\addons\items_equipment\wdc_m7.p3d";
+        picture = "\x\wdc\addons\items_equipment\data\UI\wdc_m7_ui_ca.paa";
+        ammo = "WDC_M7_Grenade";
+        initSpeed = 9.5;
+        mass = 28.42;
+    };
 	class WDC_1Rnd_G_M19WP: SPE_BaseRifleGrenade
 	{
 		scope = 2;
@@ -629,6 +754,10 @@ class CfgMagazineWells
 
 class CfgWeapons
 {
+    class Default;
+    class GrenadeLauncher: Default
+    {
+    };
 	class ACE_ItemCore;
 	class ACE_EntrenchingTool;
 	class ACE_Clacker;
@@ -657,7 +786,7 @@ class CfgWeapons
 	{
 		displayName = "US 10 Cap Blasting Machine";
 		picture = "\x\wdc\addons\items_equipment\data\UI\blasting_machine_ui_ca.paa";
-		model = "\x\wdc\addons\items_equipment\wdc_us_detonator.p3d";
+		model = "\x\wdc\addons\items_equipment\wdc_type10_detonator.p3d";
 		descriptionShort = "Standard US Handheld detonator";
 	};
 	class wdc_flastlight_tl22: ACE_Flashlight_XL50
@@ -714,7 +843,36 @@ class CfgWeapons
 		hiddenSelections[] = {};
 		hiddenSelectionsTextures[] = {};
 	};
+    class Throw: GrenadeLauncher
+    {
+        muzzles[] +=
+        {
+        "WDC_M7_Grenade_Muzzle"
+        };
+        class ThrowMuzzle: GrenadeLauncher
+        {
+        };
+        class HandGrenadeMuzzle: ThrowMuzzle
+        {
+        };
+        class SmokeShellMuzzle;
+        class SPE_ThrowMuzzle: ThrowMuzzle
+        {
+        };
+        class WDC_M7_Grenade_Muzzle: SPE_ThrowMuzzle
+        {
+        aiRateOfFire = 9;
+        magazines[] = {"WDC_M7_Grenade"};
+        minRange = 15;
+        minRangeProbab = 0.5;
+        midRange = 20;
+        midRangeProbab = 0.8;
+        maxRange = 30;
+        maxRangeProbab = 0.3;
+        };
+    };
 };
+
 class ACE_Triggers
 {
 	class Command;
@@ -724,14 +882,73 @@ class ACE_Triggers
 		picture = "\x\wdc\addons\items_equipment\data\UI\blasting_machine_ui_ca.paa";
 	};
 };
+
 class CfgVehicles
 {
-	class Items_base_F;
-	class ACE_RepairItem_Base;
-	class ACE_Track: ACE_RepairItem_Base
-	{
-		model = "\a3\Props_F_Tank\Military\TankAcc\TankTracks_01_short_F.p3d";
-	};
+    class Items_base_F;
+    class ACE_RepairItem_Base;
+    class ACE_Track: ACE_RepairItem_Base
+    {
+        model = "\a3\Props_F_Tank\Military\TankAcc\TankTracks_01_short_F.p3d";
+    };
+    class SPE_Mine_base;
+    class SPEX_CW_No75_AT_MINE: SPE_Mine_base
+    {
+        model = "\x\wdc\addons\items_equipment\wdc_no75_mk1.p3d";
+    };
+    class WDC_US_M7_MINE: SPEX_CW_No75_AT_MINE
+    {
+        model = "\x\wdc\addons\items_equipment\wdc_us_m7_ammo.p3d";
+    };
+    class Thing;
+    class ModuleEmpty_F: Thing
+    {
+        class Eventhandlers;
+    };
+    class ModuleMine_F: ModuleEmpty_F	{};
+    class ModuleExplosive_F: ModuleMine_F	{};
+    class SPEX_ModuleMine_CW_No75_AT_MINE: ModuleMine_F
+    {
+        scope = 1;
+        scopeCurator = 2;
+        displayName = "$STR_MN_SPEX_CW_No75_Grenade";
+        explosive = "SPEX_CW_No75_Mine";
+        icon = "iconExplosiveAT";
+    };
+    class WDC_ModuleMine_US_M7_MINE: ModuleMine_F
+    {
+        author = "Coldfront15";
+        scope = 1;
+        scopeCurator = 2;
+        displayName = "$STR_WDC_DN_ASSETS_WEAPONS_M7_MINE";
+        explosive = "WDC_M7_Mine";
+        icon = "iconExplosiveAP";
+    };
+    class Site_F;
+    class Site_Minefield: Site_F
+    {
+        class Arguments
+        {
+        class minesType
+            {
+                class values
+                {
+                    class SPEX_CW_No75_AT_MINE
+                    {
+                        name = "$STR_MN_SPEX_CW_No75_Grenade";
+                        value = "SPEX_CW_No75_AT_MINE";
+                        default = 0;
+                    };
+                    class WDC_US_M7_MINE
+                    {
+                        name = "$STR_WDC_DN_ASSETS_WEAPONS_M7_MINE";
+                        value = "WDC_US_M7_MINE";
+                        default = 0;
+                    };
+                };
+            };
+        };
+    };
 };
 
 class CfgCloudlets
