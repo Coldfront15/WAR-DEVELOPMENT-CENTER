@@ -45,6 +45,10 @@
             <Original>Yellow Streamer</Original>
             <English>Yellow Streamer</English>
         </Key>
+        <Key ID="STR_WDC_Assets_Weapons_InfantryWeapons_displayNameShort_M7MINE">
+            <Original>M7 AT Grenade</Original>
+            <English>M7 AT Grenade</English>
+        </Key>
         <Key ID="STR_WDC_DN_ASSETS_WEAPONS_M19_OD_RIFLE_GRENADE">
             <Original>Rifle Grenade M19 (OD/WP)</Original>
             <English>Rifle Grenade M19 (OD/WP)</English>
@@ -93,6 +97,10 @@
             <Original>Rifle Streamer M23A1 (Yellow)</Original>
             <English>Rifle Streamer M23A1 (Yellow)</English>
         </Key>
+        <Key ID="STR_WDC_DN_ASSETS_WEAPONS_M7_MINE">
+            <Original>M7 Anti-Tank Grenade</Original>
+            <English>M7 Anti-Tank Grenade</English>
+        </Key>
         <Key ID="STR_WDC_DSS_ASSETS_WEAPONS_M19_RIFLE_GRENADE">
             <Original>Type: White Phosphorous Grenade&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: M1, M7, M8 Rifle Grenade Adapters</Original>
             <English>Type: White Phosphorous Grenade&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: M1, M7, M8 Rifle Grenade Adapters</English>
@@ -136,6 +144,10 @@
         <Key ID="STR_WDC_DSS_ASSETS_WEAPONS_M23A1_YELLOW_RIFLE_Streamer">
             <Original>Type: Yellow Streamer Grenade&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: M1, M7, M8 Rifle Grenade Adapters</Original>
             <English>Type: Yellow Streamer Grenade&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: M1, M7, M8 Rifle Grenade Adapters</English>
+        </Key>
+        <Key ID="STR_WDC_DSS_ASSETS_WEAPONS_M7_MINE">
+            <Original>Type: M7 Anti-Tank Grenade&lt;br /&gt;Filler: Tetrytol&lt;br /&gt;Filler Weight: 3.25 lbs</Original>
+            <English>Type: M7 Anti-Tank Grenade&lt;br /&gt;Filler: Tetrytol&lt;br /&gt;Filler Weight: 3.25 lbs</English>
         </Key>
     </Package>
 </Project>

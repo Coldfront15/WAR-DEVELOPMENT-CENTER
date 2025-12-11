@@ -1,7 +1,3 @@
-
-
-
-
 	class ItemCore;
 	class H_HelmetB: ItemCore
 	{

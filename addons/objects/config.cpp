@@ -3,8 +3,53 @@
 class CfgPatches {
     class ADDON {
         name = COMPONENT_NAME;
-        units[] = {};
-        weapons[] = {};
+        units[] = {
+            "wdc_form_a4_base",
+            "wdc_form_a4_stack_base",
+            "wdc_form_a4_stack_400",
+            "wdc_form_a4_81",
+            "wdc_form_a4_81_stack",
+            "wdc_map_utah",
+            "wdc_map_carentan",
+            "wdc_map_lingevres",
+            "wdc_map_mortain",
+            "wdc_map_normandy",
+            "wdc_map_angola",
+            "wdc_map_anizay",
+            "wdc_map_bastogne",
+            "wdc_map_benouville",
+            "wdc_map_garmanda",
+            "wdc_map_sumava",
+            "wdc_map_henderson",
+            "wdc_map_holland",
+            "wdc_map_iwojima",
+            "wdc_map_manila",
+            "wdc_map_moder",
+            "wdc_map_okinawa",
+            "wdc_map_omaha",
+            "wdc_map_palau",
+            "wdc_map_rhineland",
+            "wdc_map_stvith",
+            "wdc_map_tarawa",
+            "wdc_map_vossenac",
+            "wdc_map_wesel",
+            "WDC_A5_Dropbag_Container_AntiTank_early",
+            "WDC_A5_Dropbag_Container_AntiTank_late",
+            "WDC_A5_Dropbag_Container_SMA_early",
+            "WDC_A5_Dropbag_Container_SMA_late",
+            "WDC_A5_Dropbag_Container_Med",
+            "WDC_A5_Dropbag_Container_Demolitions",
+            "WDC_A5_Dropbag_Container_Pioneering",
+            "WDC_A5_Dropbag_Container_M2",
+            "WDC_A5_Dropbag_Container_M1919A4",
+            "WDC_A5_Dropbag_Container_M1_Mortar",
+            "WDC_A5_Dropbag_Container_M2_Mortar",
+            "WDC_A5_Dropbag_Container_Signal",
+            "wdc_US_ParaExitTrainer"
+        };
+        weapons[] = {
+
+        };
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
             "A3_Data_F_Tank_Loadorder"
@@ -14,8 +59,48 @@ class CfgPatches {
     };
 };
 
+
 class CfgVehicles
 {
+    class All
+    {
+		class ViewCargo;
+		class ViewOptics;
+	};
+	class AllVehicles: All
+	{
+		class NewTurret
+		{
+			class ViewGunner;
+			class ViewOptics;
+        };
+        class ViewPilot;
+		class ViewCargo;
+		class ViewOptics;
+        class CargoTurret: NewTurret
+		{
+			class ViewGunner: ViewCargo {};
+		};
+	};
+	class Land: AllVehicles
+	{
+	};
+	class LandVehicle: Land
+	{
+		class CommanderOptics: NewTurret
+		{
+			class ViewOptics: ViewOptics {};
+			class ViewGunner: ViewCargo {};
+		};
+	};
+	class StaticWeapon: LandVehicle
+	{
+		class Turrets
+		{
+			class MainTurret: NewTurret {};
+		};
+	};
+	
 	class Items_base_F;
     class wdc_form_a4_base: Items_base_F
 	{
@@ -626,45 +711,478 @@ class CfgVehicles
 		displayName = "Map (Wesel)";
 		model = "\x\wdc\addons\objects\wdc_us_map_wesel.p3d";
 	};
-	class All
-    {
-		class ViewCargo;
-		class ViewOptics;
-	};
-	class AllVehicles: All
+    class SPE_A5_Dropbag_Container_Base;
+    class WDC_A5_Dropbag_Container_AntiTank_early: SPE_A5_Dropbag_Container_Base
 	{
-		class NewTurret
+		author = "Heavy Ordnance Works";//"AWAR"
+		dlc = "SPE";
+		scope = 2;
+		scopeCurator = 2;
+		displayName = "A-5 AD Container (M1 Bazooka)";
+		icon = "iconCrateWpns";
+        editorCategory = "WDC_Items";
+		editorSubcategory = "WDC_Supplies";
+		parachuteClassOverride = "SPE_Cargo_Parachute_Red";
+		class TransportWeapons
 		{
-			class ViewGunner;
-			class ViewOptics;
+			MACRO_ADDWEAPON(SPE_M1A1_Carbine,4);
+			MACRO_ADDWEAPON(SPE_M1A1_Bazooka,2);
+		};
+		class TransportMagazines
+		{
+			MACRO_ADDMAGAZINE(SPE_15Rnd_762x33,24);
+			MACRO_ADDMAGAZINE(SPE_1Rnd_60mm_M6,8);
+		};
+		class TransportBackpacks
+		{
+			MACRO_ADDBACKPACK(B_SPE_US_M36_Rocketbag,4);
+		};
+	};
+    class WDC_A5_Dropbag_Container_AntiTank_late: SPE_A5_Dropbag_Container_Base
+	{
+		author = "Heavy Ordnance Works";//"AWAR"
+		dlc = "SPE";
+		scope = 2;
+		scopeCurator = 2;
+		displayName = "A-5 AD Container (M9 Bazooka)";
+		icon = "iconCrateWpns";
+        editorCategory = "WDC_Items";
+		editorSubcategory = "WDC_Supplies";
+		parachuteClassOverride = "SPE_Cargo_Parachute_Red";
+        lightClassOverride = "SPE_Cargo_Parachute_Red";
+		class TransportWeapons
+		{
+			MACRO_ADDWEAPON(SPE_M1A1_Carbine,4);
+			MACRO_ADDWEAPON(SPE_M9_Bazooka,2);
+		};
+		class TransportMagazines
+		{
+			MACRO_ADDMAGAZINE(SPE_15Rnd_762x33,24);
+			MACRO_ADDMAGAZINE(SPE_1Rnd_60mm_M6A3,8);
+		};
+		class TransportBackpacks
+		{
+			MACRO_ADDBACKPACK(B_SPE_US_M36_Rocketbag,4);
+		};
+	};
+	class WDC_A5_Dropbag_Container_SMA_early: SPE_A5_Dropbag_Container_Base
+	{
+		author = "Heavy Ordnance Works";//"AWAR"
+		dlc = "SPE";
+		scope = 2;
+		scopeCurator = 2;
+		displayName = "A-5 AD Container (Small Arms, Early)";
+		icon = "iconCrateAmmo";
+        editorCategory = "WDC_Items";
+		editorSubcategory = "WDC_Supplies";
+		parachuteClassOverride = "SPE_Cargo_Parachute_Yellow";
+		class TransportMagazines
+		{
+			MACRO_ADDMAGAZINE(SPE_5Rnd_762x63_M2_AP,24);
+            MACRO_ADDMAGAZINE(SPE_5Rnd_762x63_t,24);
+			MACRO_ADDMAGAZINE(SPE_8Rnd_762x63_M2_AP,43);
+            MACRO_ADDMAGAZINE(SPE_8Rnd_762x63_t,43);
+			MACRO_ADDMAGAZINE(SPE_15Rnd_762x33,15);
+            MACRO_ADDMAGAZINE(SPE_15Rnd_762x33_t,15);
+			MACRO_ADDMAGAZINE(SPE_30Rnd_Thompson_45ACP,20);
+            MACRO_ADDMAGAZINE(SPE_30Rnd_Thompson_45ACP_t,8);
+            MACRO_ADDMAGAZINE(SPE_20Rnd_762x63_M2_AP,10);
+			MACRO_ADDMAGAZINE(SPE_100Rnd_762x63_M2_AP,8);
+            MACRO_ADDMAGAZINE(SPEX_1Rnd_60mmHE_M2_M49A2,6);
+			MACRO_ADDMAGAZINE(SPEX_1Rnd_60mmWP_M2_M302,6);
+
+			MACRO_ADDMAGAZINE(SPE_US_Mk_2,8);
+            MACRO_ADDMAGAZINE(SPEX_CW_No75_Grenade,4);
+            MACRO_ADDMAGAZINE(SPEX_CW_No82_Heavy,2);
+			MACRO_ADDMAGAZINE(SPE_US_M15,8);
+            MACRO_ADDMAGAZINE(SPE_US_M18,5);
+			MACRO_ADDMAGAZINE(SPE_US_M18_Green,3);
+			MACRO_ADDMAGAZINE(SPE_US_M18_Red,3);
+			MACRO_ADDMAGAZINE(SPE_US_M18_Yellow,3);
+            MACRO_ADDMAGAZINE(SPE_US_M18_Violet,3);
+
+            MACRO_ADDMAGAZINE(SPE_Type_A1_Lamp_Green,8);
+			MACRO_ADDMAGAZINE(SPE_Type_A1_Lamp_Blue,8);
+			MACRO_ADDMAGAZINE(SPE_Type_A1_Lamp_Orange,8);
+			MACRO_ADDMAGAZINE(SPE_Type_A1_Lamp_Red,8);
+            MACRO_ADDMAGAZINE(SPE_Type_A1_Lamp_White,8);
+
+			MACRO_ADDMAGAZINE(SPE_1Rnd_G_Mk2,6);
+            MACRO_ADDMAGAZINE(SPE_US_AN_M14,2);
+			MACRO_ADDMAGAZINE(SPE_1Rnd_G_M9A1,6);
+            MACRO_ADDMAGAZINE(WDC_1Rnd_G_M19WP,4);
+			MACRO_ADDMAGAZINE(SPE_1Rnd_G_M2_ANM8,4);
+            MACRO_ADDMAGAZINE(SPE_1Rnd_G_M2_M18_Green,1);
+            MACRO_ADDMAGAZINE(SPE_1Rnd_G_M2_M18_Red,1);
+            MACRO_ADDMAGAZINE(SPE_1Rnd_G_M2_M18_Violet,1);
+            MACRO_ADDMAGAZINE(SPE_1Rnd_G_M2_M18_Yellow,1);
+			MACRO_ADDMAGAZINE(SPE_1Rnd_G_M17A1,4);
+			MACRO_ADDMAGAZINE(SPE_1Rnd_G_M19A1,2);
+			MACRO_ADDMAGAZINE(SPE_1Rnd_G_M21A1,2);
+			MACRO_ADDMAGAZINE(SPE_1Rnd_G_M51A1,2);
         };
-        class ViewPilot;
-		class ViewCargo;
-		class ViewOptics;
-        class CargoTurret: NewTurret
+
+        class TransportItems
 		{
-			class ViewGunner: ViewCargo {};
+            MACRO_ADDITEM(ACE_artilleryTable,2);
+            MACRO_ADDITEM(ACE_PlottingBoard,2);
+            MACRO_ADDITEM(SPE_US_FL_TL122,12);
+            MACRO_ADDITEM(ACE_CableTie,12);
+            MACRO_ADDITEM(SPE_ACC_M1_Bayo,2);
+            MACRO_ADDITEM(SPE_ACC_GL_M1,1);
 		};
 	};
-	class Land: AllVehicles
+    class WDC_A5_Dropbag_Container_SMA_late: SPE_A5_Dropbag_Container_Base
 	{
-	};
-	class LandVehicle: Land
-	{
-		class CommanderOptics: NewTurret
+		author = "Heavy Ordnance Works";//"AWAR"
+		dlc = "SPE";
+		scope = 2;
+		scopeCurator = 2;
+		displayName = "A-5 AD Container (Small Arms, Late)";
+		icon = "iconCrateAmmo";
+        editorCategory = "WDC_Items";
+		editorSubcategory = "WDC_Supplies";
+		parachuteClassOverride = "SPE_Cargo_Parachute_Yellow";
+		class TransportMagazines
 		{
-			class ViewOptics: ViewOptics {};
-			class ViewGunner: ViewCargo {};
+			MACRO_ADDMAGAZINE(SPE_5Rnd_762x63_M2_AP,12);
+            MACRO_ADDMAGAZINE(SPE_5Rnd_762x63_t,12);
+			MACRO_ADDMAGAZINE(SPE_8Rnd_762x63_M2_AP,43);
+            MACRO_ADDMAGAZINE(SPE_8Rnd_762x63_t,43);
+			MACRO_ADDMAGAZINE(SPE_15Rnd_762x33,15);
+            MACRO_ADDMAGAZINE(SPE_15Rnd_762x33_t,15);
+			MACRO_ADDMAGAZINE(SPE_30Rnd_Thompson_45ACP,20);
+            MACRO_ADDMAGAZINE(SPE_30Rnd_Thompson_45ACP_t,8);
+			MACRO_ADDMAGAZINE(SPE_30Rnd_M3_GreaseGun_45ACP,20);
+            MACRO_ADDMAGAZINE(SPE_30Rnd_M3_GreaseGun_45ACP_t,8);
+            MACRO_ADDMAGAZINE(SPE_20Rnd_762x63_M2_AP,10);
+			MACRO_ADDMAGAZINE(SPE_100Rnd_762x63_M2_AP,8);
+            MACRO_ADDMAGAZINE(SPEX_1Rnd_60mmHE_M2_M49A2,6);
+			MACRO_ADDMAGAZINE(SPEX_1Rnd_60mmWP_M2_M302,6);
+
+
+			MACRO_ADDMAGAZINE(SPE_US_Mk_2,8);
+            MACRO_ADDMAGAZINE(WDC_M7_Grenade,4);
+            MACRO_ADDMAGAZINE(SPEX_CW_No82_Heavy,2);
+			MACRO_ADDMAGAZINE(SPE_US_M15,8);
+            MACRO_ADDMAGAZINE(SPE_US_M18,5);
+			MACRO_ADDMAGAZINE(SPE_US_M18_Green,3);
+			MACRO_ADDMAGAZINE(SPE_US_M18_Red,3);
+			MACRO_ADDMAGAZINE(SPE_US_M18_Yellow,3);
+            MACRO_ADDMAGAZINE(SPE_US_M18_Violet,3);
+
+            MACRO_ADDMAGAZINE(SPE_Type_A1_Lamp_Green,8);
+			MACRO_ADDMAGAZINE(SPE_Type_A1_Lamp_Blue,8);
+			MACRO_ADDMAGAZINE(SPE_Type_A1_Lamp_Orange,8);
+			MACRO_ADDMAGAZINE(SPE_Type_A1_Lamp_Red,8);
+            MACRO_ADDMAGAZINE(SPE_Type_A1_Lamp_White,8);
+
+			MACRO_ADDMAGAZINE(SPE_1Rnd_G_Mk2,6);
+            MACRO_ADDMAGAZINE(SPE_US_AN_M14,2);
+			MACRO_ADDMAGAZINE(SPE_1Rnd_G_M9A1,6);
+            MACRO_ADDMAGAZINE(WDC_1Rnd_G_M19WP,4);
+			MACRO_ADDMAGAZINE(WDC_1Rnd_G_M22_White,4);
+            MACRO_ADDMAGAZINE(WDC_1Rnd_G_M22_Green,2);
+            MACRO_ADDMAGAZINE(WDC_1Rnd_G_M22_Red,2);
+            MACRO_ADDMAGAZINE(WDC_1Rnd_G_M22_Violet,2);
+            MACRO_ADDMAGAZINE(WDC_1Rnd_G_M22_Yellow,2);
+			MACRO_ADDMAGAZINE(SPE_1Rnd_G_M17A1,4);
+			MACRO_ADDMAGAZINE(SPE_1Rnd_G_M19A1,2);
+			MACRO_ADDMAGAZINE(SPE_1Rnd_G_M21A1,2);
+			MACRO_ADDMAGAZINE(SPE_1Rnd_G_M51A1,2);
+		};
+        class TransportItems
+		{
+            MACRO_ADDITEM(ACE_artilleryTable,2);
+            MACRO_ADDITEM(ACE_PlottingBoard,2);
+            MACRO_ADDITEM(SPE_US_FL_TL122,12);
+            MACRO_ADDITEM(ACE_CableTie,12);
+            MACRO_ADDITEM(ACE_SpareBarrel,2);
+            MACRO_ADDITEM(SPE_ACC_M1_Bayo,2);
+            MACRO_ADDITEM(SPE_ACC_GL_M7,1);
+            MACRO_ADDITEM(simc_canteen_m1943_weap,4);
+        };
+	};
+	class WDC_A5_Dropbag_Container_Med: SPE_A5_Dropbag_Container_Base
+ 	{
+		author = "Heavy Ordnance Works";//"AWAR"
+		dlc = "SPE";
+		scope = 2;
+		scopeCurator = 2;
+		displayName = "A-5 AD Container (Aidbag)";
+		icon = "iconCrateLarge";
+		parachuteClassOverride = "SPE_Cargo_Parachute_Green";
+        editorCategory = "WDC_Items";
+		editorSubcategory = "WDC_Supplies";
+        class TransportWeapons
+		{
+			MACRO_ADDWEAPON(SPEX_K35_PH324,1);
+		};
+        class TransportMagazines
+		{
+            MACRO_ADDMAGAZINE(SPEX_36rnd_Super_XX_Film,12);
+        };
+		class TransportItems
+		{
+            
+            MACRO_ADDITEM(ACE_CableTie,12);
+            MACRO_ADDITEM(simc_krat_e_b_weap,12);
+            MACRO_ADDITEM(simc_krat_e_d_weap,12);
+            MACRO_ADDITEM(simc_krat_e_s_weap,12);
+            MACRO_ADDITEM(simc_canteen_m1943_weap,12);
+
+			MACRO_ADDITEM(wdc_Sulfa,50);
+			MACRO_ADDITEM(wdc_morphineSyrette,5);
+            MACRO_ADDITEM(ACE_suture,20);
+            MACRO_ADDITEM(wdc_ammoniaAmpule,10);
+            MACRO_ADDITEM(wdc_bloodPlasmaIV_250,20);
+            MACRO_ADDITEM(wdc_bloodPlasmaIV_500,10);
+            MACRO_ADDITEM(wdc_carlisleLarge,20);
+            MACRO_ADDITEM(wdc_gauzeBandage,15);
+            MACRO_ADDITEM(wdc_triangleBandage,15);
+
+            MACRO_ADDITEM(wdc_US_Splint,10);
+            MACRO_ADDITEM(wdc_US_Tourniquet,10);
+            MACRO_ADDITEM(wdc_US_surgicalKit,1);
+            MACRO_ADDITEM(wdc_US_personalAidKit,1);
 		};
 	};
-	class StaticWeapon: LandVehicle
+	class WDC_A5_Dropbag_Container_Demolitions: SPE_A5_Dropbag_Container_Base
 	{
-		class Turrets
+		author = "Heavy Ordnance Works";//"AWAR"
+		dlc = "SPE";
+		scope = 2;
+		scopeCurator = 2;
+		displayName = "A-5 AD Container (Demolitions)";
+		icon = "iconCrateOrd";
+		parachuteClassOverride = "SPE_Cargo_Parachute_Red";
+        editorCategory = "WDC_Items";
+		editorSubcategory = "WDC_Supplies";
+		class TransportMagazines
 		{
-			class MainTurret: NewTurret {};
+			MACRO_ADDMAGAZINE(SPE_US_Bangalore_mag,3);
+			MACRO_ADDMAGAZINE(WDC_M7_Grenade,5);
+            MACRO_ADDMAGAZINE(SPEX_CW_No82_Light,2);
+            MACRO_ADDMAGAZINE(SPE_US_AN_M14,5);
+			MACRO_ADDMAGAZINE(SPE_US_TNT_4pound_mag,5);
+			MACRO_ADDMAGAZINE(SPE_US_TNT_half_pound_mag,10);
+		};
+		class TransportItems
+		{
+            MACRO_ADDITEM(ace_marker_flags_red,20);
+            MACRO_ADDITEM(ace_marker_flags_white,20);
+            MACRO_ADDITEM(ace_marker_flags_yellow,20);
+            MACRO_ADDITEM(ace_marker_flags_green,20);
+            MACRO_ADDITEM(ace_flags_green,4);
+            MACRO_ADDITEM(ace_flags_red,4);
+            MACRO_ADDITEM(ace_flags_white,4);
+            MACRO_ADDITEM(ACE_SpraypaintBlack,2);
+            MACRO_ADDITEM(ACE_SpraypaintWhite,2);
+            MACRO_ADDITEM(ACE_SpraypaintRed,2);
+            MACRO_ADDITEM(ACE_M26_Clacker,2);
+            MACRO_ADDITEM(ACE_DefusalKit,5);
+			MACRO_ADDITEM(SPE_ToolKit,5);
+		};
+        class TransportWeapons
+		{
+			MACRO_ADDWEAPON(ACE_VMH3,2);
 		};
 	};
-	class wdc_Static_Base: StaticWeapon {};
+    class WDC_A5_Dropbag_Container_Pioneering: SPE_A5_Dropbag_Container_Base
+	{
+		author = "Heavy Ordnance Works";//"AWAR"
+		dlc = "SPE";
+		scope = 2;
+		scopeCurator = 2;
+		displayName = "A-5 AD Container (Pioneering)";
+		icon = "iconCrateOrd";
+		parachuteClassOverride = "SPE_Cargo_Parachute_Red";
+        editorCategory = "WDC_Items";
+		editorSubcategory = "WDC_Supplies";
+		class TransportMagazines
+		{
+			MACRO_ADDMAGAZINE(SPE_US_Bangalore_mag,3);
+			MACRO_ADDMAGAZINE(SPE_US_TNT_4pound_mag,2);
+			MACRO_ADDMAGAZINE(SPE_US_TNT_half_pound_mag,5);
+
+            MACRO_ADDMAGAZINE(ACE_FlareTripMine_Mag,2);
+            MACRO_ADDMAGAZINE(ACE_FlareTripMine_Mag_Green,2);
+            MACRO_ADDMAGAZINE(ACE_FlareTripMine_Mag_Red,2);
+            MACRO_ADDMAGAZINE(SPE_US_M3_Pressure_MINE_mag,5);
+            MACRO_ADDMAGAZINE(SPE_US_M3_MINE_mag,10);
+            MACRO_ADDMAGAZINE(SPE_US_M1A1_ATMINE_mag,3);
+
+            MACRO_ADDMAGAZINE(WDC_M7_Grenade,8);
+            MACRO_ADDMAGAZINE(SPE_Type_A1_Lamp_Green,4);
+			MACRO_ADDMAGAZINE(SPE_Type_A1_Lamp_Blue,4);
+			MACRO_ADDMAGAZINE(SPE_Type_A1_Lamp_Orange,4);
+			MACRO_ADDMAGAZINE(SPE_Type_A1_Lamp_Red,4);
+            MACRO_ADDMAGAZINE(SPE_Type_A1_Lamp_White,4);
+		};
+		class TransportItems
+		{
+            MACRO_ADDITEM(ACE_Fortify,1);
+            MACRO_ADDITEM(ACE_RangeCard,1);
+            MACRO_ADDITEM(ACE_artilleryTable,2);
+            MACRO_ADDITEM(ACE_PlottingBoard,2);
+            MACRO_ADDITEM(ace_marker_flags_red,20);
+            MACRO_ADDITEM(ace_marker_flags_white,20);
+            MACRO_ADDITEM(ace_marker_flags_yellow,20);
+            MACRO_ADDITEM(ace_marker_flags_green,20);
+            MACRO_ADDITEM(ace_flags_green,4);
+            MACRO_ADDITEM(ace_flags_red,4);
+            MACRO_ADDITEM(ace_flags_white,4);
+            MACRO_ADDITEM(ACE_SpraypaintBlack,2);
+            MACRO_ADDITEM(ACE_SpraypaintWhite,2);
+            MACRO_ADDITEM(ACE_SpraypaintRed,2);
+            MACRO_ADDITEM(ACE_M26_Clacker,2);
+            MACRO_ADDITEM(ACE_DefusalKit,5);
+            MACRO_ADDITEM(wdc_EntrenchingTool_m28,5);
+            MACRO_ADDITEM(ACE_wirecutter,5);
+            MACRO_ADDITEM(ToolKit,2);
+			MACRO_ADDITEM(SPE_ToolKit,2);
+		};
+        class TransportWeapons
+		{
+			MACRO_ADDWEAPON(ACE_VMH3,2);
+		};
+	};
+	class WDC_A5_Dropbag_Container_M2: SPE_A5_Dropbag_Container_Base
+	{
+		author = "Heavy Ordnance Works";//"AWAR"
+		dlc = "SPE";
+		scope = 2;
+		scopeCurator = 2;
+		displayName = "$STR_DN_SPE_A5_Dropbag_Container_M2";
+		icon = "iconCrateWpns";
+		parachuteClassOverride = "SPE_Cargo_Parachute_Red";
+        editorCategory = "WDC_Items";
+		editorSubcategory = "WDC_Supplies";
+		class TransportWeapons
+		{
+			MACRO_ADDWEAPON(SPE_M3_Tripod,1);
+			MACRO_ADDWEAPON(SPE_M2_50,1);
+		};
+		class TransportMagazines
+		{
+			MACRO_ADDMAGAZINE(SPE_100Rnd_127x99_M2,12);
+		};
+	};
+	class WDC_A5_Dropbag_Container_M1919A4: SPE_A5_Dropbag_Container_Base
+	{
+		author = "Heavy Ordnance Works";//"AWAR"
+		dlc = "SPE";
+		scope = 2;
+		scopeCurator = 2;
+		displayName = "$STR_DN_SPE_A5_Dropbag_Container_M1919A4";
+		icon = "iconCrateWpns";
+		parachuteClassOverride = "SPE_Cargo_Parachute_Red";
+        editorCategory = "WDC_Items";
+		editorSubcategory = "WDC_Supplies";
+		class TransportWeapons
+		{
+			MACRO_ADDWEAPON(SPE_M2_Tripod,1);
+			MACRO_ADDWEAPON(SPE_M1919A4,1);
+		};
+		class TransportMagazines
+		{
+			MACRO_ADDMAGAZINE(SPE_100Rnd_762x63_M2_AP,8);
+            MACRO_ADDMAGAZINE(SPE_100Rnd_762x63,8);
+		};
+	};
+	class WDC_A5_Dropbag_Container_M1_Mortar: SPE_A5_Dropbag_Container_Base
+	{
+		dlc = "SPE";
+		scope = 2;
+		scopeCurator = 2;
+		displayName = "A-5 AD Container (M1 81mm Mortar)";
+		icon = "iconCrateWpns";
+		parachuteClassOverride = "SPE_Cargo_Parachute_Red";
+        editorCategory = "WDC_Items";
+		editorSubcategory = "WDC_Supplies";
+		class TransportWeapons
+		{
+			MACRO_ADDWEAPON(SPE_M1_81_Stand,1);
+			MACRO_ADDWEAPON(SPE_M1_81_Barrel,1);
+		};
+		class TransportMagazines
+		{
+			MACRO_ADDMAGAZINE(SPE_1Rnd_81mmHE_M1_M43A1,20);
+			MACRO_ADDMAGAZINE(SPE_1Rnd_81mmWP_M1_M57,10);
+			MACRO_ADDMAGAZINE(SPE_81mm_M1_M57_SmokeShell,10);
+		};
+	};
+    class WDC_A5_Dropbag_Container_M2_Mortar: SPE_A5_Dropbag_Container_Base
+	{
+		dlc = "SPE";
+		scope = 2;
+		scopeCurator = 2;
+		displayName = "A-5 AD Container (M2 60mm Mortar)";
+		icon = "iconCrateWpns";
+		parachuteClassOverride = "SPE_Cargo_Parachute_Red";
+        editorCategory = "WDC_Items";
+		editorSubcategory = "WDC_Supplies";
+		class TransportWeapons
+		{
+			MACRO_ADDWEAPON(SPEX_M2_60_Stand,1);
+			MACRO_ADDWEAPON(SPEX_M2_60_Barrel,1);
+		};
+		class TransportMagazines
+		{
+			MACRO_ADDMAGAZINE(SPEX_1Rnd_60mmHE_M2_M49A2,32);
+			MACRO_ADDMAGAZINE(SPEX_1Rnd_60mmWP_M2_M302,16);
+			MACRO_ADDMAGAZINE(SPEX_1Rnd_60mmIllu_M2_M83,12);
+		};
+	};
+    class WDC_A5_Dropbag_Container_Signal: SPE_A5_Dropbag_Container_Base
+	{
+		dlc = "SPE";
+		scope = 2;
+		scopeCurator = 2;
+		displayName = "A-5 AD Container (Signals)";
+		icon = "iconCrateWpns";
+		parachuteClassOverride = "SPE_Cargo_Parachute_Green";
+        editorCategory = "WDC_Items";
+		editorSubcategory = "WDC_Supplies";
+        class TransportItems
+		{
+            MACRO_ADDITEM(ACE_MapTools,2);
+            MACRO_ADDITEM(ACE_PlottingBoard,2);
+            MACRO_ADDITEM(ACE_artilleryTable,1);
+
+            MACRO_ADDITEM(ace_marker_flags_red,5);
+            MACRO_ADDITEM(ace_marker_flags_white,5);
+            MACRO_ADDITEM(ace_marker_flags_yellow,5);
+            MACRO_ADDITEM(ace_marker_flags_green,5);
+
+            MACRO_ADDITEM(ace_flags_green,2);
+            MACRO_ADDITEM(ace_flags_red,2);
+            MACRO_ADDITEM(ace_flags_yellow,2);
+            MACRO_ADDITEM(ace_flags_white,2);
+
+            MACRO_ADDITEM(ACE_SpraypaintBlack,2);
+            MACRO_ADDITEM(ACE_SpraypaintWhite,2);
+            MACRO_ADDITEM(ACE_SpraypaintRed,2);
+
+            MACRO_ADDITEM(ACRE_VHF30108,1);
+            MACRO_ADDITEM(ACRE_SEM52SL,1);
+            MACRO_ADDITEM(ACRE_PRC77,1);
+		};
+        class TransportBackpacks
+		{
+            MACRO_ADDBACKPACK(B_SPE_US_Radio,1);
+		};
+        class TransportWeapons
+		{
+			MACRO_ADDWEAPON(SPEX_K35_PH324,1);
+		};
+        class TransportMagazines
+		{
+            MACRO_ADDMAGAZINE(SPEX_36rnd_Super_XX_Film,12);
+        };
+	};
+
+    class wdc_Static_Base: StaticWeapon {};
 
 	class wdc_US_ParaExitTrainer_base: wdc_Static_Base
 	{

@@ -4,7 +4,9 @@ class CfgPatches {
 	class ADDON {
         name = COMPONENT_NAME;
         requiredVersion = REQUIRED_VERSION;
-		units[] = {};
+		units[] = {
+            "WDC_ACE_Items_US_Resupply_medical"
+        };
 		weapons[] = {
             "wdc_carlisleLarge",
             "wdc_carlisleSmall",
@@ -12,7 +14,16 @@ class CfgPatches {
             "wdc_triangleBandage",
             "wdc_morphineSyrette",
             "wdc_atropineSyrette",
-            "wdc_ammoniaAmpule"
+            "wdc_ammoniaAmpule",
+            "wdc_Sulfa",
+            "wdc_US_surgicalKit",
+            "wdc_US_Tourniquet",
+            "wdc_US_Splint",
+            "wdc_US_personalAidKit",
+            "wdc_bloodPlasmaIV_500",
+            "wdc_bloodPlasmaIV_250",
+            "wdc_bloodIV_500",
+            "wdc_bloodIV_250"
         };
 		requiredAddons[] = {
             "ace_interaction",
@@ -524,7 +535,7 @@ class CfgVehicles
 	class WDC_ACE_Items_US_Resupply_medical: ACE_medicalSupplyCrate
 	{
 		scope = 2;
-		scopecurator = 2;
+		scopeCurator = 2;
 		displayName = "Medical Supplies";
 		editorCategory = "WDC_Items";
 		editorSubcategory = "WDC_ACE_Items";
