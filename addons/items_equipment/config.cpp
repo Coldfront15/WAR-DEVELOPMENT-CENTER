@@ -38,10 +38,15 @@ class CfgPatches {
             "WDC_G_M23A1_Violet"
         };
         units[] = {
+            "cigs_lucky_strike_kRat_cigpackItem",
+            "wdc_kRat_cig_box",
+            "wdc_cig_box",
             "WDC_US_M7_MINE",
             "WDC_ModuleMine_US_M7_MINE"
         };
 		magazines[] = {
+            "cigs_lucky_strike_cigpack",
+            "cigs_lucky_strike_kRat_cigpack",
             "WDC_1Rnd_G_M19WP",
             "WDC_1Rnd_G_M19WP_OD",
             "WDC_1Rnd_G_M22_White",
@@ -68,6 +73,7 @@ class CfgPatches {
             "ace_flashlights",
             "ace_trenches",
             "ace_explosives",
+            "cigs_lucky_strike",
             "WW2_SPEX_Assets_c_Weapons_InfantryWeapons_c",
 			"WW2_SPE_Assets_c_Weapons_InfantryWeapons_c"
         };
@@ -472,6 +478,31 @@ class CfgMagazines
 	class SPE_1Rnd_G_M2_M18_Green: SPE_BaseRifleGrenade {};
 	class SPE_1Rnd_G_M2_M18_Yellow: SPE_BaseRifleGrenade {};
 	class SPE_1Rnd_G_M2_M18_Violet: SPE_BaseRifleGrenade {};
+    class cigs_base_cigpack;
+	class cigs_lucky_strike_cigpack: cigs_base_cigpack
+	{
+		author = "Coldfront15";
+		scope = 2;
+		displayName = "Lucky Strikes";
+		descriptionShort = "Even Steve gets addicted. They're Toasted!";
+		model = "\x\wdc\addons\items_equipment\wdc_cigs.p3d";
+		picture = "\x\wdc\addons\items_equipment\data\ui\cigs_ui_ca.paa";
+		count = 18;
+		cigs_item_glasses = "cigs_lucky_strike_cig0";
+		cigs_item_hmd = "cigs_lucky_strike_cig0_nv";
+	};
+    class cigs_lucky_strike_kRat_cigpack: cigs_lucky_strike_cigpack
+	{
+		author = "Coldfront15";
+		scope = 2;
+		displayName = "K-Ration Lucky Strikes";
+		descriptionShort = "Packed like sardines, but: They're Toasted!";
+		model = "\x\wdc\addons\items_equipment\wdc_kRat_cigs.p3d";
+		picture = "\x\wdc\addons\items_equipment\data\ui\kRat_cigs_ui_ca.paa";
+		count = 4;
+		cigs_item_glasses = "cigs_lucky_strike_cig0";
+		cigs_item_hmd = "cigs_lucky_strike_cig0_nv";
+	};
     class SPEX_CW_No75_Grenade: SPE_HandGrenade_base
     {
         model = "\x\wdc\addons\items_equipment\wdc_no75_mk1.p3d";
@@ -886,6 +917,7 @@ class ACE_Triggers
 class CfgVehicles
 {
     class Items_base_F;
+    class ReammoBox_F;
     class ACE_RepairItem_Base;
     class ACE_Track: ACE_RepairItem_Base
     {
@@ -895,6 +927,54 @@ class CfgVehicles
     class SPEX_CW_No75_AT_MINE: SPE_Mine_base
     {
         model = "\x\wdc\addons\items_equipment\wdc_no75_mk1.p3d";
+    };
+    class cigs_lucky_strike_cigpackItem;
+    class cigs_lucky_strike_kRat_cigpackItem: cigs_lucky_strike_cigpackItem
+	{
+		scope = 2;
+		scopeCurator = 2;
+		displayName = "Lucky Strike K-Ration Cigaretee Pack";
+		author = "Coldfront15";
+		class TransportMagazines
+		{
+			class cigs_lucky_strike_kRat_cigpack
+			{
+				magazine = "cigs_lucky_strike_kRat_cigpack";
+				count = 1;
+			};
+		};
+	};
+    class wdc_kRat_cig_box: ReammoBox_F
+    {
+        author = "Coldfront15";
+        scope = 2;
+        displayName = "K-Ration Lucky Strikes Box";
+        model = "\x\wdc\addons\items_equipment\wdc_cigs_box.p3d";
+        transportMaxMagazines = 900;
+        class TransportMagazines 
+        {
+            class _xx_cigs_lucky_strike_kRat_cigpack 
+            {
+                magazine = "cigs_lucky_strike_kRat_cigpack";
+                count = 900;
+            };
+        };
+    };
+    class wdc_cig_box: ReammoBox_F
+    {
+        author = "Coldfront15";
+        scope = 2;
+        displayName = "K-Ration Lucky Strikes Box";
+        model = "\x\wdc\addons\items_equipment\wdc_cigs_box.p3d";
+        transportMaxMagazines = 200;
+        class TransportMagazines 
+        {
+            class _xx_cigs_lucky_strike_cigpack 
+            {
+                magazine = "cigs_lucky_strike_cigpack";
+                count = 200;
+            };
+        };
     };
     class WDC_US_M7_MINE: SPEX_CW_No75_AT_MINE
     {
