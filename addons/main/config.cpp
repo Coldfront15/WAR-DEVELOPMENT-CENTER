@@ -51,6 +51,10 @@ class CfgEditorSubcategories
 	{
 		displayName = "Buildings"; // Name visible in the list
 	};
+    class WDC_Furniture // Category class, you point to it in editorSubcategory property
+	{
+		displayName = "Furniture"; // Name visible in the list
+	};
 };
 
 class CfgUnitInsignia

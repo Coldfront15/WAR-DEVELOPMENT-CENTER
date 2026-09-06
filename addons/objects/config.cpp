@@ -45,7 +45,9 @@ class CfgPatches {
             "WDC_A5_Dropbag_Container_M1_Mortar",
             "WDC_A5_Dropbag_Container_M2_Mortar",
             "WDC_A5_Dropbag_Container_Signal",
-            "wdc_US_ParaExitTrainer"
+            "wdc_US_ParaExitTrainer",
+            "wdc_blackBoard",
+            "wdc_bench"
         };
         weapons[] = {
 
@@ -66,6 +68,7 @@ class CfgVehicles
     {
 		class ViewCargo;
 		class ViewOptics;
+        class Eventhandlers;
 	};
 	class AllVehicles: All
 	{
@@ -100,8 +103,85 @@ class CfgVehicles
 			class MainTurret: NewTurret {};
 		};
 	};
-	
+    class Building;
+    class NonStrategic: Building
+	{
+		class AnimationSources;
+	};
+    class House_Small_F;
 	class Items_base_F;
+    class wdc_blackBoard: NonStrategic
+	{
+		author = "Coldfront15";
+		mapSize = 0.7;
+		class SimpleObject
+		{
+			eden = 0;
+			animate[] = {};
+			hide[] = {};
+			verticalOffset = 0.8;
+			verticalOffsetWorld = 0;
+			init = "[this, '', []] call bis_fnc_initVehicle";
+		};
+		scope = 2;
+		scopeCurator = 2;
+		displayName = "Blackboard";
+		model = "\x\wdc\addons\objects\wdc_blackBoard.p3d";
+		icon = "iconObject_10x1";
+		editorCategory = "WDC_Items";
+		editorSubcategory = "WDC_Furniture";
+		vehicleClass = "Signs";
+		destrType = "DestructTree";
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {""};
+		class Attributes
+		{
+			class ObjectTextureCustom0
+			{
+				displayName = "$STR_3den_object_attribute_objecttexturecustom0_displayname";
+				tooltip = "$STR_3den_object_attribute_objecttexturecustom_tooltip";
+				property = "ObjectTextureCustom0";
+				control = "Edit";
+				expression = "_this setObjectTextureGlobal [0,_value]";
+				defaultValue = "getObjectTextures _this select 0";
+			};
+			class ObjectMaterialCustom0
+			{
+				displayName = "$STR_3den_object_attribute_objectmaterialcustom0_displayname";
+				tooltip = "$STR_3den_object_attribute_objectmaterialcustom_tooltip";
+				property = "ObjectMaterialCustom0";
+				control = "Edit";
+				expression = "_this setObjectMaterialGlobal [0,_value]";
+				defaultValue = "getObjectMaterials _this select 0";
+			};
+        };
+    };
+    class Land_Bench_01_F: House_Small_F {};
+    class Land_wdc_bench_F: Land_Bench_01_F
+	{
+		author = "Coldfront15";
+		mapSize = 1.99;
+		class SimpleObject
+		{
+			eden = 0;
+			animate[] = {};
+			hide[] = {};
+			verticalOffset = 0.511;
+			verticalOffsetWorld = 0;
+			init = "''";
+		};
+		scope = 2;
+		scopeCurator = 2;
+		displayName = "Simple Bench";
+		model = "\x\wdc\addons\objects\Land_wdc_bench_F.p3d";
+		icon = "iconObject_3x1";
+		editorCategory = "WDC_Items";
+		editorSubcategory = "WDC_Furniture";
+		vehicleClass = "Structures_Town";
+		destrType = "DestructWall";
+		cost = 1000;
+		class DestructionEffects{};
+	};
     class wdc_form_a4_base: Items_base_F
 	{
         scope = 0;
@@ -1184,6 +1264,7 @@ class CfgVehicles
 
     class wdc_Static_Base: StaticWeapon {};
 
+    
 	class wdc_US_ParaExitTrainer_base: wdc_Static_Base
 	{
 		scope = 0;
@@ -1221,6 +1302,15 @@ class CfgVehicles
 		SPEX_DoorTurretIndex = 2;
 		weapons[] = {};
 		magazines[] = {};
+        class EventHandlers
+        {
+            class SPEX_System_C47_StandUp_Handler
+            {
+                getIn = "_this call SPEX_fnc_System_Planes_C47_getInEH";
+                getOut = "_this call SPEX_fnc_System_Planes_C47_getOutEH";
+                seatSwitched = "_this call SPEX_fnc_System_Planes_C47_seatSwitchedEH";
+            };
+        };
 		class UserActions
 		{
 			class cargoStandUp
