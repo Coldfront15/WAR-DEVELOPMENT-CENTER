@@ -12,7 +12,11 @@ class CfgPatches {
 			"WDC_ModuleOrdnanceMediumHowitzerVT_F",
 			"WDC_ModuleOrdnanceMediumHowitzerWP_F",
 			"WDC_ModuleOrdnanceSuperHowitzer_F",
-			"WDC_ModuleOrdnanceSuperHowitzerVT_F"
+			"WDC_ModuleOrdnanceSuperHowitzerVT_F",
+            "WDC_Module_flak",
+            "WDC_Module_flak_Zeus_f",
+            "WDC_Module_searchLight",
+            "WDC_Module_searchLight_Zeus_f"
 		};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
@@ -61,6 +65,10 @@ class CfgVehicles
 			class AnyPlayer;
 			class AnyBrain;
 			class EmptyDetector;
+		};
+        class ArgumentsBaseUnits
+		{
+			class Units;
 		};
 	};
     class ModuleOrdnance_F: Module_F
@@ -168,6 +176,121 @@ class CfgVehicles
 		scope = 1;
 		scopeCurator = 2;
 		simulation = "house";
+	};
+    class WDC_Module_flak: Module_F
+	{
+		scope = 2;
+		is3DEN = 0;
+		displayName = "[WDC] Ambient Flak";
+		category = "WarDevelopmentCenter";
+		function = "wdc_curator_fnc_flak_module";
+		functionPriority = 3;
+		isGlobal = 0;
+		isPersistent = 1;
+		isTriggerActivated = 0;
+		isDisposable = 0;
+		icon = "\a3\Modules_F_Curator\Data\portraitTracers_ca.paa";
+		class Arguments: ArgumentsBaseUnits
+		{
+			class Units: Units{};
+			class flakenemyside
+			{
+				displayName = "Target Faction";
+				description = "west, resistance, east;";
+				typeName = "SIDE";
+				defaultValue = "west";
+			};
+			class flakrange
+			{
+				displayName = "Flak Range";
+				description = "Flak Range (from object, meters)";
+				typeName = "NUMBER";
+				defaultValue = 1750;
+			};
+			class flakdelay
+			{
+				displayName = "Flak Delay";
+				description = "Flak Delay (in sec), shorter for smaller calibers. Set per gun/per module for variation.";
+				typeName = "NUMBER";
+				defaultValue = 1;
+			};
+			class flakdiameter
+			{
+				displayName = "Flak Diameter";
+				description = "Flak Diameter (around target, meters)";
+				typeName = "NUMBER";
+				defaultValue = 200;
+			};
+			class flakaltitude
+			{
+				displayName = "Flak Alt";
+				description = "Flak Alt (above and below target)";
+				typeName = "NUMBER";
+				defaultValue = 100;
+			};
+			class flakminalt
+			{
+				displayName = "Flak min Alt";
+				description = "Flak min Alt (of target, meters)";
+				typeName = "NUMBER";
+				defaultValue = 75;
+			};
+			class flakType
+			{
+				displayName = "$STR_A3_CfgVehicles_ModuleOrdnance_F_Arguments_Type";
+				description = "Type of Flak";
+                typeName = "NUMBER";
+				class values
+				{
+					class flakLarge
+					{
+						name = "Large Caliber Flak";
+						value = 0;
+                        default = 1;
+					};
+					class flakSmall
+					{
+						name = "Small Caliber Flak";
+						value = 1;
+					};
+				};
+			};
+		};
+		class ModuleDescription: ModuleDescription
+		{
+			description = "Simulated Flak, SPE Effects";
+			sync[] = {};
+		};
+	};
+    class WDC_Module_searchLight: Module_F
+	{
+		scope = 2;
+		is3DEN = 0;
+		displayName = "[WDC] Search Lights";
+		category = "WarDevelopmentCenter";
+		function = "wdc_curator_fnc_searchLight_module";
+		functionPriority = 3;
+		isGlobal = 0;
+		isPersistent = 1;
+		isTriggerActivated = 0;
+		isDisposable = 0;
+		icon = "\a3\Modules_F_Curator\Data\portraitFlare_ca.paa";
+		class Arguments: ArgumentsBaseUnits
+		{
+			class Units: Units{};
+			class searchDelay
+			{
+				displayName = "Target Delay";
+				description = "How many seconds between switching targets, avoid anything under two seconds when: using large amount of spotlights or large player counts.";
+				typeName = "NUMBER";
+				defaultValue = 5;
+			};
+		};
+		class ModuleDescription: ModuleDescription
+		{
+			description = "Search Light Behavior Module";
+			sync[] = {};
+		};
 	};
     class WDC_ModuleOrdnanceLightHowitzerVT_F: SPE_ModuleOrdnanceLightHowitzer_F
 	{
@@ -948,22 +1071,22 @@ class CfgVehicles
 
 class Extended_PreInit_EventHandlers
 {
-	class wdc_artillery
+	class wdc_curator
 	{
-		init = "call compile preprocessFileLineNumbers '\x\wdc\addons\artillery\XEH_preInit.sqf'";
+		init = "call compile preprocessFileLineNumbers '\x\wdc\addons\curator\XEH_preInit.sqf'";
 	};
 };
 class Extended_PostInit_EventHandlers
 {
-	class wdc_artillery
+	class wdc_curator
 	{
-		init = "call compile preprocessFileLineNumbers '\x\wdc\addons\artillery\XEH_postInit.sqf'";
+		init = "call compile preprocessFileLineNumbers '\x\wdc\addons\curator\XEH_postInit.sqf'";
 	};
 };
 class Extended_PreStart_EventHandlers
 {
-	class wdc_artillery
+	class wdc_curator
 	{
-		init = "call compile preprocessFileLineNumbers '\x\wdc\addons\artillery\XEH_preStart.sqf'";
+		init = "call compile preprocessFileLineNumbers '\x\wdc\addons\curator\XEH_preStart.sqf'";
 	};
 };
