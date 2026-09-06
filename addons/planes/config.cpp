@@ -2,7 +2,9 @@ class CfgPatches
 {
 	class wdc_planes
 	{
-		units[] = {};
+		units[] = {
+            "SPE_P47_62"
+        };
 		weapons[] = {};
 		requiredVersion = 0.1;
 		requiredAddons[] = {"WW2_SPE_Core_c_Core_c","WW2_SPE_Assets_c_Vehicles_Planes_c_P47"};
@@ -63,58 +65,63 @@ class CfgVehicles
 			class HitEngine;
 		};
 	};
-	class SPE_P47;
-	class SPE_P47_335: SPE_P47
+    class SPE_P47;
+	class SPE_P47_62: SPE_P47
 	{
-		displayName = "P-47D-28 (335th Squadron)";
-		hiddenSelections[] = {
-			"camo1",
-			"camo2",
-			"camo3",
-			"camo4",
-			"camo5",
-			"camo6",
-			"camo7",
-			"num_1",
-			"num_2",
-			"num_3",
-			"num_4",
-			"num_5",
-			"num_6",
-			"letter_1",
-			"letter_2",
-			"letter_3"
-		};
-		hiddenSelectionsTextures[] = {
-			"x\wdc\addons\planes\335FS\P47\P47_Fuselage_335_co.paa",
-			"x\wdc\addons\planes\335FS\P47\P47_Wings_335_co.paa",
-			"WW2\SPE_Assets_t\Vehicles\Planes_t\P47\P47_Cockpit_1_co.paa",
-			"WW2\SPE_Assets_t\Vehicles\Planes_t\P47\P47_Cockpit_2_co.paa",
-			"WW2\SPE_Assets_t\Vehicles\Planes_t\P47\P47_Misc_co.paa",
-			"WW2\SPE_Assets_t\Vehicles\Planes_t\P47\P47_Exterior_Decals_ca.paa",
-			"WW2\SPE_Assets_t\Vehicles\Planes_t\P47\P47_Nose_Checker_ca.paa"
-		};
+        displayName = "P-47D Thunderbolt (62d Sqdn)";
+        author = "Heavy Ordnance Works";//"AWAR"
+		dlc = "SPE";
+		scope = 2;
+        scopeCurator = 2;
 		class textureSources
 		{
-			class standard335
+			class ramirez62
 			{
-				displayName = "335th Fighter Squadron (Red Chief)";
-				author = "Heavy Ordnance Works";//"AWAR"
+				displayName = "62d Fighter Squadron (Ramirez)";
+				author = "Mast (M60A3)";//"AWAR"
 				dlc = "SPE";
-				textures[] = {"x\wdc\addons\planes\335FS\P47\P47_Fuselage_335_co.paa","x\wdc\addons\planes\335FS\P47\P47_Wings_335_co.paa","WW2\SPE_Assets_t\Vehicles\Planes_t\P47\P47_Cockpit_1_co.paa","WW2\SPE_Assets_t\Vehicles\Planes_t\P47\P47_Cockpit_2_co.paa","WW2\SPE_Assets_t\Vehicles\Planes_t\P47\P47_Misc_co.paa","WW2\SPE_Assets_t\Vehicles\Planes_t\P47\P47_Exterior_Decals_ca.paa","WW2\SPE_Assets_t\Vehicles\Planes_t\P47\P47_Nose_Checker_ca.paa"};
+				textures[] = {
+                    "x\wdc\addons\planes\62FS\P47\Ramirez\P47_Fuselage_Ramirez_co.paa",
+                "x\wdc\addons\planes\62FS\P47\Ramirez\P47_Wings_Ramirez_co.paa",
+                "WW2\SPE_Assets_t\Vehicles\Planes_t\P47\P47_Cockpit_1_co.paa",
+                "WW2\SPE_Assets_t\Vehicles\Planes_t\P47\P47_Cockpit_2_co.paa",
+                "WW2\SPE_Assets_t\Vehicles\Planes_t\P47\P47_Misc_co.paa",
+                "WW2\SPE_Assets_t\Vehicles\Planes_t\P47\P47_Exterior_Decals_ca.paa",
+                ""
+                };
 				factions[] = {"SPE_US_ARMY"};
-				materials[] = {"x\wdc\addons\planes\335FS\P47\Fuselage_335.rvmat","x\wdc\addons\planes\335FS\P47\Wings_335.rvmat","WW2\SPE_Assets_r\Vehicles\Planes_r\P47\Cockpit_1.rvmat","WW2\SPE_Assets_r\Vehicles\Planes_r\P47\Cockpit_2.rvmat","WW2\SPE_Assets_r\Vehicles\Planes_r\P47\Misc.rvmat"};
+				materials[] = {
+                    "x\wdc\addons\planes\62FS\P47\Ramirez\P47_Fuselage_Ramirez.rvmat",
+                    "x\wdc\addons\planes\62FS\P47\Ramirez\P47_Wings_Ramirez.rvmat",
+                    "WW2\SPE_Assets_r\Vehicles\Planes_r\P47\Cockpit_1.rvmat",
+                    "WW2\SPE_Assets_r\Vehicles\Planes_r\P47\Cockpit_2.rvmat",
+                    "WW2\SPE_Assets_r\Vehicles\Planes_r\P47\Misc.rvmat"
+                };
 			};
-			class cooper335
+            class mast62
 			{
-				displayName = "335th Fighter Squadron (Cooper)";
-				author = "Heavy Ordnance Works";//"AWAR"
+				displayName = "62d Fighter Squadron (Mast)";
+				author = "Mast (M60A3)";//"AWAR"
 				dlc = "SPE";
-				textures[] = {"x\wdc\addons\planes\335FS\P47\P47_Fuselage_Cooper_co.paa","x\wdc\addons\planes\335FS\P47\P47_Wings_335_co.paa","WW2\SPE_Assets_t\Vehicles\Planes_t\P47\P47_Cockpit_1_co.paa","WW2\SPE_Assets_t\Vehicles\Planes_t\P47\P47_Cockpit_2_co.paa","WW2\SPE_Assets_t\Vehicles\Planes_t\P47\P47_Misc_co.paa","WW2\SPE_Assets_t\Vehicles\Planes_t\P47\P47_Exterior_Decals_ca.paa","WW2\SPE_Assets_t\Vehicles\Planes_t\P47\P47_Nose_Checker_ca.paa"};
+				textures[] = {
+                    "x\wdc\addons\planes\62FS\P47\Mast\P47_Fuselage_Mast_co.paa",
+                    "x\wdc\addons\planes\62FS\P47\Mast\P47_Wings_Mast_co.paa",
+                    "WW2\SPE_Assets_t\Vehicles\Planes_t\P47\P47_Cockpit_1_co.paa",
+                    "WW2\SPE_Assets_t\Vehicles\Planes_t\P47\P47_Cockpit_2_co.paa",
+                    "WW2\SPE_Assets_t\Vehicles\Planes_t\P47\P47_Misc_co.paa",
+                    "WW2\SPE_Assets_t\Vehicles\Planes_t\P47\P47_Exterior_Decals_ca.paa",
+                    ""
+                    };
 				factions[] = {"SPE_US_ARMY"};
-				materials[] = {"x\wdc\addons\planes\335FS\P47\Fuselage_Cooper.rvmat","x\wdc\addons\planes\335FS\P47\Wings_335.rvmat","WW2\SPE_Assets_r\Vehicles\Planes_r\P47\Cockpit_1.rvmat","WW2\SPE_Assets_r\Vehicles\Planes_r\P47\Cockpit_2.rvmat","WW2\SPE_Assets_r\Vehicles\Planes_r\P47\Misc.rvmat"};
+				materials[] = {
+                    "x\wdc\addons\planes\62FS\P47\Mast\P47_Fuselage_Mast.rvmat",
+                    "x\wdc\addons\planes\62FS\P47\Mast\P47_Wings_Mast.rvmat",
+                    "WW2\SPE_Assets_r\Vehicles\Planes_r\P47\Cockpit_1.rvmat",
+                    "WW2\SPE_Assets_r\Vehicles\Planes_r\P47\Cockpit_2.rvmat",
+                    "WW2\SPE_Assets_r\Vehicles\Planes_r\P47\Misc.rvmat"
+                    };
 			};
 		};
-		textureList[] = {"standard335", 1, "cooper335", 1};
+		textureList[] = {"mast62", 1, "ramirez62", 1};
 	};
 };

@@ -8,7 +8,7 @@ PixelShaderID = "Super";
 VertexShaderID = "Super";
 class Stage1
 {
-	texture = "WW2\SPE_Assets_t\Vehicles\Planes_t\P47\P47_Fuselage_nohq.paa";
+	texture = "x\wdc\addons\planes\62FS\P47\Ramirez\P47_Fuselage_Ramirez_nohq.paa";
 	uvSource = "tex";
 	class uvTransform
 	{
@@ -57,7 +57,7 @@ class Stage4
 };
 class Stage5
 {
-	texture = "x\wdc\addons\planes\335FS\P47\P47_Fuselage_335_smdi.paa";
+	texture = "x\wdc\addons\planes\62FS\P47\Ramirez\P47_Fuselage_Ramirez_smdi.paa";
 	uvSource = "tex";
 	class uvTransform
 	{
